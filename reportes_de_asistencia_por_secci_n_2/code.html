@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,600;0,7..72,700;1,7..72,600&amp;family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-surface": "#191c1e", "on-error": "#ffffff", "on-secondary": "#ffffff", "primary-fixed-dim": "#b6c6f1", "on-primary-fixed": "#081a3c", "error": "#ba1a1a", "surface-container-high": "#e7e8eb", "secondary-container": "#81c4ff", "surface-container-low": "#f2f4f6", "on-error-container": "#93000a", "on-secondary-fixed": "#001d32", "on-tertiary-fixed-variant": "#005236", "error-container": "#ffdad6", "tertiary-container": "#002718", "on-primary-container": "#7988b0", "tertiary-fixed": "#80f9c0", "on-background": "#191c1e", "surface-variant": "#e1e2e5", "outline-variant": "#c5c6cf", "surface-dim": "#d8dadd", "inverse-primary": "#b6c6f1", "primary-container": "#0f2042", "on-tertiary-container": "#009c6b", "secondary-fixed-dim": "#94ccff", "tertiary": "#000d06", "surface-container-highest": "#e1e2e5", "on-tertiary": "#ffffff", "on-secondary-container": "#00517e", "surface-bright": "#f8f9fc", "tertiary-fixed-dim": "#62dca6", "inverse-on-surface": "#eff1f3", "surface-container-lowest": "#ffffff", "primary": "#000922", "secondary-fixed": "#cde5ff", "surface-container": "#eceef0", "outline": "#75777f", "secondary": "#016398", "surface": "#f8f9fc", "on-primary": "#ffffff", "surface-tint": "#4f5e83", "on-tertiary-fixed": "#002113", "primary-fixed": "d9e2ff", "on-surface-variant": "#45464e", "inverse-surface": "#2e3133", "on-secondary-fixed-variant": "#004b74", "on-primary-fixed-variant": "#37466a", "background": "#f8f9fc" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "space-xs": "0.25rem", "space-lg": "1.5rem", "space-sm": "0.5rem", "space-xl": "2rem", "margin-desktop": "2rem", "margin": "1rem", "gutter": "1rem", "gutter-desktop": "1.5rem", "space-md": "1rem" }, "fontFamily": { "headline-xl": [ "Literata" ], "label-sm": [ "\"Source Sans 3\"" ], "label-md": [ "\"Source Sans 3\"" ], "label-lg": [ "\"Source Sans 3\"" ], "headline-sm": [ "Literata" ], "body-sm": [ "\"Source Sans 3\"" ], "headline-lg": [ "Literata" ], "body-lg": [ "\"Source Sans 3\"" ], "headline-xl-mobile": [ "Literata" ], "body-md": [ "\"Source Sans 3\"" ], "headline-md": [ "Literata" ], "data-metric": [ "Literata" ] }, "fontSize": { "headline-xl": [ "32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "label-sm": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "700" } ], "label-md": [ "14px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "600" } ], "label-lg": [ "16px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" } ], "headline-sm": [ "18px", { "lineHeight": "24px", "fontWeight": "600" } ], "body-sm": [ "14px", { "lineHeight": "20px", "fontWeight": "400" } ], "headline-lg": [ "24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "body-lg": [ "18px", { "lineHeight": "26px", "fontWeight": "400" } ], "headline-xl-mobile": [ "26px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "700" } ], "body-md": [ "16px", { "lineHeight": "24px", "fontWeight": "400" } ], "headline-md": [ "20px", { "lineHeight": "28px", "fontWeight": "600" } ], "data-metric": [ "28px", { "lineHeight": "32px", "fontWeight": "700" } ] } } } };</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-screen w-60 bg-primary-container text-on-primary z-50 flex flex-col justify-between select-none border-r border-outline-variant"><div class="flex flex-col"><div class="h-16 px-space-md flex items-center gap-space-sm border-b border-on-surface-variant"><img alt="Logo Asistencia Escolar" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WkWcu8W10U63iXYrDP661lDIPK-p3cMoyA7KvRQHsknA4cHhkmABrBsFJQKzpVFT7bjUd2_lg4IJR-3053lbHMzMPo3Fp2S4lrsmMpn-nuIFOt1iZ6RCd1pFzxoFzl8Jxat636m4GrT_D0J3LWcM1HIWExCxMHfqD5WqKZ4hal8F6vR8yTUWHtSOCmLEhMd1REmUH2BkP1pjH4WmW2dp3koU-rC84wnDyS2-BbY5A"/><div class="flex flex-col min-w-0"><span class="font-headline-sm text-headline-sm text-on-primary tracking-tight truncate leading-none">Asistencia</span><span class="font-label-sm text-label-sm text-on-primary-container tracking-wider uppercase mt-0.5 truncate">Rep. Dominicana</span></div></div><nav class="flex flex-col gap-space-xs p-space-sm" data-active-classes="bg-secondary text-on-secondary font-label-md"><a class="flex items-center gap-space-sm px-space-md h-12 rounded-lg text-on-primary-container hover:bg-on-primary-container/20 hover:text-on-primary transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">dashboard</span><span class="font-label-md text-label-md">Inicio</span></a><a class="flex items-center gap-space-sm px-space-md h-12 rounded-lg text-on-primary-container hover:bg-on-primary-container/20 hover:text-on-primary transition-colors" data-path="registrar-asistencia" href="#"><span class="material-symbols-outlined text-[20px]">how_to_reg</span><span class="font-label-md text-label-md">Registrar asistencia</span></a><a class="flex items-center gap-space-sm px-space-md h-12 rounded-lg text-on-primary-container hover:bg-on-primary-container/20 hover:text-on-primary transition-colors" data-path="estudiantes-historial" href="#"><span class="material-symbols-outlined text-[20px]">groups</span><span class="font-label-md text-label-md">Estudiantes</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-md h-12 rounded-lg transition-colors bg-secondary text-on-secondary font-label-md" data-path="reportes" href="#"><span class="material-symbols-outlined text-[20px]">assessment</span><span class="font-label-md text-label-md">Reportes</span></a><a class="flex items-center gap-space-sm px-space-md h-12 rounded-lg text-on-primary-container hover:bg-on-primary-container/20 hover:text-on-primary transition-colors" data-path="excusas" href="#"><span class="material-symbols-outlined text-[20px]">assignment_turned_in</span><span class="font-label-md text-label-md">Excusas</span></a></nav></div><div class="p-space-sm border-t border-on-surface-variant bg-primary-container"><div class="flex items-center justify-between p-space-xs"><div class="flex items-center gap-space-sm min-w-0 mr-space-xs"><img alt="Profile" class="w-8 h-8 rounded-full object-cover shrink-0 border border-outline-variant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfDhQ4E4YTfeiEI50awEpB-B-_Nia084KMbelNXWjiFMBN-DwEK3gcsHxihOTaYNc6-TovK0WNxlMQin_iJoUbAPALwzCBPNzs1oQJXAUx7sFiLDO7FoxVB2rk6k3wCB1obCaG2MvSXqAut3wb0y4v188LH0qLhACF8ZBdcJh2oQw2JlQ_qTsvRrw6XAsRS7SZvxI9krlKI72-C-TsbEk825pFymVD4DlQm_IvZbA"/><div class="flex flex-col min-w-0"><span class="font-label-md text-label-md text-on-primary truncate">Prof. Altagracia Rosario</span><span class="font-body-sm text-[11px] text-on-primary-container truncate leading-tight">Liceo Sec. Unión Panamericana (Distrito 15-03)</span></div></div><button class="w-12 h-12 shrink-0 flex items-center justify-center rounded-lg text-on-primary-container hover:bg-on-primary-container/20 hover:text-on-primary transition-colors" title="Ajustes y Salida" type="button"><span class="material-symbols-outlined text-[20px]">logout</span></button></div></div></aside><div class="pl-60"><header class="fixed top-0 left-60 right-0 h-16 bg-surface-container-lowest border-b border-outline-variant z-40 flex items-center justify-between px-gutter-desktop"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs h-12 px-space-md bg-surface-container-low border border-outline-variant rounded-lg cursor-pointer hover:bg-surface-container transition-colors"><span class="material-symbols-outlined text-secondary text-[20px]">calendar_today</span><span class="font-label-md text-label-md text-on-surface">Jueves, 29 de octubre de 2026</span><span class="material-symbols-outlined text-outline text-[18px]">arrow_drop_down</span></div></div><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-xs px-space-md py-1 bg-secondary-fixed text-on-secondary-fixed border border-secondary/30 rounded-full"><span class="material-symbols-outlined text-secondary text-[16px]">school</span><span class="font-label-sm text-label-sm font-semibold">2do Período Lectivo 2026-2027</span></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs px-space-md py-1 bg-surface-container-low border border-outline-variant rounded-full"><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-on-tertiary-container opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-on-tertiary-container"></span></span><span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Guardado y sincronizado</span></div><button class="flex items-center gap-space-xs h-12 px-space-sm text-outline hover:text-on-surface transition-colors" title="Modo fuera de línea" type="button"><span class="material-symbols-outlined text-[20px]">cloud_done</span><span class="font-label-sm text-label-sm uppercase tracking-wider">En Línea</span></button></div></div></header><main class="w-full pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Subtle decorative ambient glow contained locally -->
+<div class="relative w-full overflow-hidden pb-12">
+<div class="absolute -top-32 -right-24 w-96 h-96 bg-primary-fixed-dim/20 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute top-96 left-12 w-80 h-80 bg-secondary-container/20 rounded-full blur-3xl pointer-events-none"></div>
+<!-- Main Workspace Container (Standard Desktop 1440px target rhythm) -->
+<div class="w-full max-w-[1400px] mx-auto px-6 py-6 flex flex-col gap-6">
+<!-- Breadcrumb / Section Context Header -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-2">
+<div class="flex flex-col">
+<div class="flex items-center gap-2 text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider mb-1">
+<span>Gestión Académica</span>
+<span class="text-outline">/</span>
+<span>Reportes Normativos MINERD</span>
+<span class="text-outline">/</span>
+<span class="text-secondary font-semibold">Consolidado Mensual</span>
+</div>
+<div class="flex items-center gap-3">
+<h1 class="font-headline-xl text-headline-xl text-primary tracking-tight">Sábana y Analítica de Asistencia</h1>
+<span class="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">
+<span class="w-2 h-2 rounded-full bg-on-tertiary-container"></span>
+              Corte Oficial: Semana 4
+            </span>
+</div>
+</div>
+<!-- Institutional Header Identity Meta -->
+<div class="hidden xl:flex items-center gap-4 bg-surface-container-lowest px-4 py-2 rounded-lg shadow-sm">
+<div class="w-10 h-10 rounded bg-primary-container flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-[24px]">account_balance</span>
+</div>
+<div class="flex flex-col text-left">
+<span class="font-label-md text-label-md text-primary font-bold">Liceo Sec. Unión Panamericana</span>
+<span class="font-body-sm text-[12px] text-on-surface-variant">Distrito Educativo 15-03 • Santo Domingo Centro</span>
+</div>
+</div>
+</div>
+<!-- FILTER CONTROLS TOOLBAR (Utilitarian & High Efficiency) -->
+<div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm flex flex-col xl:flex-row items-stretch xl:items-center justify-between gap-4">
+<!-- Filter Selectors -->
+<div class="flex flex-wrap items-center gap-3">
+<!-- Dropdown Grado y Sección -->
+<div class="relative min-w-[280px]">
+<label class="block font-label-sm text-[11px] text-on-surface-variant uppercase font-semibold mb-1">Grado y Asignatura</label>
+<div class="flex items-center justify-between h-12 px-3 bg-surface-container-low rounded-lg cursor-pointer hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-2 truncate">
+<span class="material-symbols-outlined text-secondary text-[20px]">class</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold truncate">4to B – Lengua Española</span>
+<span class="text-on-surface-variant font-body-sm text-[12px]">(28 est.)</span>
+</div>
+<span class="material-symbols-outlined text-outline text-[20px]">expand_more</span>
+</div>
+</div>
+<!-- Período Lectivo -->
+<div class="relative min-w-[210px]">
+<label class="block font-label-sm text-[11px] text-on-surface-variant uppercase font-semibold mb-1">Período Lectivo</label>
+<div class="flex items-center justify-between h-12 px-3 bg-surface-container-low rounded-lg cursor-pointer hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-2 truncate">
+<span class="material-symbols-outlined text-outline text-[20px]">history_edu</span>
+<span class="font-label-md text-label-md text-on-surface truncate">2do Período (Oct - Dic)</span>
+</div>
+<span class="material-symbols-outlined text-outline text-[20px]">expand_more</span>
+</div>
+</div>
+<!-- Rango de Fechas -->
+<div class="relative min-w-[230px]">
+<label class="block font-label-sm text-[11px] text-on-surface-variant uppercase font-semibold mb-1">Ventana Temporal</label>
+<div class="flex items-center justify-between h-12 px-3 bg-surface-container-low rounded-lg cursor-pointer hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-2 truncate">
+<span class="material-symbols-outlined text-secondary text-[20px]">date_range</span>
+<span class="font-label-md text-label-md text-on-surface truncate">01 oct 2026 - 29 oct 2026</span>
+</div>
+<span class="material-symbols-outlined text-outline text-[20px]">arrow_drop_down</span>
+</div>
+</div>
+<!-- View Toggle [Semanal | Mensual] -->
+<div>
+<label class="block font-label-sm text-[11px] text-on-surface-variant uppercase font-semibold mb-1">Agrupación</label>
+<div class="inline-flex h-12 p-1 bg-surface-container-high rounded-lg items-center">
+<button class="px-3 h-10 rounded font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" type="button">
+                Semanal
+              </button>
+<button class="px-3 h-10 rounded font-label-md text-label-md bg-surface-container-lowest text-primary shadow-sm font-bold" type="button">
+                Mensual
+              </button>
+</div>
+</div>
+</div>
+<!-- Top Right Export & Review Actions -->
+<div class="flex items-end justify-end gap-3 pt-2 xl:pt-0">
+<!-- Vista previa institucional -->
+<button class="h-12 px-4 rounded-lg bg-secondary-fixed text-on-secondary-fixed hover:bg-secondary-fixed-dim transition-colors flex items-center gap-2 font-label-md text-label-md font-semibold shrink-0" onclick="document.getElementById('institutionalPreviewDrawer').classList.remove('translate-y-full')" type="button">
+<span class="material-symbols-outlined text-[20px] text-secondary">visibility</span>
+<span>Vista previa institucional</span>
+</button>
+<!-- Export Dropdown Button Group -->
+<div class="relative inline-block text-left shrink-0" id="exportDropdownContainer">
+<button class="h-12 px-4 rounded-lg bg-primary-container text-on-primary hover:bg-primary transition-colors flex items-center gap-2.5 font-label-md text-label-md shadow-sm" onclick="document.getElementById('exportMenu').classList.toggle('hidden')" type="button">
+<span class="material-symbols-outlined text-[20px]">download</span>
+<span class="font-semibold">Exportar Coordinación</span>
+<span class="material-symbols-outlined text-[18px]">expand_more</span>
+</button>
+<!-- Dropdown Menu -->
+<div class="hidden absolute right-0 mt-2 w-72 bg-surface-container-lowest rounded-xl shadow-xl z-50 p-2 border border-surface-container-high" id="exportMenu">
+<div class="px-3 py-2 font-label-sm text-[11px] uppercase tracking-wider text-on-surface-variant">Formatos Oficiales Registrados</div>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-surface-container text-on-surface transition-colors" href="#">
+<span class="material-symbols-outlined text-error text-[20px]">picture_as_pdf</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold">PDF Oficial MINERD</span>
+<span class="font-body-sm text-[12px] text-on-surface-variant">Formato Matriz RNE A4 horizontal</span>
+</div>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-surface-container text-on-surface transition-colors" href="#">
+<span class="material-symbols-outlined text-on-tertiary-container text-[20px]">table_view</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold">Hoja de Cálculo Excel / CSV</span>
+<span class="font-body-sm text-[12px] text-on-surface-variant">Desglose analítico acumulado</span>
+</div>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-surface-container text-on-surface transition-colors" href="#">
+<span class="material-symbols-outlined text-secondary text-[20px]">print</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold">Imprimir Sábana de Asistencia</span>
+<span class="font-body-sm text-[12px] text-on-surface-variant">Plantilla física de firma docente</span>
+</div>
+</a>
+</div>
+</div>
+</div>
+</div>
+<!-- BLOCK 1: SUMMARY KPI CARDS (Bento Metrix Architecture) -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
+<!-- KPI 1: Asistencia promedio -->
+<div class="bg-surface-container-lowest p-5 rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-start justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant font-semibold">Asistencia Promedio Sección</span>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-label-sm font-label-sm bg-amber-100 text-amber-900 font-bold">
+              En Alerta
+            </span>
+</div>
+<div class="my-3 flex items-baseline gap-3">
+<span class="font-headline-xl text-headline-xl text-primary font-bold">83.2%</span>
+<span class="font-body-sm text-body-sm text-error flex items-center font-medium">
+<span class="material-symbols-outlined text-[16px]">trending_down</span>
+              -4.8% vs Sep
+            </span>
+</div>
+<div class="w-full bg-surface-container rounded-full h-2 overflow-hidden">
+<div class="bg-amber-500 h-2 rounded-full" style="width: 83.2%"></div>
+</div>
+<div class="mt-2 text-right">
+<span class="font-body-sm text-[12px] text-on-surface-variant">Meta institucional: 90.0%</span>
+</div>
+</div>
+<!-- KPI 2: Inasistencia promedio -->
+<div class="bg-surface-container-lowest p-5 rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant font-semibold">Inasistencia Promedio Total</span>
+<span class="material-symbols-outlined text-outline text-[20px]">person_off</span>
+</div>
+<div class="my-3 flex items-baseline gap-3">
+<span class="font-headline-xl text-headline-xl text-primary font-bold">16.8%</span>
+<span class="font-body-sm text-[12px] text-on-surface-variant">Acumulado mensual</span>
+</div>
+<div class="flex items-center gap-2 pt-1 font-body-sm text-[12px] text-on-surface-variant">
+<span class="inline-block w-2.5 h-2.5 rounded-full bg-error"></span>
+<span>94 ausencias registradas en 22 días lectivos</span>
+</div>
+</div>
+<!-- KPI 3: Umbral de Riesgo -->
+<div class="bg-surface-container-lowest p-5 rounded-xl shadow-sm flex flex-col justify-between border-l-4 border-error">
+<div class="flex items-start justify-between">
+<span class="font-label-md text-label-md text-error font-semibold">Riesgo de Repitencia (&gt;15%)</span>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-label-sm font-label-sm bg-error-container text-on-error-container font-bold">
+              5 alumnos
+            </span>
+</div>
+<div class="my-3 flex items-baseline gap-2">
+<span class="font-headline-xl text-headline-xl text-error font-bold">5</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">de 28 estudiantes</span>
+</div>
+<div class="grid grid-cols-2 gap-2 text-[12px] pt-1 font-label-sm">
+<div class="bg-surface-container-low px-2 py-1 rounded text-on-error-container font-bold">
+              2 Críticos (&gt;20%)
+            </div>
+<div class="bg-surface-container-low px-2 py-1 rounded text-amber-800 font-bold">
+              3 En Alerta (15-20%)
+            </div>
+</div>
+</div>
+<!-- KPI 4: Excusas radicadas -->
+<div class="bg-surface-container-lowest p-5 rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant font-semibold">Excusas Médicas / Radicadas</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">verified</span>
+</div>
+<div class="my-3 flex items-baseline gap-2">
+<span class="font-headline-xl text-headline-xl text-primary font-bold">14</span>
+<span class="font-body-sm text-body-sm text-on-tertiary-container font-semibold">Justificadas</span>
+</div>
+<div class="flex items-center justify-between text-[12px] font-body-sm text-on-surface-variant">
+<span>2 pendientes de revisión</span>
+<span class="text-secondary font-semibold cursor-pointer hover:underline">Ver carpeta →</span>
+</div>
+</div>
+</div>
+<!-- BLOCKS 2 & 3: TWO-COLUMN ANALYTIC VIEW -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+<!-- LEFT COLUMN: Trends Chart & Priority Risk List (5 Cols) -->
+<div class="lg:col-span-5 flex flex-col gap-6">
+<!-- Trend Bar Chart (Semanas 1 a 4) -->
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm flex flex-col">
+<div class="flex items-center justify-between pb-4">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-primary font-bold">Evolución Semanal de Asistencia</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Comportamiento del mes de Octubre 2026</p>
+</div>
+<span class="font-label-sm text-label-sm text-outline uppercase font-semibold">4to Secundario</span>
+</div>
+<!-- SVG Bar & Benchmark Visualization -->
+<div class="w-full pt-3">
+<svg class="w-full h-auto" preserveaspectratio="xMidYMid meet" viewbox="0 0 420 220">
+<!-- Background Gridlines -->
+<line stroke="#E1E2E5" stroke-dasharray="2 2" stroke-width="1" x1="40" x2="400" y1="30" y2="30"></line>
+<line stroke="#E1E2E5" stroke-dasharray="2 2" stroke-width="1" x1="40" x2="400" y1="80" y2="80"></line>
+<line stroke="#E1E2E5" stroke-dasharray="2 2" stroke-width="1" x1="40" x2="400" y1="130" y2="130"></line>
+<line stroke="#E1E2E5" stroke-width="1" x1="40" x2="400" y1="180" y2="180"></line>
+<!-- Left Axis Labels -->
+<text fill="#75777F" font-family="'Source Sans 3', sans-serif" font-size="11" text-anchor="end" x="32" y="34">100%</text>
+<text fill="#75777F" font-family="'Source Sans 3', sans-serif" font-size="11" text-anchor="end" x="32" y="84">90%</text>
+<text fill="#BA1A1A" font-family="'Source Sans 3', sans-serif" font-size="11" font-weight="700" text-anchor="end" x="32" y="134">80%</text>
+<text fill="#75777F" font-family="'Source Sans 3', sans-serif" font-size="11" text-anchor="end" x="32" y="184">70%</text>
+<!-- Prominent Red Dashed Benchmark Line (80% attendance / 20% critical abs ceiling) -->
+<line stroke="#BA1A1A" stroke-dasharray="6 4" stroke-width="2" x1="40" x2="400" y1="130" y2="130"></line>
+<!-- Tag on right edge of line -->
+<rect fill="#FFDAD6" height="18" rx="4" width="105" x="290" y="118"></rect>
+<text fill="#93000A" font-family="'Source Sans 3', sans-serif" font-size="10" font-weight="700" text-anchor="middle" x="342" y="131">LÍMITE MINERD (80%)</text>
+<!-- Week Bars & Values -->
+<!-- Week 1: 88% -> y = 30 + (100 - 88) * 5 = 90. Height = 180 - 90 = 90 -->
+<g class="transition-transform hover:opacity-90">
+<rect fill="#016398" height="90" rx="4" width="46" x="75" y="90"></rect>
+<text fill="#016398" font-family="'Literata', serif" font-size="13" font-weight="700" text-anchor="middle" x="98" y="82">88%</text>
+<text fill="#45464E" font-family="'Source Sans 3', sans-serif" font-size="12" font-weight="600" text-anchor="middle" x="98" y="200">Sem 1</text>
+</g>
+<!-- Week 2: 84% -> y = 30 + (100 - 84) * 5 = 110. Height = 180 - 110 = 70 -->
+<g class="transition-transform hover:opacity-90">
+<rect fill="#016398" height="70" rx="4" width="46" x="160" y="110"></rect>
+<text fill="#016398" font-family="'Literata', serif" font-size="13" font-weight="700" text-anchor="middle" x="183" y="102">84%</text>
+<text fill="#45464E" font-family="'Source Sans 3', sans-serif" font-size="12" font-weight="600" text-anchor="middle" x="183" y="200">Sem 2</text>
+</g>
+<!-- Week 3: 81% -> y = 30 + (100 - 81) * 5 = 125. Height = 180 - 125 = 55 -->
+<g class="transition-transform hover:opacity-90">
+<rect fill="#D97706" height="55" rx="4" width="46" x="245" y="125"></rect>
+<text fill="#D97706" font-family="'Literata', serif" font-size="13" font-weight="700" text-anchor="middle" x="268" y="117">81%</text>
+<text fill="#45464E" font-family="'Source Sans 3', sans-serif" font-size="12" font-weight="600" text-anchor="middle" x="268" y="200">Sem 3</text>
+</g>
+<!-- Week 4: 79% (Below 80% line) -> y = 30 + (100 - 79) * 5 = 135. Height = 180 - 135 = 45 -->
+<g class="transition-transform hover:opacity-90">
+<rect fill="#BA1A1A" height="45" rx="4" width="46" x="330" y="135"></rect>
+<text fill="#BA1A1A" font-family="'Literata', serif" font-size="13" font-weight="700" text-anchor="middle" x="353" y="127">79%</text>
+<text fill="#BA1A1A" font-family="'Source Sans 3', sans-serif" font-size="12" font-weight="700" text-anchor="middle" x="353" y="200">Sem 4 ⚠️</text>
+</g>
+</svg>
+</div>
+<!-- Chart Footer Annotation -->
+<div class="mt-4 p-3 bg-error-container/40 rounded-lg flex items-start gap-2.5">
+<span class="material-symbols-outlined text-error text-[18px] shrink-0 mt-0.5">report_problem</span>
+<p class="font-body-sm text-[12px] text-on-surface leading-snug">
+<strong>Alerta Departamental:</strong> La Semana 4 cerró por debajo del mínimo reglamentario (79%). Se requiere citación formal con Psicología Escolar y Orientación Académica.
+              </p>
+</div>
+</div>
+<!-- Estudiantes en Riesgo Prioritario (Categorized Tiers) -->
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm flex flex-col">
+<div class="flex items-center justify-between pb-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-error text-[22px]">warning</span>
+<h2 class="font-headline-sm text-headline-sm text-primary font-bold">Casos en Riesgo Prioritario</h2>
+</div>
+<span class="font-label-sm text-label-sm bg-surface-container-high px-2 py-0.5 rounded text-on-surface-variant font-semibold">MINERD Art. 63</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4">
+              Estudiantes próximos o que superan el umbral de pérdida de derecho a exámenes cuatrimestrales.
+            </p>
+<div class="flex flex-col gap-3">
+<!-- Tier 1: Nivel Crítico (>20%) -->
+<div class="flex flex-col gap-2 p-3 rounded-lg bg-error-container/30">
+<div class="flex items-center justify-between">
+<span class="inline-flex items-center gap-1.5 font-label-sm text-label-sm text-error font-bold uppercase tracking-wider">
+<span class="w-2 h-2 rounded-full bg-error animate-ping"></span>
+                    Nivel Crítico (&gt;20% de inasistencia)
+                  </span>
+<span class="font-label-sm text-[11px] text-on-error-container bg-error-container px-2 py-0.5 rounded font-bold">Pérdida de Asignatura</span>
+</div>
+<!-- Student 1 Wander -->
+<div class="flex items-center justify-between bg-surface-container-lowest p-2.5 rounded-lg shadow-sm">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center font-label-md text-primary font-bold">
+                      WP
+                    </div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Wander Peña Gómez</span>
+<span class="font-body-sm text-[12px] text-error font-bold">23.4% inasistencia • 11 faltas</span>
+</div>
+</div>
+<button class="h-9 px-3 rounded bg-primary-container text-on-primary font-label-sm text-label-sm font-semibold hover:bg-primary transition-colors flex items-center gap-1" type="button">
+<span>Historial</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+<!-- Student 2 Yeimi -->
+<div class="flex items-center justify-between bg-surface-container-lowest p-2.5 rounded-lg shadow-sm">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center font-label-md text-primary font-bold">
+                      YR
+                    </div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Yeimi Rodríguez Martínez</span>
+<span class="font-body-sm text-[12px] text-error font-bold">21.0% inasistencia • 10 faltas</span>
+</div>
+</div>
+<button class="h-9 px-3 rounded bg-primary-container text-on-primary font-label-sm text-label-sm font-semibold hover:bg-primary transition-colors flex items-center gap-1" type="button">
+<span>Historial</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Tier 2: Nivel Alerta (15-20%) -->
+<div class="flex flex-col gap-2 p-3 rounded-lg bg-amber-50">
+<div class="flex items-center justify-between">
+<span class="inline-flex items-center gap-1.5 font-label-sm text-label-sm text-amber-900 font-bold uppercase tracking-wider">
+<span class="w-2 h-2 rounded-full bg-amber-600"></span>
+                    Nivel Alerta (15% – 20% inasistencia)
+                  </span>
+<span class="font-label-sm text-[11px] text-amber-900 bg-amber-200 px-2 py-0.5 rounded font-semibold">Alerta Temprana</span>
+</div>
+<!-- Student 3 Josue -->
+<div class="flex items-center justify-between bg-surface-container-lowest p-2.5 rounded-lg shadow-sm">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center font-label-md text-primary font-bold">
+                      JF
+                    </div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Josué Familia Montero</span>
+<span class="font-body-sm text-[12px] text-amber-800 font-semibold">17.8% inasistencia • 8 faltas</span>
+</div>
+</div>
+<button class="h-8 px-2.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm hover:bg-surface-container transition-colors" type="button">
+                    Ver ficha
+                  </button>
+</div>
+<!-- Student 4 Ariana -->
+<div class="flex items-center justify-between bg-surface-container-lowest p-2.5 rounded-lg shadow-sm">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center font-label-md text-primary font-bold">
+                      AS
+                    </div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Ariana Santana Beltre</span>
+<span class="font-body-sm text-[12px] text-amber-800 font-semibold">16.2% inasistencia • 7 faltas</span>
+</div>
+</div>
+<button class="h-8 px-2.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm hover:bg-surface-container transition-colors" type="button">
+                    Ver ficha
+                  </button>
+</div>
+</div>
+<!-- Tier 3: Nivel Observación (10-15%) -->
+<div class="flex flex-col gap-2 p-3 rounded-lg bg-surface-container-low">
+<div class="flex items-center justify-between">
+<span class="inline-flex items-center gap-1.5 font-label-sm text-label-sm text-on-surface-variant font-bold uppercase tracking-wider">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+                    Nivel Observación (10% – 15%)
+                  </span>
+<span class="font-label-sm text-[11px] text-on-surface-variant bg-surface-container-high px-2 py-0.5 rounded">Seguimiento Aula</span>
+</div>
+<!-- Student 5 Luisanny -->
+<div class="flex items-center justify-between bg-surface-container-lowest p-2.5 rounded-lg shadow-sm">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center font-label-md text-primary font-bold">
+                      LC
+                    </div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Luisanny Cabrera Pérez</span>
+<span class="font-body-sm text-[12px] text-on-surface-variant">12.5% inasistencia • 5 faltas</span>
+</div>
+</div>
+<button class="h-8 px-2.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm hover:bg-surface-container transition-colors" type="button">
+                    Ver ficha
+                  </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN: Full Section Absenteeism Ranking Table (7 Cols) -->
+<div class="lg:col-span-7 bg-surface-container-lowest rounded-xl p-6 shadow-sm flex flex-col">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-primary font-bold">Sábana y Ranking de Inasistencia</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Ordenado de mayor a menor vulnerabilidad de reprobación</p>
+</div>
+<!-- Quick Search inside section -->
+<div class="relative w-full sm:w-64">
+<span class="material-symbols-outlined absolute left-3 top-3 text-outline text-[18px]">search</span>
+<input class="w-full h-10 pl-9 pr-3 text-body-sm bg-surface-container-low rounded-lg focus:outline-none focus:ring-1 focus:ring-secondary text-on-surface placeholder:text-outline" placeholder="Buscar por RNE o nombre..." type="text"/>
+</div>
+</div>
+<!-- Institutional High-Contrast Table View -->
+<div class="overflow-x-auto w-full">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-sm text-[12px] uppercase tracking-wider">
+<th class="py-3 px-3 rounded-l-lg text-center w-12 cursor-pointer hover:text-primary">Pos</th>
+<th class="py-3 px-3 cursor-pointer hover:text-primary">Estudiante / RNE</th>
+<th class="py-3 px-2 text-center w-12 font-bold text-error cursor-pointer title='Ausencias Injustificadas'">A</th>
+<th class="py-3 px-2 text-center w-12 font-bold text-amber-700 cursor-pointer title='Tardanzas'">T</th>
+<th class="py-3 px-2 text-center w-12 font-bold text-secondary cursor-pointer title='Excusas Médicas'">E</th>
+<th class="py-3 px-3 text-right cursor-pointer hover:text-primary">% Inasist.</th>
+<th class="py-3 px-3 w-32">Nivel Gráfico</th>
+<th class="py-3 px-3 rounded-r-lg text-right">Acción</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container text-body-sm">
+<!-- Row 1: Wander Peña Gómez (CRÍTICO > 20%) -->
+<tr class="bg-error-container/40 hover:bg-error-container/60 transition-colors">
+<td class="py-3.5 px-3 text-center font-bold text-error">
+<span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-error text-on-error text-[11px]">01</span>
+</td>
+<td class="py-3.5 px-3">
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-bold truncate">Wander Peña Gómez</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant font-mono">RNE: PGW-2010-09823</span>
+</div>
+</td>
+<td class="py-3.5 px-2 text-center font-bold text-error">11</td>
+<td class="py-3.5 px-2 text-center font-medium text-amber-800">3</td>
+<td class="py-3.5 px-2 text-center font-medium text-secondary">0</td>
+<td class="py-3.5 px-3 text-right font-headline-sm text-[16px] text-error font-bold">23.4%</td>
+<td class="py-3.5 px-3">
+<div class="w-full bg-surface-container-high rounded-full h-2 overflow-hidden">
+<div class="bg-error h-2 rounded-full" style="width: 85%"></div>
+</div>
+</td>
+<td class="py-3.5 px-3 text-right">
+<button class="h-9 px-3 rounded bg-primary-container text-on-primary hover:bg-primary text-label-sm font-semibold transition-colors inline-flex items-center gap-1" type="button">
+<span>Expediente</span>
+</button>
+</td>
+</tr>
+<!-- Row 2: Yeimi Rodríguez Martínez (CRÍTICO > 20%) -->
+<tr class="bg-error-container/40 hover:bg-error-container/60 transition-colors">
+<td class="py-3.5 px-3 text-center font-bold text-error">
+<span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-error text-on-error text-[11px]">02</span>
+</td>
+<td class="py-3.5 px-3">
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-bold truncate">Yeimi Rodríguez Martínez</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant font-mono">RNE: RMY-2010-10442</span>
+</div>
+</td>
+<td class="py-3.5 px-2 text-center font-bold text-error">10</td>
+<td class="py-3.5 px-2 text-center font-medium text-amber-800">1</td>
+<td class="py-3.5 px-2 text-center font-medium text-secondary">1</td>
+<td class="py-3.5 px-3 text-right font-headline-sm text-[16px] text-error font-bold">21.0%</td>
+<td class="py-3.5 px-3">
+<div class="w-full bg-surface-container-high rounded-full h-2 overflow-hidden">
+<div class="bg-error h-2 rounded-full" style="width: 78%"></div>
+</div>
+</td>
+<td class="py-3.5 px-3 text-right">
+<button class="h-9 px-3 rounded bg-primary-container text-on-primary hover:bg-primary text-label-sm font-semibold transition-colors inline-flex items-center gap-1" type="button">
+<span>Expediente</span>
+</button>
+</td>
+</tr>
+<!-- Row 3: Josué Familia Montero (ALERTA) -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-3.5 px-3 text-center font-bold text-on-surface-variant">03</td>
+<td class="py-3.5 px-3">
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-semibold truncate">Josué Familia Montero</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant font-mono">RNE: FMJ-2010-04312</span>
+</div>
+</td>
+<td class="py-3.5 px-2 text-center font-semibold text-error">8</td>
+<td class="py-3.5 px-2 text-center font-medium text-amber-800">2</td>
+<td class="py-3.5 px-2 text-center font-medium text-secondary">2</td>
+<td class="py-3.5 px-3 text-right font-headline-sm text-[16px] text-amber-800 font-bold">17.8%</td>
+<td class="py-3.5 px-3">
+<div class="w-full bg-surface-container-high rounded-full h-2 overflow-hidden">
+<div class="bg-amber-600 h-2 rounded-full" style="width: 65%"></div>
+</div>
+</td>
+<td class="py-3.5 px-3 text-right">
+<button class="h-9 px-3 rounded bg-surface-container-high text-on-surface hover:bg-surface-container text-label-sm font-semibold transition-colors" type="button">
+                      Expediente
+                    </button>
+</td>
+</tr>
+<!-- Row 4: Ariana Santana Beltre (ALERTA) -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-3.5 px-3 text-center font-bold text-on-surface-variant">04</td>
+<td class="py-3.5 px-3">
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-semibold truncate">Ariana Santana Beltre</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant font-mono">RNE: SBA-2010-08722</span>
+</div>
+</td>
+<td class="py-3.5 px-2 text-center font-semibold text-error">7</td>
+<td class="py-3.5 px-2 text-center font-medium text-amber-800">4</td>
+<td class="py-3.5 px-2 text-center font-medium text-secondary">3</td>
+<td class="py-3.5 px-3 text-right font-headline-sm text-[16px] text-amber-800 font-bold">16.2%</td>
+<td class="py-3.5 px-3">
+<div class="w-full bg-surface-container-high rounded-full h-2 overflow-hidden">
+<div class="bg-amber-600 h-2 rounded-full" style="width: 58%"></div>
+</div>
+</td>
+<td class="py-3.5 px-3 text-right">
+<button class="h-9 px-3 rounded bg-surface-container-high text-on-surface hover:bg-surface-container text-label-sm font-semibold transition-colors" type="button">
+                      Expediente
+                    </button>
+</td>
+</tr>
+<!-- Row 5: Kevin David Alcántara -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-3.5 px-3 text-center font-bold text-on-surface-variant">05</td>
+<td class="py-3.5 px-3">
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-semibold truncate">Kevin David Alcántara Cruz</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant font-mono">RNE: ACK-2010-12889</span>
+</div>
+</td>
+<td class="py-3.5 px-2 text-center font-semibold text-error">6</td>
+<td class="py-3.5 px-2 text-center font-medium text-amber-800">5</td>
+<td class="py-3.5 px-2 text-center font-medium text-secondary">1</td>
+<td class="py-3.5 px-3 text-right font-headline-sm text-[16px] text-amber-800 font-bold">15.5%</td>
+<td class="py-3.5 px-3">
+<div class="w-full bg-surface-container-high rounded-full h-2 overflow-hidden">
+<div class="bg-amber-600 h-2 rounded-full" style="width: 54%"></div>
+</div>
+</td>
+<td class="py-3.5 px-3 text-right">
+<button class="h-9 px-3 rounded bg-surface-container-high text-on-surface hover:bg-surface-container text-label-sm font-semibold transition-colors" type="button">
+                      Expediente
+                    </button>
+</td>
+</tr>
+<!-- Row 6: Luisanny Cabrera Pérez (OBSERVACIÓN) -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-3.5 px-3 text-center font-bold text-on-surface-variant">06</td>
+<td class="py-3.5 px-3">
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-semibold truncate">Luisanny Cabrera Pérez</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant font-mono">RNE: CPL-2010-09311</span>
+</div>
+</td>
+<td class="py-3.5 px-2 text-center font-semibold text-on-surface">5</td>
+<td class="py-3.5 px-2 text-center font-medium text-amber-800">1</td>
+<td class="py-3.5 px-2 text-center font-medium text-secondary">2</td>
+<td class="py-3.5 px-3 text-right font-headline-sm text-[16px] text-on-surface font-semibold">12.5%</td>
+<td class="py-3.5 px-3">
+<div class="w-full bg-surface-container-high rounded-full h-2 overflow-hidden">
+<div class="bg-secondary h-2 rounded-full" style="width: 44%"></div>
+</div>
+</td>
+<td class="py-3.5 px-3 text-right">
+<button class="h-9 px-3 rounded bg-surface-container-high text-on-surface hover:bg-surface-container text-label-sm font-semibold transition-colors" type="button">
+                      Expediente
+                    </button>
+</td>
+</tr>
+<!-- Row 7: Brayan De León Encarnación -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-3.5 px-3 text-center font-bold text-on-surface-variant">07</td>
+<td class="py-3.5 px-3">
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-semibold truncate">Brayan De León Encarnación</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant font-mono">RNE: DEB-2010-05041</span>
+</div>
+</td>
+<td class="py-3.5 px-2 text-center font-semibold text-on-surface">4</td>
+<td class="py-3.5 px-2 text-center font-medium text-amber-800">2</td>
+<td class="py-3.5 px-2 text-center font-medium text-secondary">4</td>
+<td class="py-3.5 px-3 text-right font-headline-sm text-[16px] text-on-surface font-semibold">10.0%</td>
+<td class="py-3.5 px-3">
+<div class="w-full bg-surface-container-high rounded-full h-2 overflow-hidden">
+<div class="bg-secondary h-2 rounded-full" style="width: 36%"></div>
+</div>
+</td>
+<td class="py-3.5 px-3 text-right">
+<button class="h-9 px-3 rounded bg-surface-container-high text-on-surface hover:bg-surface-container text-label-sm font-semibold transition-colors" type="button">
+                      Expediente
+                    </button>
+</td>
+</tr>
+<!-- Row 8: Melany Esther Pineda (ASISTENCIA SÓLIDA) -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-3.5 px-3 text-center font-bold text-on-surface-variant">08</td>
+<td class="py-3.5 px-3">
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-semibold truncate">Melany Esther Pineda</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant font-mono">RNE: PEM-2010-07739</span>
+</div>
+</td>
+<td class="py-3.5 px-2 text-center font-semibold text-on-surface">2</td>
+<td class="py-3.5 px-2 text-center font-medium text-on-surface-variant">0</td>
+<td class="py-3.5 px-2 text-center font-medium text-secondary">1</td>
+<td class="py-3.5 px-3 text-right font-headline-sm text-[16px] text-on-tertiary-container font-semibold">4.8%</td>
+<td class="py-3.5 px-3">
+<div class="w-full bg-surface-container-high rounded-full h-2 overflow-hidden">
+<div class="bg-on-tertiary-container h-2 rounded-full" style="width: 15%"></div>
+</div>
+</td>
+<td class="py-3.5 px-3 text-right">
+<button class="h-9 px-3 rounded bg-surface-container-high text-on-surface hover:bg-surface-container text-label-sm font-semibold transition-colors" type="button">
+                      Expediente
+                    </button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Pagination & Count Legend -->
+<div class="flex items-center justify-between pt-4 mt-auto">
+<span class="font-body-sm text-body-sm text-on-surface-variant">
+              Mostrando 8 de 28 estudiantes registrados en el período
+            </span>
+<div class="flex items-center gap-1">
+<button class="h-9 px-3 rounded bg-surface-container-high text-on-surface hover:bg-surface-container text-label-sm font-semibold transition-colors" type="button">
+                Anterior
+              </button>
+<button class="h-9 w-9 rounded bg-primary-container text-on-primary text-label-sm font-bold" type="button">
+                1
+              </button>
+<button class="h-9 w-9 rounded bg-surface-container-high text-on-surface hover:bg-surface-container text-label-sm font-semibold transition-colors" type="button">
+                2
+              </button>
+<button class="h-9 px-3 rounded bg-surface-container-high text-on-surface hover:bg-surface-container text-label-sm font-semibold transition-colors" type="button">
+                Siguiente
+              </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- INSTITUTIONAL PREVIEW MODAL / DRAWER (MINERD OFFICIAL DOCUMENT AUDIT) -->
+<div class="fixed inset-x-0 bottom-0 z-50 transform translate-y-full transition-transform duration-300 ease-in-out" id="institutionalPreviewDrawer">
+<!-- Backdrop Dimmer (click to close) -->
+<div class="fixed inset-0 -top-full bg-primary/40 -z-10 cursor-pointer" onclick="document.getElementById('institutionalPreviewDrawer').classList.add('translate-y-full')"></div>
+<!-- Drawer Content -->
+<div class="bg-surface-container-lowest rounded-t-2xl shadow-2xl max-w-6xl mx-auto border-t-4 border-secondary overflow-hidden max-h-[921px] flex flex-col">
+<!-- Header Banner institucional -->
+<div class="bg-primary-container text-on-primary p-5 flex flex-col md:flex-row md:items-center justify-between gap-4">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-lg bg-surface-container-lowest flex items-center justify-center p-1 shrink-0">
+<span class="material-symbols-outlined text-primary text-[32px]">school</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-[11px] bg-secondary px-2 py-0.5 rounded text-on-secondary font-bold tracking-wider uppercase">Documento Oficial MINERD</span>
+<span class="font-label-sm text-[12px] text-on-primary-container">Folio Electrónico: #RPT-2026-1503-4B</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-primary font-bold">
+                Centro Educativo: Liceo Secundario Unión Panamericana
+              </h3>
+<p class="font-body-sm text-[13px] text-on-primary-container">
+                Distrito Educativo 15-03 Santo Domingo Centro | Docente Responsable: Prof. Altagracia Rosario
+              </p>
+</div>
+</div>
+<div class="flex items-center gap-3 self-end md:self-center">
+<button class="h-10 px-4 rounded bg-surface-container-lowest text-primary font-label-md text-label-md font-bold hover:bg-surface-container transition-colors flex items-center gap-2 shadow-sm" onclick="window.print()" type="button">
+<span class="material-symbols-outlined text-[18px]">print</span>
+<span>Imprimir Certificado</span>
+</button>
+<button class="w-10 h-10 rounded bg-primary text-on-primary hover:bg-primary-container flex items-center justify-center transition-colors" onclick="document.getElementById('institutionalPreviewDrawer').classList.add('translate-y-full')" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+</div>
+<!-- Document Preview Sheet (Emulating Official Ledger Paper) -->
+<div class="p-8 overflow-y-auto bg-surface space-y-6">
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm border border-surface-container-high">
+<div class="text-center pb-4 border-b border-surface-container-high mb-6">
+<span class="font-label-sm text-[12px] uppercase font-bold text-on-surface-variant tracking-widest block">Ministerio de Educación de la República Dominicana (MINERD)</span>
+<h4 class="font-headline-lg text-headline-lg text-primary font-bold">Sábana Oficial de Asistencia del Período</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Año Lectivo 2026-2027 • 4to Grado de Secundaria Modalidad General, Sección B</p>
+</div>
+<!-- Ledger Meta Grid -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 p-4 bg-surface-container-low rounded-lg font-body-sm text-body-sm mb-6">
+<div>
+<span class="font-label-sm text-[11px] uppercase text-outline block font-bold">Matrícula Total</span>
+<span class="font-bold text-on-surface text-[15px]">28 Estudiantes</span>
+</div>
+<div>
+<span class="font-label-sm text-[11px] uppercase text-outline block font-bold">Total Días Lectivos</span>
+<span class="font-bold text-on-surface text-[15px]">22 Días</span>
+</div>
+<div>
+<span class="font-label-sm text-[11px] uppercase text-outline block font-bold">Tasa Asistencia Global</span>
+<span class="font-bold text-amber-800 text-[15px]">83.2% (Crítica)</span>
+</div>
+<div>
+<span class="font-label-sm text-[11px] uppercase text-outline block font-bold">Estudiantes en Riesgo</span>
+<span class="font-bold text-error text-[15px]">5 Casos Notificados</span>
+</div>
+</div>
+<!-- Signatures and Stamp Block (Firma y Sello Digital) -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-6 border-t border-surface-container-high">
+<!-- Docente -->
+<div class="flex flex-col items-center text-center p-4 bg-surface-container-low/50 rounded-lg">
+<div class="w-32 h-12 border-b-2 border-primary border-dashed flex items-center justify-center text-secondary font-headline-sm italic">
+                  A. Rosario
+                </div>
+<span class="font-label-md text-label-md font-bold text-on-surface mt-2">Prof. Altagracia Rosario</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">Docente Titular de Asignatura</span>
+<span class="font-body-sm text-[10px] text-outline mt-1 font-mono">Firma verificada: 29-OCT-2026 14:32</span>
+</div>
+<!-- Dirección / Coordinación -->
+<div class="flex flex-col items-center text-center p-4 bg-surface-container-low/50 rounded-lg">
+<div class="w-32 h-12 border-b-2 border-outline border-dashed flex items-center justify-center text-outline font-label-sm italic">
+                  Pendiente de rúbrica
+                </div>
+<span class="font-label-md text-label-md font-bold text-on-surface mt-2">Lic. Manuel Henríquez</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">Coordinador Pedagógico Liceo</span>
+<span class="font-body-sm text-[10px] text-outline mt-1">Plazo de validación: 31-OCT-2026</span>
+</div>
+<!-- Sello Digital MINERD -->
+<div class="flex flex-col items-center justify-center p-4 bg-surface-container-low/50 rounded-lg relative overflow-hidden">
+<div class="w-20 h-20 rounded-full border-2 border-secondary border-dashed flex flex-col items-center justify-center text-secondary p-1 text-center">
+<span class="material-symbols-outlined text-[20px]">verified_user</span>
+<span class="font-label-sm text-[8px] font-bold tracking-tight uppercase">MINERD 15-03 REGISTRO</span>
+<span class="font-mono text-[7px]">OCT 2026</span>
+</div>
+<span class="font-label-sm text-[11px] font-bold text-secondary mt-2">Sello Criptográfico Válido</span>
+<span class="font-body-sm text-[9px] text-outline font-mono">SHA-256: 8f2a...c019</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer Actions within Drawer -->
+<div class="bg-surface-container-lowest px-6 py-4 border-t border-surface-container-high flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-on-surface-variant">
+            Al imprimir este documento, se emitirá una copia foliada para el expediente del centro.
+          </span>
+<button class="h-10 px-5 rounded bg-primary-container text-on-primary font-label-md text-label-md font-semibold hover:bg-primary transition-colors" onclick="document.getElementById('institutionalPreviewDrawer').classList.add('translate-y-full')" type="button">
+            Cerrar Vista Previa
+          </button>
+</div>
+</div>
+</div>
+</div>
+</div></main></div></body></html>

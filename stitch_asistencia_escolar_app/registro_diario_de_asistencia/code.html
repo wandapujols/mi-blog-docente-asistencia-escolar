@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,600;0,7..72,700;1,7..72,600&amp;family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-surface": "#191c1e", "on-error": "#ffffff", "on-secondary": "#ffffff", "primary-fixed-dim": "#b6c6f1", "on-primary-fixed": "#081a3c", "error": "#ba1a1a", "surface-container-high": "#e7e8eb", "secondary-container": "#81c4ff", "surface-container-low": "#f2f4f6", "on-error-container": "#93000a", "on-secondary-fixed": "#001d32", "on-tertiary-fixed-variant": "#005236", "error-container": "#ffdad6", "tertiary-container": "#002718", "on-primary-container": "#7988b0", "tertiary-fixed": "#80f9c0", "on-background": "#191c1e", "surface-variant": "#e1e2e5", "outline-variant": "#c5c6cf", "surface-dim": "#d8dadd", "inverse-primary": "#b6c6f1", "primary-container": "#0f2042", "on-tertiary-container": "#009c6b", "secondary-fixed-dim": "#94ccff", "tertiary": "#000d06", "surface-container-highest": "#e1e2e5", "on-tertiary": "#ffffff", "on-secondary-container": "#00517e", "surface-bright": "#f8f9fc", "tertiary-fixed-dim": "#62dca6", "inverse-on-surface": "#eff1f3", "surface-container-lowest": "#ffffff", "primary": "#000922", "secondary-fixed": "#cde5ff", "surface-container": "#eceef0", "outline": "#75777f", "secondary": "#016398", "surface": "#f8f9fc", "on-primary": "#ffffff", "surface-tint": "#4f5e83", "on-tertiary-fixed": "#002113", "primary-fixed": "d9e2ff", "on-surface-variant": "#45464e", "inverse-surface": "#2e3133", "on-secondary-fixed-variant": "#004b74", "on-primary-fixed-variant": "#37466a", "background": "#f8f9fc" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "space-xs": "0.25rem", "space-lg": "1.5rem", "space-sm": "0.5rem", "space-xl": "2rem", "margin-desktop": "2rem", "margin": "1rem", "gutter": "1rem", "gutter-desktop": "1.5rem", "space-md": "1rem" }, "fontFamily": { "headline-xl": [ "Literata" ], "label-sm": [ "\"Source Sans 3\"" ], "label-md": [ "\"Source Sans 3\"" ], "label-lg": [ "\"Source Sans 3\"" ], "headline-sm": [ "Literata" ], "body-sm": [ "\"Source Sans 3\"" ], "headline-lg": [ "Literata" ], "body-lg": [ "\"Source Sans 3\"" ], "headline-xl-mobile": [ "Literata" ], "body-md": [ "\"Source Sans 3\"" ], "headline-md": [ "Literata" ], "data-metric": [ "Literata" ] }, "fontSize": { "headline-xl": [ "32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "label-sm": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "700" } ], "label-md": [ "14px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "600" } ], "label-lg": [ "16px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" } ], "headline-sm": [ "18px", { "lineHeight": "24px", "fontWeight": "600" } ], "body-sm": [ "14px", { "lineHeight": "20px", "fontWeight": "400" } ], "headline-lg": [ "24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "body-lg": [ "18px", { "lineHeight": "26px", "fontWeight": "400" } ], "headline-xl-mobile": [ "26px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "700" } ], "body-md": [ "16px", { "lineHeight": "24px", "fontWeight": "400" } ], "headline-md": [ "20px", { "lineHeight": "28px", "fontWeight": "600" } ], "data-metric": [ "28px", { "lineHeight": "32px", "fontWeight": "700" } ] } } } };</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-screen w-60 bg-primary-container text-on-primary z-50 flex flex-col justify-between select-none border-r border-outline-variant"><div class="flex flex-col"><div class="h-16 px-space-md flex items-center gap-space-sm border-b border-on-surface-variant"><img alt="Logo Asistencia Escolar" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WkWcu8W10U63iXYrDP661lDIPK-p3cMoyA7KvRQHsknA4cHhkmABrBsFJQKzpVFT7bjUd2_lg4IJR-3053lbHMzMPo3Fp2S4lrsmMpn-nuIFOt1iZ6RCd1pFzxoFzl8Jxat636m4GrT_D0J3LWcM1HIWExCxMHfqD5WqKZ4hal8F6vR8yTUWHtSOCmLEhMd1REmUH2BkP1pjH4WmW2dp3koU-rC84wnDyS2-BbY5A"/><div class="flex flex-col min-w-0"><span class="font-headline-sm text-headline-sm text-on-primary tracking-tight truncate leading-none">Asistencia</span><span class="font-label-sm text-label-sm text-on-primary-container tracking-wider uppercase mt-0.5 truncate">Rep. Dominicana</span></div></div><nav class="flex flex-col gap-space-xs p-space-sm" data-active-classes="bg-secondary text-on-secondary font-label-md"><a class="flex items-center gap-space-sm px-space-md h-12 rounded-lg text-on-primary-container hover:bg-on-primary-container/20 hover:text-on-primary transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">dashboard</span><span class="font-label-md text-label-md">Inicio</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-md h-12 rounded-lg transition-colors bg-secondary text-on-secondary font-label-md" data-path="registrar-asistencia" href="#"><span class="material-symbols-outlined text-[20px]">how_to_reg</span><span class="font-label-md text-label-md">Registrar asistencia</span></a><a class="flex items-center gap-space-sm px-space-md h-12 rounded-lg text-on-primary-container hover:bg-on-primary-container/20 hover:text-on-primary transition-colors" data-path="estudiantes-historial" href="#"><span class="material-symbols-outlined text-[20px]">groups</span><span class="font-label-md text-label-md">Estudiantes</span></a><a class="flex items-center gap-space-sm px-space-md h-12 rounded-lg text-on-primary-container hover:bg-on-primary-container/20 hover:text-on-primary transition-colors" data-path="reportes" href="#"><span class="material-symbols-outlined text-[20px]">assessment</span><span class="font-label-md text-label-md">Reportes</span></a><a class="flex items-center gap-space-sm px-space-md h-12 rounded-lg text-on-primary-container hover:bg-on-primary-container/20 hover:text-on-primary transition-colors" data-path="excusas" href="#"><span class="material-symbols-outlined text-[20px]">assignment_turned_in</span><span class="font-label-md text-label-md">Excusas</span></a></nav></div><div class="p-space-sm border-t border-on-surface-variant bg-primary-container"><div class="flex items-center justify-between p-space-xs"><div class="flex items-center gap-space-sm min-w-0 mr-space-xs"><img alt="Profile" class="w-8 h-8 rounded-full object-cover shrink-0 border border-outline-variant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfDhQ4E4YTfeiEI50awEpB-B-_Nia084KMbelNXWjiFMBN-DwEK3gcsHxihOTaYNc6-TovK0WNxlMQin_iJoUbAPALwzCBPNzs1oQJXAUx7sFiLDO7FoxVB2rk6k3wCB1obCaG2MvSXqAut3wb0y4v188LH0qLhACF8ZBdcJh2oQw2JlQ_qTsvRrw6XAsRS7SZvxI9krlKI72-C-TsbEk825pFymVD4DlQm_IvZbA"/><div class="flex flex-col min-w-0"><span class="font-label-md text-label-md text-on-primary truncate">Prof. Altagracia Rosario</span><span class="font-body-sm text-[11px] text-on-primary-container truncate leading-tight">Liceo Sec. Unión Panamericana (Distrito 15-03)</span></div></div><button class="w-12 h-12 shrink-0 flex items-center justify-center rounded-lg text-on-primary-container hover:bg-on-primary-container/20 hover:text-on-primary transition-colors" title="Ajustes y Salida" type="button"><span class="material-symbols-outlined text-[20px]">logout</span></button></div></div></aside><div class="pl-60"><header class="fixed top-0 left-60 right-0 h-16 bg-surface-container-lowest border-b border-outline-variant z-40 flex items-center justify-between px-gutter-desktop"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs h-12 px-space-md bg-surface-container-low border border-outline-variant rounded-lg cursor-pointer hover:bg-surface-container transition-colors"><span class="material-symbols-outlined text-secondary text-[20px]">calendar_today</span><span class="font-label-md text-label-md text-on-surface">Jueves, 29 de octubre de 2026</span><span class="material-symbols-outlined text-outline text-[18px]">arrow_drop_down</span></div></div><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-xs px-space-md py-1 bg-secondary-fixed text-on-secondary-fixed border border-secondary/30 rounded-full"><span class="material-symbols-outlined text-secondary text-[16px]">school</span><span class="font-label-sm text-label-sm font-semibold">2do Período Lectivo 2026-2027</span></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs px-space-md py-1 bg-surface-container-low border border-outline-variant rounded-full"><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-on-tertiary-container opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-on-tertiary-container"></span></span><span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Guardado y sincronizado</span></div><button class="flex items-center gap-space-xs h-12 px-space-sm text-outline hover:text-on-surface transition-colors" title="Modo fuera de línea" type="button"><span class="material-symbols-outlined text-[20px]">cloud_done</span><span class="font-label-sm text-label-sm uppercase tracking-wider">En Línea</span></button></div></div></header><main class="w-full pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<div class="p-space-lg max-w-[1440px] w-full mx-auto flex flex-col gap-space-lg">
+<!-- Top Configuration & Fast-Action Header -->
+<header class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col gap-space-md relative overflow-hidden">
+<!-- Ambient decorative gradient line -->
+<div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-secondary via-on-tertiary-container to-secondary-container"></div>
+<!-- Top Row: Selectors & Dynamic Progress -->
+<div class="flex flex-wrap items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md flex-wrap">
+<!-- Grado y Sección Trigger -->
+<button class="group flex items-center gap-space-sm bg-surface-container-low hover:bg-surface-container transition-colors px-space-md py-2.5 rounded-lg text-left" id="btn-section-modal" type="button">
+<span class="material-symbols-outlined text-secondary text-[22px]">auto_stories</span>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-headline-sm text-primary group-hover:text-secondary transition-colors">3ro A – Matemática</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-normal">25 estudiantes inscritos · Período 2</span>
+</div>
+<span class="material-symbols-outlined text-outline ml-space-xs text-[20px]">expand_more</span>
+</button>
+<!-- Horario y Bloque -->
+<div class="flex items-center gap-space-xs px-space-md py-2.5 bg-surface-container-low rounded-lg text-on-surface">
+<span class="material-symbols-outlined text-outline text-[20px]">schedule</span>
+<span class="font-label-md text-label-md text-on-surface">Jueves, 29 de octubre de 2026 · 1ra Hora (8:00 AM)</span>
+</div>
+</div>
+<!-- Live Dynamic Roll-Call Status -->
+<div class="flex items-center gap-space-md bg-surface-container-low px-space-lg py-2.5 rounded-lg">
+<div class="flex flex-col items-end">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-data-metric text-data-metric text-primary" id="counter-done">18</span>
+<span class="font-label-md text-label-md text-on-surface-variant">de 25 marcados</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-secondary-fixed-variant font-semibold">7 pendientes de confirmación</span>
+</div>
+<div class="relative w-11 h-11 flex items-center justify-center">
+<svg class="w-11 h-11 transform -rotate-90" viewbox="0 0 36 36">
+<path class="text-surface-container-highest" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3.5"></path>
+<path class="text-on-tertiary-container" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="72, 100" stroke-linecap="round" stroke-width="3.5"></path>
+</svg>
+<span class="absolute font-label-sm text-[11px] font-bold text-on-tertiary-container">72%</span>
+</div>
+</div>
+</div>
+<!-- Quick-Action Operations Strip -->
+<div class="flex flex-wrap items-center justify-between gap-space-md pt-space-xs">
+<div class="flex items-center gap-space-md flex-1 min-w-[320px]">
+<!-- Instant Roll-Call 1-Click Action -->
+<button class="h-12 px-space-lg bg-on-tertiary-container hover:bg-tertiary-container text-on-tertiary font-label-md text-label-md rounded-lg flex items-center gap-space-sm shadow-sm transition-all transform active:scale-95 shrink-0" id="btn-mark-all-present" type="button">
+<span class="material-symbols-outlined text-[22px]">done_all</span>
+<span>Marcar todos presentes (P)</span>
+</button>
+<!-- Search Input -->
+<div class="relative flex-1 min-w-[240px]">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[20px]">search</span>
+<input class="w-full h-12 pl-10 pr-space-md bg-surface-container-low focus:bg-surface-container-lowest text-on-surface placeholder:text-outline text-label-md font-label-md rounded-lg outline-none transition-colors" placeholder="Buscar estudiante por nombre o número de lista..." type="text"/>
+</div>
+</div>
+<!-- Filters & Photo Display Toggle -->
+<div class="flex items-center gap-space-md shrink-0">
+<label class="flex items-center gap-space-xs cursor-pointer select-none px-space-sm py-2">
+<input checked="" class="sr-only peer" id="toggle-photos" type="checkbox"/>
+<div class="w-9 h-5 bg-surface-container-high peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-surface-container-lowest after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-secondary"></div>
+<span class="font-label-md text-label-md text-on-surface">Mostrar fotos</span>
+</label>
+<div class="flex items-center gap-space-xs bg-surface-container-low p-1 rounded-lg">
+<button class="filter-pill px-space-md py-1.5 rounded bg-surface-container-lowest text-primary font-label-md text-label-md shadow-sm" type="button">Todos (25)</button>
+<button class="filter-pill px-space-md py-1.5 rounded hover:bg-surface-container text-on-surface-variant font-label-md text-label-md transition-colors" type="button">Pendientes (7)</button>
+<button class="filter-pill px-space-md py-1.5 rounded hover:bg-surface-container text-on-surface-variant font-label-md text-label-md transition-colors" type="button">Ausentes (2)</button>
+<button class="filter-pill px-space-md py-1.5 rounded hover:bg-surface-container text-error font-label-md text-label-md transition-colors" type="button">Con alerta &gt;20% (2)</button>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Two-Column Interactive Canvas -->
+<div class="grid grid-cols-12 gap-space-lg items-start">
+<!-- LEFT COLUMN: Roster Attendance Matrix (65% / col-span-8) -->
+<section class="col-span-12 lg:col-span-8 flex flex-col gap-space-sm">
+<!-- Legend & Speed Instructions Bar -->
+<div class="flex items-center justify-between px-space-md py-2 bg-surface-container-low rounded-lg text-on-surface-variant font-label-sm text-label-sm">
+<div class="flex items-center gap-space-sm">
+<span class="font-bold uppercase tracking-wider text-outline">Atajos:</span>
+<span>Usa 1 toque para registrar excepciones tras confirmar bloque.</span>
+</div>
+<div class="flex items-center gap-space-md">
+<span class="inline-flex items-center gap-1"><span class="w-2.5 h-2.5 rounded-full bg-on-tertiary-container"></span> Presente (P)</span>
+<span class="inline-flex items-center gap-1"><span class="w-2.5 h-2.5 rounded-full bg-error"></span> Ausente (A)</span>
+<span class="inline-flex items-center gap-1"><span class="w-2.5 h-2.5 rounded-full bg-on-secondary-container"></span> Tardanza (T)</span>
+<span class="inline-flex items-center gap-1"><span class="w-2.5 h-2.5 rounded-full bg-secondary"></span> Excusa (E)</span>
+</div>
+</div>
+<!-- Student Roster List -->
+<div class="flex flex-col gap-space-xs" id="students-container">
+<!-- Estudiante 01: Presente -->
+<article class="student-row group bg-surface-container-lowest hover:bg-surface-container-lowest/80 p-space-md rounded-xl shadow-sm flex items-center justify-between min-h-[68px] transition-colors" data-id="1">
+<div class="flex items-center gap-space-md min-w-0">
+<span class="font-data-metric text-headline-sm text-outline-variant w-8 text-center shrink-0">01</span>
+<img class="student-photo w-11 h-11 rounded-full object-cover shrink-0 shadow-sm" data-alt="Close up student portrait photography of an Afro-Latina high school girl named Luisanny wearing a white Dominican public school collared uniform polo against clean light classroom background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsceAuWkKEm99O9DbNhqeqXOfIv8kREgrkPvTZn5h8kF4jIIe6HRL4czs-EjeDsA-jgENP4XQrEz47R0k-oTH8yzbOr7BFp6wtVIIrPDMSJyIXCGONaha0qPNmawlQFjI2vmBIqtDfMW4IThOo4fJIxwlWYirfR7aEDWKpS9lEJs1LxSkMYUJvbhzAjNH1mlRR2FpUCfPHc4dHh8YA-sNXPd8XSDSvWGZ9a5uWBfs"/>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg text-on-surface font-bold truncate">Cabrera Rosario, Luisanny</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">RNE: CABL-091012-004 · 96% asist. general</span>
+</div>
+</div>
+<!-- Touch Selectors Matrix 48x48px each -->
+<div aria-label="Estado de asistencia" class="flex items-center gap-space-xs shrink-0" role="group">
+<button class="btn-att w-12 h-12 rounded-lg font-label-lg text-label-lg font-bold flex items-center justify-center transition-all bg-on-tertiary-container text-on-tertiary shadow-sm" data-state="P" type="button">P</button>
+<button class="btn-att w-12 h-12 rounded-lg font-label-lg text-label-lg font-bold flex items-center justify-center transition-all bg-surface-container-low text-on-surface-variant hover:bg-surface-container-high" data-state="A" type="button">A</button>
+<button class="btn-att w-12 h-12 rounded-lg font-label-lg text-label-lg font-bold flex items-center justify-center transition-all bg-surface-container-low text-on-surface-variant hover:bg-surface-container-high" data-state="T" type="button">T</button>
+<button class="btn-att w-12 h-12 rounded-lg font-label-lg text-label-lg font-bold flex items-center justify-center transition-all bg-surface-container-low text-on-surface-variant hover:bg-surface-container-high" data-state="E" type="button">E</button>
+</div>
+</article>
+<!-- Estudiante 02: Presente -->
+<article class="student-row group bg-surface-container-lowest hover:bg-surface-container-lowest/80 p-space-md rounded-xl shadow-sm flex items-center justify-between min-h-[68px] transition-colors" data-id="2">
+<div class="flex items-center gap-space-md min-w-0">
+<span class="font-data-metric text-headline-sm text-outline-variant w-8 text-center shrink-0">02</span>
+<img class="student-photo w-11 h-11 rounded-full object-cover shrink-0 shadow-sm" data-alt="Portrait photography of Josue, a young Dominican high school male student smiling gently in turquoise school uniform shirt, bright lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCC9Fy6Bfu6ozg9HmNbXLUHXXF-w9PHaQcRW7jNufzQG8iBle1gRP0R_TLQO8rmeNxwImTUGaRdxnpKgzde02ka07I-W1n-0uHYhJCY45GvpTky7Au3MM8cUExF9DgMTHlDC336g_8lmjZx12uUROmQ1jZ7HzlLmpOCTI23MykNibUuVHY6XxYqnsfqgyv0gYyWyunsaiQGM4UVC6ES3u2ClV2UDoD4K_Fo0mH7ZVw"/>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg text-on-surface font-bold truncate">Familia Montero, Josué</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">RNE: FAMJ-080315-001 · 92% asist. general</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs shrink-0" role="group">
+<button class="btn-att w-12 h-12 rounded-lg font-label-lg text-label-lg font-bold flex items-center justify-center transition-all bg-on-tertiary-container text-on-tertiary shadow-sm" data-state="P" type="button">P</button>
+<button class="btn-att w-12 h-12 rounded-lg font-label-lg text-label-lg font-bold flex items-center justify-center transition-all bg-surface-container-low text-on-surface-variant hover:bg-surface-container-high" data-state="A" type="button">A</button>
+<button class="btn-att w-12 h-12 rounded-lg font-label-lg text-label-lg font-bold flex items-center justify-center transition-all bg-surface-container-low text-on-surface-variant hover:bg-surface-container-high" data-state="T" type="button">T</button>
+<button class="btn-att w-12 h-12 rounded-lg font-label-lg text-label-lg font-bold flex items-center justify-center transition-all bg-surface-container-low text-on-surface-variant hover:bg-surface-container-high" data-state="E" type="button">E</button>
+</div>
+</article>
+<!-- Estudiante 03: Ausente con Alerta de Riesgo >20% -->
+<article class="student-row group bg-surface-container-lowest hover:bg-surface-container-lowest/80 p-space-md rounded-xl shadow-sm flex items-center justify-between min-h-[68px] transition-colors" data-id="3">
+<div class="flex items-center gap-space-md min-w-0">
+<span class="font-data-metric text-headline-sm text-outline-variant w-8 text-center shrink-0">03</span>
+<img class="student-photo w-11 h-11 rounded-full object-cover shrink-0 shadow-sm" data-alt="Headshot of Wander, a teenage student from Santo Domingo wearing school uniform against academic soft focus background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0kbQnLZZXb1ZcQCzN4Vbfgsh-PV1Sgc8-0clrgNxpsmN5Ut0NCFkI3B4Mbgh-IHgVs4U7UULmefPl_x7HlKIIvIDhboSA5aiIHTE4Cqg5HiycMAX8ebf9r47XoqS7VnFqO0W3zC10MLxjNkGlbNZjjrBehuqpctna1yKUXd22WNFGALWSjiHjrL0GcqJLjgszrLQwnrRSF8k9PdFYX6DXWiebSYxpobvEswtl8II"/>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="font-label-lg text-label-lg text-on-surface font-bold truncate">Peña Gómez, Wander</span>
+<!-- Cumulative Risk Pill Badge -->
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[14px]">warning</span>
+                    Alerta 22% inasistencia acumulada
+                  </span>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="font-body-sm text-body-sm text-on-surface-variant">RNE: PENG-090220-008</span>
+<a class="inline-flex items-center gap-0.5 text-secondary hover:underline font-label-sm text-label-sm font-semibold" href="#">
+                    Registrar excusa médica
+                    <span class="material-symbols-outlined text-[14px]">north_east</span>
+</a>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-xs shrink-0" role="group">
+<button class="btn-att w-12 h-12 rounded-lg font-label-lg text-label-lg font-bold flex items-center justify-center transition-all bg-surface-container-low text-on-surface-variant hover:bg-surface-container-high" data-state="P" type="button">P</button>
+<button class="btn-att w-12 h-12 rounded-lg font-label-lg text-label-lg font-bold flex items-center justify-center transition-all bg-error text-on-error shadow-sm" data-state="A" type="button">A</button>
+<button class="btn-att w-12 h-12 rounded-lg font-label-lg text-label-lg font-bold flex items-center justify-center transition-all bg-surface-container-low text-on-surface-variant hover:bg-surface-container-high" data-state="T" type="button">T</button>
+<button class="btn-att w-12 h-12 rounded-lg font-label-lg text-label-lg font-bold flex items-center justify-center transition-all bg-surface-container-low text-on-surface-variant hover:bg-surface-container-high" data-state="E" type="button">E</button>
+</div>
+</article>
+<!-- Estudiante 04: Tardanza con sello de hora -->
+<article class="student-row group bg-surface-container-lowest hover:bg-surface-container-lowest/80 p-space-md rounded-xl shadow-sm flex items-center justify-between min-h-[68px] transition-colors" data-id="4">
+<div class="flex items-center gap-space-md min-w-0">
+<span class="font-data-metric text-headline-sm text-outline-variant w-8 text-center shrink-0">04</span>
+<img class="student-photo w-11 h-11 rounded-full object-cover shrink-0 shadow-sm" data-alt="Portrait photography of Yeimi, female Dominican high school student with braided hair in navy blue school blazer and tie" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYaRfDPdS0desb1GVdBAptXrGSTHEZ0GkRstZuYsulvfDI3s-q_aqIf7l0cscY501ozgqcS6kmKu608s8jR4m3oQbI9D9rP8qC1hZwuMv804Y7xESYr0ix-7oGVJYktIUdn5vg7F2ngLf7ZMPxSmUhS4X2vebvWWeQCLZg12ErwWCCI0hzbBZliTJWy9YJn8Nf8wcyXtzA72zW1nRqPU2x2Ge5dAWzoslCPJOwPfg"/>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-sm">
+<span class="font-label-lg text-label-lg text-on-surface font-bold truncate">Rodríguez Martínez, Yeimi</span>
+<!-- Inline Time Tag -->
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[13px] text-outline">alarm</span>
+                    Hora: 8:14 AM
+                  </span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">RNE: RODM-090903-002 · 88% asist. general</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs shrink-0" role="group">
+<button class="btn-att w-12 h-12 rounded-lg font-label-lg text-label-lg font-bold flex items-center justify-center transition-all bg-surface-container-low text-on-surface-variant hover:bg-surface-container-high" data-state="P" type="button">P</button>
+<button class="btn-att w-12 h-12 rounded-lg font-label-lg text-label-lg font-bold flex items-center justify-center transition-all bg-surface-container-low text-on-surface-variant hover:bg-surface-container-high" data-state="A" type="button">A</button>
+<button class="btn-att w-12 h-12 rounded-lg font-label-lg text-label-lg font-bold flex items-center justify-center transition-all bg-secondary text-on-secondary shadow-sm" data-state="T" type="button">T</button>
+<button class="btn-att w-12 h-12 rounded-lg font-label-lg text-label-lg font-bold flex items-center justify-center transition-all bg-surface-container-low text-on-surface-variant hover:bg-surface-container-high" data-state="E" type="button">E</button>
+</div>
+</article>
+<!-- Estudiante 05: Presente con Alerta Crítica >20% -->
+<article class="student-row group bg-surface-container-lowest hover:bg-surface-container-lowest/80 p-space-md rounded-xl shadow-sm flex items-center justify-between min-h-[68px] transition-colors" data-id="5">
+<div class="flex items-center gap-space-md min-w-0">
+<span class="font-data-metric text-headline-sm text-outline-variant w-8 text-center shrink-0">05</span>
+<img class="student-photo w-11 h-11 rounded-full object-cover shrink-0 shadow-sm" data-alt="Portrait photography of Ariana, Latina high school girl with eyeglasses in Dominican public school uniform, bright natural morning daylight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZcGXJFnVUj9Hyur5ub4P048mUHa1ybdKJrKJc3oa2xM4i685mhswu8ZQB0IyF9Eandr70zPxmfs9pC03MeXTLdqPHy92eX0mBXSg1KNkIFK7Y8Nbk5MAH7L6TZZ7AQj7Uil8JNN6CZuFwklNGBG99ePQz4fNOxRrq5wYVj67Wih20Ck9ZgP9hmPhMmSogByJpWGVHx7NocducjWEEn9yxsq_Nsy94NGOLggLxkOE"/>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="font-label-lg text-label-lg text-on-surface font-bold truncate">Santana Polanco, Ariana</span>
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[14px]">warning</span>
+                    Alerta 24% inasistencia acumulada
+                  </span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">RNE: SANP-090611-009 · Orientación notificada</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs shrink-0" role="group">
+<button class="btn-att w-12 h-12 rounded-lg font-label-lg text-label-lg font-bold flex items-center justify-center transition-all bg-on-tertiary-container text-on-tertiary shadow-sm" data-state="P" type="button">P</button>
+<button class="btn-att w-12 h-12 rounded-lg font-label-lg text-label-lg font-bold flex items-center justify-center transition-all bg-surface-container-low text-on-surface-variant hover:bg-surface-container-high" data-state="A" type="button">A</button>
+<button class="btn-att w-12 h-12 rounded-lg font-label-lg text-label-lg font-bold flex items-center justify-center transition-all bg-surface-container-low text-on-surface-variant hover:bg-surface-container-high" data-state="T" type="button">T</button>
+<button class="btn-att w-12 h-12 rounded-lg font-label-lg text-label-lg font-bold flex items-center justify-center transition-all bg-surface-container-low text-on-surface-variant hover:bg-surface-container-high" data-state="E" type="button">E</button>
+</div>
+</article>
+<!-- Estudiante 06: PENDIENTE (Sin estado seleccionado, con borde ámbar indicativo) -->
+<article class="student-row group bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-center justify-between min-h-[68px] relative ring-2 ring-dashed ring-on-secondary-fixed-variant" data-id="6">
+<div class="flex items-center gap-space-md min-w-0">
+<span class="font-data-metric text-headline-sm text-on-secondary-fixed-variant w-8 text-center shrink-0">06</span>
+<img class="student-photo w-11 h-11 rounded-full object-cover shrink-0 shadow-sm" data-alt="Portrait photography of Marcos, handsome young Dominican teenager in white student shirt in high school classroom setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDct1rGDK8Sel99czcUqhq4lYgs_v5PNVVKiCoIAED5NygO7VHNmHeAe75xcg02HIB5wTt5A_zB4ZkkUWF5LNlSigTgdo33EUqaCIWrhCiZ98oDfxO2Bf4hFeHJt91aTHOUOPasK273qbaDG5wegI_VgPi9Aguq3VJ4ObtpnV0rDC6Dh82RIxJU1LyeNwj_2q9mfSxefci_6SLQz_P2s__wV6NGzJyE26HCsCsWJSo"/>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-sm">
+<span class="font-label-lg text-label-lg text-on-surface font-bold truncate">De León Báez, Marcos</span>
+<span class="inline-flex items-center px-2 py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-bold">Pendiente de marcar</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">RNE: DELM-090124-005 · 94% asist. general</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs shrink-0" role="group">
+<button class="btn-att w-12 h-12 rounded-lg font-label-lg text-label-lg font-bold flex items-center justify-center transition-all bg-surface-container-low text-on-surface-variant hover:bg-surface-container-high" data-state="P" type="button">P</button>
+<button class="btn-att w-12 h-12 rounded-lg font-label-lg text-label-lg font-bold flex items-center justify-center transition-all bg-surface-container-low text-on-surface-variant hover:bg-surface-container-high" data-state="A" type="button">A</button>
+<button class="btn-att w-12 h-12 rounded-lg font-label-lg text-label-lg font-bold flex items-center justify-center transition-all bg-surface-container-low text-on-surface-variant hover:bg-surface-container-high" data-state="T" type="button">T</button>
+<button class="btn-att w-12 h-12 rounded-lg font-label-lg text-label-lg font-bold flex items-center justify-center transition-all bg-surface-container-low text-on-surface-variant hover:bg-surface-container-high" data-state="E" type="button">E</button>
+</div>
+</article>
+</div>
+</section>
+<!-- RIGHT COLUMN: Sticky Live Summary, Insights & Instant Action Panel (35% / col-span-4) -->
+<aside class="col-span-12 lg:col-span-4 flex flex-col gap-space-md sticky top-20">
+<!-- Live Counters Card -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-primary">Balance de la Sesión</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Conteo en tiempo real</span>
+</div>
+<span class="material-symbols-outlined text-secondary text-[24px]">analytics</span>
+</div>
+<!-- Semantic Metrics 2x2 Grid -->
+<div class="grid grid-cols-2 gap-space-sm">
+<!-- Presentes -->
+<div class="p-space-md bg-surface-container-low rounded-lg flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Presentes</span>
+<span class="w-3 h-3 rounded-full bg-on-tertiary-container"></span>
+</div>
+<div class="flex items-baseline gap-space-xs mt-space-xs">
+<span class="font-data-metric text-data-metric text-on-tertiary-container" id="stat-p">15</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">estudiantes</span>
+</div>
+</div>
+<!-- Ausentes -->
+<div class="p-space-md bg-surface-container-low rounded-lg flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Ausentes</span>
+<span class="w-3 h-3 rounded-full bg-error"></span>
+</div>
+<div class="flex items-baseline gap-space-xs mt-space-xs">
+<span class="font-data-metric text-data-metric text-error" id="stat-a">2</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">estudiantes</span>
+</div>
+</div>
+<!-- Tardanzas -->
+<div class="p-space-md bg-surface-container-low rounded-lg flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Tardanzas</span>
+<span class="w-3 h-3 rounded-full bg-secondary"></span>
+</div>
+<div class="flex items-baseline gap-space-xs mt-space-xs">
+<span class="font-data-metric text-data-metric text-secondary" id="stat-t">1</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">estudiante</span>
+</div>
+</div>
+<!-- Excusas -->
+<div class="p-space-md bg-surface-container-low rounded-lg flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Excusas</span>
+<span class="w-3 h-3 rounded-full bg-on-primary-container"></span>
+</div>
+<div class="flex items-baseline gap-space-xs mt-space-xs">
+<span class="font-data-metric text-data-metric text-on-surface" id="stat-e">0</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">registradas</span>
+</div>
+</div>
+</div>
+<!-- Pending Pill Warning Notice -->
+<div class="p-space-md bg-secondary-fixed/50 rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[22px]">pending_actions</span>
+<span class="font-label-md text-label-md text-on-secondary-fixed font-bold">Por verificar en lista</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-secondary font-bold" id="stat-pending">7</span>
+</div>
+<!-- Proportional Visual Stack Bar -->
+<div class="flex flex-col gap-1.5 pt-space-xs">
+<div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span>Proporción de asistencia</span>
+<span class="font-bold text-primary">60% efectivo</span>
+</div>
+<div class="h-3 w-full bg-surface-container-high rounded-full overflow-hidden flex">
+<div class="bg-on-tertiary-container h-full transition-all" style="width: 60%;"></div>
+<div class="bg-error h-full transition-all" style="width: 8%;"></div>
+<div class="bg-secondary h-full transition-all" style="width: 4%;"></div>
+<div class="bg-surface-container h-full transition-all" style="width: 28%;"></div>
+</div>
+<div class="flex justify-between items-center text-[11px] font-label-sm text-outline mt-1">
+<span>0%</span>
+<span>Meta institucional MINERD: 85%+</span>
+<span>100%</span>
+</div>
+</div>
+<!-- Institutional Intelligence Diagnostic Banner -->
+<div class="p-space-md bg-surface-container rounded-lg flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[20px] shrink-0 mt-0.5">info</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-snug">
+              La inasistencia acumulada en esta sección se mantiene en <strong class="text-on-surface font-semibold">12%</strong> (Nivel de atención preventiva según normativa de registro escolar).
+            </p>
+</div>
+<!-- Primary Submit Section CTA -->
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<button class="w-full min-h-[52px] px-space-lg bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg rounded-lg flex items-center justify-center gap-space-sm shadow-md transition-all transform active:scale-98" id="btn-save-attendance" type="button">
+<span class="material-symbols-outlined text-[20px]">cloud_upload</span>
+<span>Guardar asistencia de la sección</span>
+</button>
+<button class="w-full min-h-[44px] px-space-lg bg-surface-container-low hover:bg-surface-container text-secondary font-label-md text-label-md rounded-lg flex items-center justify-center gap-space-xs transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">save</span>
+<span>Guardar borrador local</span>
+</button>
+</div>
+</div>
+<!-- Quick Summary Mini-Card: Record Info -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container-low flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm font-bold text-on-surface">Validación de firma digital</span>
+<span class="font-body-sm text-[12px] text-on-surface-variant">Conexión directa SIGERD activa</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-tertiary-container text-[20px]">wifi</span>
+</div>
+</aside>
+</div>
+</div>
+<!-- Persistent Feedback Snackbar Strip -->
+<div class="fixed bottom-6 left-1/2 -translate-x-1/2 bg-primary text-on-primary px-space-lg py-3 rounded-xl shadow-xl flex items-center gap-space-md z-50 transition-all duration-300" id="snackbar-feedback">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-tertiary-fixed text-[20px]">check_circle</span>
+<span class="font-label-md text-label-md">Asistencia guardada correctamente. Se sincronizó con SIGERD</span>
+</div>
+<div class="h-4 w-px bg-on-surface-variant"></div>
+<button class="text-tertiary-fixed hover:text-on-tertiary font-label-md text-label-md font-bold underline transition-colors" type="button">
+      Deshacer
+    </button>
+<button class="text-on-primary-container hover:text-on-primary ml-space-xs flex items-center" onclick="document.getElementById('snackbar-feedback').classList.add('hidden')" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<!-- Client Micro-Interactions Script -->
+<script>
+    // Toggle Student Photo visibility
+    const photoToggle = document.getElementById('toggle-photos');
+    photoToggle?.addEventListener('change', (e) => {
+      const photos = document.querySelectorAll('.student-photo');
+      photos.forEach(img => {
+        img.style.display = e.target.checked ? 'block' : 'none';
+      });
+    });
+
+    // Handle 1-Click "Marcar todos presentes (P)"
+    const markAllBtn = document.getElementById('btn-mark-all-present');
+    markAllBtn?.addEventListener('click', () => {
+      const rows = document.querySelectorAll('.student-row');
+      rows.forEach(row => {
+        row.classList.remove('ring-2', 'ring-dashed', 'ring-on-secondary-fixed-variant');
+        const pendingBadge = row.querySelector('.bg-secondary-fixed');
+        if (pendingBadge) pendingBadge.remove();
+
+        const buttons = row.querySelectorAll('.btn-att');
+        buttons.forEach(b => {
+          if (b.getAttribute('data-state') === 'P') {
+            b.className = 'btn-att w-12 h-12 rounded-lg font-label-lg text-label-lg font-bold flex items-center justify-center transition-all bg-on-tertiary-container text-on-tertiary shadow-sm';
+          } else {
+            b.className = 'btn-att w-12 h-12 rounded-lg font-label-lg text-label-lg font-bold flex items-center justify-center transition-all bg-surface-container-low text-on-surface-variant hover:bg-surface-container-high';
+          }
+        });
+      });
+
+      // Update counters
+      const statP = document.getElementById('stat-p');
+      const statA = document.getElementById('stat-a');
+      const statT = document.getElementById('stat-t');
+      const statPending = document.getElementById('stat-pending');
+      const counterDone = document.getElementById('counter-done');
+      if (statP) statP.textContent = '25';
+      if (statA) statA.textContent = '0';
+      if (statT) statT.textContent = '0';
+      if (statPending) statPending.textContent = '0';
+      if (counterDone) counterDone.textContent = '25';
+
+      // Pop snackbar notification
+      const snackbar = document.getElementById('snackbar-feedback');
+      if (snackbar) {
+        snackbar.classList.remove('hidden');
+        snackbar.classList.add('flex');
+      }
+    });
+
+    // Interactive button switcher per student row
+    document.querySelectorAll('.student-row').forEach(row => {
+      const buttons = row.querySelectorAll('.btn-att');
+      buttons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          // Clear active classes from sibling buttons
+          buttons.forEach(b => {
+            b.className = 'btn-att w-12 h-12 rounded-lg font-label-lg text-label-lg font-bold flex items-center justify-center transition-all bg-surface-container-low text-on-surface-variant hover:bg-surface-container-high';
+          });
+
+          // Remove pending ring if present
+          row.classList.remove('ring-2', 'ring-dashed', 'ring-on-secondary-fixed-variant');
+
+          const state = btn.getAttribute('data-state');
+          if (state === 'P') {
+            btn.className = 'btn-att w-12 h-12 rounded-lg font-label-lg text-label-lg font-bold flex items-center justify-center transition-all bg-on-tertiary-container text-on-tertiary shadow-sm';
+          } else if (state === 'A') {
+            btn.className = 'btn-att w-12 h-12 rounded-lg font-label-lg text-label-lg font-bold flex items-center justify-center transition-all bg-error text-on-error shadow-sm';
+          } else if (state === 'T') {
+            btn.className = 'btn-att w-12 h-12 rounded-lg font-label-lg text-label-lg font-bold flex items-center justify-center transition-all bg-secondary text-on-secondary shadow-sm';
+          } else if (state === 'E') {
+            btn.className = 'btn-att w-12 h-12 rounded-lg font-label-lg text-label-lg font-bold flex items-center justify-center transition-all bg-primary-container text-on-primary shadow-sm';
+          }
+        });
+      });
+    });
+
+    // Save Section Action Feedback
+    const saveBtn = document.getElementById('btn-save-attendance');
+    saveBtn?.addEventListener('click', () => {
+      const snackbar = document.getElementById('snackbar-feedback');
+      if (snackbar) {
+        snackbar.classList.remove('hidden');
+        snackbar.classList.add('flex');
+        setTimeout(() => {
+          snackbar.classList.add('hidden');
+        }, 5000);
+      }
+    });
+  </script>
+</div></main></div></body></html>
