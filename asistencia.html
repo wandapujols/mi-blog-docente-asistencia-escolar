@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><title>EduAsiste</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"surface-container":"#e5eeff","on-surface":"#0b1c30","secondary-fixed-dim":"#68dba9","on-error":"#ffffff","on-primary-fixed":"#001453","inverse-surface":"#213145","surface-container-high":"#dce9ff","on-tertiary-fixed":"#2f1500","primary":"#00288e","outline":"#757684","on-secondary-fixed-variant":"#005137","tertiary-container":"#743d00","surface-tint":"#3755c3","tertiary-fixed":"#ffdcc3","on-secondary-fixed":"#002114","on-primary-container":"#a8b8ff","on-background":"#0b1c30","on-tertiary-fixed-variant":"#6e3900","tertiary":"#532a00","surface-variant":"#d3e4fe","inverse-primary":"#b8c4ff","on-tertiary-container":"#ffa85d","on-secondary":"#ffffff","secondary":"#006c4a","primary-fixed":"#dde1ff","surface-container-highest":"#d3e4fe","background":"#f8f9ff","on-error-container":"#93000a","on-tertiary":"#ffffff","outline-variant":"#c4c5d5","surface-container-low":"#eff4ff","secondary-container":"#82f5c1","on-primary":"#ffffff","surface-bright":"#f8f9ff","surface-dim":"#cbdbf5","primary-fixed-dim":"#b8c4ff","inverse-on-surface":"#eaf1ff","surface":"#f8f9ff","on-secondary-container":"#00714e","on-primary-fixed-variant":"#173bab","error-container":"#ffdad6","secondary-fixed":"#85f8c4","surface-container-lowest":"#ffffff","error":"#ba1a1a","tertiary-fixed-dim":"#ffb77d","primary-container":"#1e40af","on-surface-variant":"#444653"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-lg":"1.5rem","space-md":"1rem","space-sm":"0.5rem","space-xs":"0.25rem","space-xl":"2rem","gutter-sm":"1rem","gutter":"1.5rem","margin":"2rem","margin-sm":"1rem"},"fontFamily":{"body-lg":["Inter"],"headline-lg":["Plus Jakarta Sans"],"headline-lg-mobile":["Plus Jakarta Sans"],"body-md":["Inter"],"display-lg":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"label-md":["Inter"],"body-sm":["Inter"],"title-md":["Inter"],"label-sm":["Inter"],"display-lg-mobile":["Plus Jakarta Sans"]},"fontSize":{"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"headline-lg":["28px",{"lineHeight":"36px","letterSpacing":"-0.02em","fontWeight":"600"}],"headline-lg-mobile":["22px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"display-lg":["40px",{"lineHeight":"48px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-md":["20px",{"lineHeight":"26px","letterSpacing":"-0.01em","fontWeight":"600"}],"label-md":["13px",{"lineHeight":"18px","letterSpacing":"0.01em","fontWeight":"600"}],"body-sm":["12px",{"lineHeight":"16px","fontWeight":"400"}],"title-md":["16px",{"lineHeight":"24px","fontWeight":"600"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.03em","fontWeight":"600"}],"display-lg-mobile":["30px",{"lineHeight":"38px","letterSpacing":"-0.01em","fontWeight":"700"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between"><div class="flex flex-col flex-1 overflow-y-auto"><div class="h-16 px-space-md flex items-center gap-space-sm bg-surface-container-lowest"><img alt="EduAsiste Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WNhigynvS7BsCPKvLxDgd3EGouNqulCln-VgeOICNZThmcCeen72_GYZrSje4BQpotAt_ourMKjRsGu7wREgurFDcgF51yn-UdCFxbLG1_2y-eqLUt4ZyzMEXKC4WPEPTKdcKoaii-kkRaPN4fJkzoJYaBvWcxNY5WC4AZfd_0YuZfN6JOSVoPPeCBoJJcHDPyKH6XU1CuXwwJAnWiKoNuUMAEwrpBTs9pIPrridZb"/><div class="flex flex-col"><span class="font-headline-md text-headline-md text-primary leading-none tracking-tight">EduAsiste</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mt-space-xs">Gestión Escolar</span></div></div><div class="px-space-md py-space-sm"><div class="px-space-sm py-space-xs font-label-sm text-label-sm uppercase tracking-wider text-outline">Menú Principal</div></div><nav class="flex-1 px-space-sm space-y-space-xs" data-active-classes="bg-primary text-on-primary font-title-md shadow-[0_1px_3px_rgba(15,23,42,0.08)]"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">dashboard</span><span>Dashboard</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg transition-all bg-primary text-on-primary font-title-md shadow-[0_1px_3px_rgba(15,23,42,0.08)]" data-path="registro-diario" href="#"><span class="material-symbols-outlined text-[20px]">fact_check</span><span>Asistencia Diaria</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all" data-path="estudiantes" href="#"><span class="material-symbols-outlined text-[20px]">group</span><span>Estudiantes</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all" data-path="nuevo-estudiante" href="#"><span class="material-symbols-outlined text-[20px]">person_add</span><span>Nuevo Estudiante</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all" data-path="historial" href="#"><span class="material-symbols-outlined text-[20px]">calendar_month</span><span>Historial</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all" data-path="reportes" href="#"><span class="material-symbols-outlined text-[20px]">analytics</span><span>Reportes</span></a><div class="pt-space-sm px-space-sm py-space-xs font-label-sm text-label-sm uppercase tracking-wider text-outline">Ajustes</div><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all" data-path="configuracion" href="#"><span class="material-symbols-outlined text-[20px]">settings</span><span>Configuración</span></a></nav></div><div class="p-space-md bg-surface-container-low m-space-sm rounded-xl"><div class="flex items-center gap-space-sm mb-space-sm"><div class="h-2 w-2 rounded-full bg-secondary"></div><span class="font-label-sm text-label-sm text-secondary font-semibold">Periodo Lectivo 2024</span></div><a class="flex items-center gap-space-sm px-space-sm py-space-xs text-error hover:bg-error-container hover:text-on-error-container rounded-lg transition-colors font-label-md text-label-md" data-path="login" href="#"><span class="material-symbols-outlined text-[18px]">logout</span><span>Cerrar Sesión</span></a></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs px-space-md py-space-xs bg-surface-container rounded-full text-primary font-label-md text-label-md"><span class="material-symbols-outlined text-[16px]">today</span><span>Hoy: 24 de Octubre, 2024</span></div><div class="hidden lg:flex items-center gap-space-xs bg-surface-container-low px-space-md py-space-xs rounded-lg text-outline"><span class="material-symbols-outlined text-[18px]">search</span><span class="font-body-sm text-body-sm">Buscar estudiante, carnet o curso...</span></div></div><div class="flex items-center gap-space-md"><button aria-label="Notificaciones" class="relative p-space-xs rounded-full text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1 right-1 w-2 h-2 rounded-full bg-error"></span></button><div class="flex items-center gap-space-sm pl-space-sm"><div class="flex flex-col text-right hidden sm:flex"><span class="font-title-md text-body-sm font-semibold text-on-surface leading-tight">Prof. Martín Benítez</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-tight">Docente Principal</span></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCU6SbgMpYI1jp9C3RhVnxiWjiik-q9tmzLzXVGIVPI61TA5giSFdaekj_eaXti2EIn4jRKgIWM_BYM-WDaGBWxQBtuFM2BlN18wKx9rwGztsDZOeyFFyep71Wr-fPiujNkfVPnqjZ3Fh4wFrAYTz7UsXYQyck2r1e15ci3WOJwg_Hx0cmGzddc8FisWrojhMGLChKrfxDjhNeFZEM6902wzTRJKucBcgfQudI-CB0"/></div></div></header><main class="relative w-full pt-16 px-gutter bg-background min-h-screen"><div class="flex flex-col w-full pb-space-xl">
+<!-- Top Session Context & Quick Actions Ribbon -->
+<div class="relative bg-surface-container-lowest rounded-xl shadow-sm p-space-md mb-space-md overflow-hidden">
+<div class="absolute -right-16 -top-16 w-56 h-56 rounded-full bg-gradient-to-br from-primary/10 via-primary-container/5 to-transparent pointer-events-none"></div>
+<div class="flex flex-col xl:flex-row xl:items-center justify-between gap-space-md relative z-10">
+<!-- Selectors Group -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-sm flex-1">
+<!-- Grado y Sección -->
+<div class="flex flex-col bg-surface-container-low p-space-sm rounded-lg">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">school</span> Grado y Curso
+          </span>
+<div class="flex items-center justify-between mt-0.5">
+<select aria-label="Seleccionar Grado y Sección" class="bg-transparent font-title-md text-body-md text-on-surface font-semibold focus:outline-none cursor-pointer w-full">
+<option selected="">3° Secundaria - Sección B</option>
+<option>3° Secundaria - Sección A</option>
+<option>4° Secundaria - Sección A</option>
+<option>2° Secundaria - Sección C</option>
+</select>
+</div>
+</div>
+<!-- Asignatura -->
+<div class="flex flex-col bg-surface-container-low p-space-sm rounded-lg">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">menu_book</span> Asignatura / Sesión
+          </span>
+<div class="flex items-center justify-between mt-0.5">
+<select aria-label="Seleccionar Asignatura" class="bg-transparent font-title-md text-body-md text-on-surface font-semibold focus:outline-none cursor-pointer w-full">
+<option selected="">Matemática · Sesión Regular</option>
+<option>Álgebra y Trigonometría</option>
+<option>Física Elemental</option>
+<option>Tutoría y Convivencia</option>
+</select>
+</div>
+</div>
+<!-- Selector de Fecha con botones anterior/siguiente -->
+<div class="flex flex-col bg-surface-container-low p-space-sm rounded-lg">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">event</span> Fecha Lectiva
+          </span>
+<div class="flex items-center justify-between gap-1 mt-0.5">
+<button aria-label="Día anterior" class="w-6 h-6 rounded flex items-center justify-center text-on-surface-variant hover:bg-surface-container hover:text-primary transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+</button>
+<span class="font-title-md text-body-sm font-semibold text-on-surface text-center truncate">Hoy, 24 Oct 2024</span>
+<button aria-label="Día siguiente" class="w-6 h-6 rounded flex items-center justify-center text-on-surface-variant hover:bg-surface-container hover:text-primary transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Horario y Tolerancia -->
+<div class="flex flex-col bg-surface-container-low p-space-sm rounded-lg">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">schedule</span> Bloque Horario
+          </span>
+<div class="flex items-center justify-between mt-0.5">
+<span class="font-title-md text-body-md font-semibold text-on-surface">08:00 - 09:30 AM</span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-surface-container text-primary font-semibold">Tolerancia 10m</span>
+</div>
+</div>
+</div>
+<!-- Acciones de pase rápido -->
+<div class="flex items-center gap-space-xs self-end xl:self-center shrink-0">
+<button class="flex items-center gap-1.5 px-space-md py-2.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-primary font-title-md text-body-sm transition-all shadow-sm" id="btn-mark-all-present" type="button">
+<span class="material-symbols-outlined text-[18px]">done_all</span>
+<span>Todos Presentes</span>
+</button>
+<button class="flex items-center gap-1.5 px-space-md py-2.5 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface-variant font-title-md text-body-sm transition-all" id="btn-reset-attendance" type="button">
+<span class="material-symbols-outlined text-[18px]">refresh</span>
+<span>Reiniciar</span>
+</button>
+<button class="flex items-center gap-1.5 px-space-md py-2.5 rounded-lg bg-primary-container text-on-primary font-title-md text-body-sm hover:opacity-95 shadow-sm transition-all" id="btn-quick-save" type="button">
+<span class="material-symbols-outlined text-[18px]">save</span>
+<span>Guardar Borrador</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Real-Time Metric Stat Cards & Live Ring Breakdown -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-space-md mb-space-md">
+<!-- Stat 1: Total Matriculados -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Matrícula Total</span>
+<span class="font-headline-lg text-display-lg text-on-surface leading-tight mt-1" id="metric-total">30</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">100% de la nómina</span>
+</div>
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[28px]">groups</span>
+</div>
+</div>
+<!-- Stat 2: Presentes -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-semibold">Presentes</span>
+<span class="font-headline-lg text-display-lg text-secondary leading-tight mt-1" id="metric-present">26</span>
+<div class="flex items-center gap-1">
+<span class="inline-block w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-medium" id="metric-present-pct">86.7% en aula</span>
+</div>
+</div>
+<div class="w-12 h-12 rounded-xl bg-secondary-container/30 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[28px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+</div>
+<!-- Stat 3: Tardanzas -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-tertiary-container font-semibold">Tardanzas</span>
+<span class="font-headline-lg text-display-lg text-tertiary-container leading-tight mt-1" id="metric-late">2</span>
+<div class="flex items-center gap-1">
+<span class="inline-block w-2 h-2 rounded-full bg-tertiary-fixed-dim"></span>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-medium" id="metric-late-pct">6.7% con retraso</span>
+</div>
+</div>
+<div class="w-12 h-12 rounded-xl bg-tertiary-fixed/40 flex items-center justify-center text-tertiary-container">
+<span class="material-symbols-outlined text-[28px]">schedule</span>
+</div>
+</div>
+<!-- Stat 4: Ausentes -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-error font-semibold">Ausentes</span>
+<span class="font-headline-lg text-display-lg text-error leading-tight mt-1" id="metric-absent">2</span>
+<div class="flex items-center gap-1">
+<span class="inline-block w-2 h-2 rounded-full bg-error"></span>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-medium" id="metric-absent-pct">6.7% inasistencias</span>
+</div>
+</div>
+<div class="w-12 h-12 rounded-xl bg-error-container/40 flex items-center justify-center text-error">
+<span class="material-symbols-outlined text-[28px]">cancel</span>
+</div>
+</div>
+<!-- Stat 5: Mini Progresión Circular SVG visual -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-center gap-3">
+<div class="relative w-14 h-14 shrink-0">
+<svg class="w-full h-full -rotate-90" viewbox="0 0 36 36">
+<path class="text-surface-container" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3.5"></path>
+<!-- Presentes: 86.7% (Verde) -->
+<path class="text-secondary" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="86.7, 100" stroke-linecap="round" stroke-width="3.5"></path>
+</svg>
+<span class="absolute inset-0 flex items-center justify-center font-title-md text-label-sm font-bold text-on-surface">87%</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm font-semibold text-on-surface truncate">Quórum Aprobatorio</span>
+<span class="font-body-sm text-body-sm text-secondary font-medium flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">check</span> Meta &gt; 85% OK
+        </span>
+<span class="font-label-sm text-label-sm text-outline mt-0.5">Alertas automáticas activas</span>
+</div>
+</div>
+</div>
+<!-- Barra de Filtros, Búsqueda y Herramientas Rápidas -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-sm mb-space-sm flex flex-col md:flex-row md:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm flex-1 max-w-lg">
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-[20px] text-outline">search</span>
+<input class="w-full pl-10 pr-4 py-2 bg-surface-container-low rounded-lg text-body-sm font-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary-container transition-all" id="student-search-input" placeholder="Filtrar por estudiante, carnet ID o estado..." type="text"/>
+</div>
+<div class="flex items-center gap-1 bg-surface-container-low p-1 rounded-lg shrink-0">
+<button class="px-2.5 py-1 text-label-sm font-title-md rounded bg-surface-container-lowest text-primary shadow-xs" id="filter-all" type="button">Todos (30)</button>
+<button class="px-2.5 py-1 text-label-sm font-body-sm rounded text-on-surface-variant hover:text-on-surface" id="filter-present" type="button">Presentes (26)</button>
+<button class="px-2.5 py-1 text-label-sm font-body-sm rounded text-on-surface-variant hover:text-on-surface" id="filter-late" type="button">Tardanzas (2)</button>
+<button class="px-2.5 py-1 text-label-sm font-body-sm rounded text-on-surface-variant hover:text-on-surface" id="filter-absent" type="button">Ausentes (2)</button>
+</div>
+</div>
+<!-- Leyenda rápida y notificaciones push status -->
+<div class="flex items-center gap-space-md shrink-0">
+<div class="hidden xl:flex items-center gap-space-sm font-label-sm text-label-sm text-on-surface-variant">
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-secondary"></span> P = Presente</span>
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-tertiary-fixed-dim"></span> T = Tardanza</span>
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-error"></span> A = Inasistencia</span>
+</div>
+<div class="flex items-center gap-1.5 px-space-sm py-1 rounded bg-secondary-container/20 text-on-secondary-container font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary">mark_chat_read</span>
+<span>Gateway SMS/WhatsApp Conectado</span>
+</div>
+</div>
+</div>
+<!-- Interactive Attendance Table -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden mb-space-lg">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse" id="attendance-table">
+<thead>
+<tr class="bg-surface-container-low font-label-sm text-label-sm text-outline uppercase tracking-wider select-none">
+<th class="py-3 px-space-md w-12 text-center">N°</th>
+<th class="py-3 px-space-md min-w-[240px]">Estudiante &amp; Carnet</th>
+<th class="py-3 px-space-md min-w-[280px] text-center">Estado de Asistencia</th>
+<th class="py-3 px-space-md min-w-[220px]">Observación / Justificante</th>
+<th class="py-3 px-space-md min-w-[160px] text-right">Canal Padres</th>
+</tr>
+</thead>
+<tbody class="divide-y-0" id="student-rows-container">
+<!-- Row 1: Presente -->
+<tr class="student-row hover:bg-surface-container-low/50 transition-colors" data-id="EST-001" data-status="present">
+<td class="py-3.5 px-space-md font-body-sm text-body-sm text-outline text-center">01</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-3">
+<img class="w-9 h-9 rounded-full object-cover shrink-0" data-alt="Close up portrait photograph of young male high school student smiling wearing clean navy school uniform shirt with soft natural lighting indoors" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJHXXBgXd9kSs61XNNy-i9SgPSP9wVIzK8RxXPJdCJ8pjoLCia0Vt-3cGT33cUw-pjosletINC8v4Ct9k013Vp2rtIjbh-PFmJXmOaMeMQsqkZp5JJtqYeTetdqJJSoB8bUxzuIX39vdX12IBKtfW0KvWCdlpGBi7UN5Ecmos24NoTIgq10iwY2aGM5CppG2PAud-LF5MnWHGy1RajGIsb4zfuZ_BKbNABy1A9a6s"/>
+<div class="flex flex-col min-w-0">
+<span class="student-name font-title-md text-body-sm text-on-surface truncate">Álvarez Ramos, Mateo Sebastián</span>
+<span class="student-id font-body-sm text-label-sm text-outline">EST-001 · 89% prom. asistencia</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center justify-center p-1 bg-surface-container-low rounded-lg gap-1 max-w-[260px] mx-auto">
+<button class="btn-status flex-1 flex items-center justify-center gap-1 py-1 px-2 rounded-md font-label-md text-label-md transition-all bg-secondary text-on-secondary shadow-xs" onclick="setAttendance(this, 'present')" type="button">
+<span class="material-symbols-outlined text-[16px]">check</span>
+<span>P</span>
+</button>
+<button class="btn-status flex-1 flex items-center justify-center gap-1 py-1 px-2 rounded-md font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all" onclick="setAttendance(this, 'late')" type="button">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<span>T</span>
+</button>
+<button class="btn-status flex-1 flex items-center justify-center gap-1 py-1 px-2 rounded-md font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all" onclick="setAttendance(this, 'absent')" type="button">
+<span class="material-symbols-outlined text-[16px]">close</span>
+<span>A</span>
+</button>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<input class="w-full text-body-sm font-body-sm bg-surface-container-low hover:bg-surface-container px-3 py-1.5 rounded text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest focus:ring-1 focus:ring-primary-container transition-all" placeholder="Añadir nota rápida..." type="text" value="Puntual, entrega de tarea"/>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<span class="status-badge inline-flex items-center gap-1 px-2 py-0.5 rounded-full font-label-sm text-label-sm bg-surface-container text-outline">
+<span class="material-symbols-outlined text-[13px]">done</span> No requiere alerta
+              </span>
+</td>
+</tr>
+<!-- Row 2: Tardanza con hora -->
+<tr class="student-row hover:bg-surface-container-low/50 transition-colors" data-id="EST-002" data-status="late">
+<td class="py-3.5 px-space-md font-body-sm text-body-sm text-outline text-center">02</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-3">
+<img class="w-9 h-9 rounded-full object-cover shrink-0" data-alt="Portrait photograph of cheerful high school girl with braided hair and dark blue school blazer in an illuminated bright classroom" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfgp0EXlZgWf6SQQWFYsXMj9FJCC-2Gf9q1NP23sA5k9XRTd8tth_xt5J55kPxcJbVHhSkiSwjXna4YiI6i0MtoRlhg_QOEhfyZ9PS-rdxmLdSGMJGzIyqd6G9cn7ueEpm8q8QEmDHpo3bCqoqrmdb5m8BYobO4sMRo1BzZAzr60DAeZe4wAvU0RzjhRa90S0ABNZMrRThY80rWeQL5RurPETMxG2SvAJSK77fYCw"/>
+<div class="flex flex-col min-w-0">
+<span class="student-name font-title-md text-body-sm text-on-surface truncate">Castro Morales, Valentina Lucía</span>
+<span class="student-id font-body-sm text-label-sm text-outline">EST-002 · 92% prom. asistencia</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center justify-center p-1 bg-surface-container-low rounded-lg gap-1 max-w-[260px] mx-auto">
+<button class="btn-status flex-1 flex items-center justify-center gap-1 py-1 px-2 rounded-md font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all" onclick="setAttendance(this, 'present')" type="button">
+<span class="material-symbols-outlined text-[16px]">check</span>
+<span>P</span>
+</button>
+<button class="btn-status flex-1 flex items-center justify-center gap-1 py-1 px-2 rounded-md font-label-md text-label-md transition-all bg-tertiary-fixed text-on-tertiary-fixed font-bold shadow-xs" onclick="setAttendance(this, 'late')" type="button">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<span>08:14</span>
+</button>
+<button class="btn-status flex-1 flex items-center justify-center gap-1 py-1 px-2 rounded-md font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all" onclick="setAttendance(this, 'absent')" type="button">
+<span class="material-symbols-outlined text-[16px]">close</span>
+<span>A</span>
+</button>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-1.5">
+<input class="w-full text-body-sm font-body-sm bg-surface-container-low hover:bg-surface-container px-3 py-1.5 rounded text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest focus:ring-1 focus:ring-primary-container transition-all" placeholder="Añadir nota rápida..." type="text" value="Retraso de 14 min por tráfico línea B"/>
+</div>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<span class="status-badge inline-flex items-center gap-1 px-2 py-0.5 rounded-full font-label-sm text-label-sm bg-tertiary-fixed/50 text-tertiary-container font-semibold">
+<span class="material-symbols-outlined text-[14px]">sms</span> SMS Enviado
+              </span>
+</td>
+</tr>
+<!-- Row 3: Inasistencia Justificada -->
+<tr class="student-row hover:bg-surface-container-low/50 transition-colors" data-id="EST-003" data-status="absent">
+<td class="py-3.5 px-space-md font-body-sm text-body-sm text-outline text-center">03</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-3">
+<img class="w-9 h-9 rounded-full object-cover shrink-0" data-alt="Studio portrait of teenage boy with spectacles and school uniform with a soft neutral background and clean aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhAh5fojQm_q7fymSnFTG3qCx7mdX_6VTSFdQjcJ_zMuTqNj4R8LnT27BrK1Ork6nvkC7S8J9hSccaBVKc8Ebb7kOpnwtMBp8reuGKXaFhoDFjP89FeI1JtpWwCOuqhyPZdyiR5w0YeSbaEsBa9BpK0v3gBJ-8FJAug3HIEk-yIPzZ-X8noTq8h14fx6Xn2BTQzTLZeGdzZwrglAep0LTgHgSPwulaBN6sBAUQsFE"/>
+<div class="flex flex-col min-w-0">
+<span class="student-name font-title-md text-body-sm text-on-surface truncate">Delgado Fuentes, Gabriel Ignacio</span>
+<span class="student-id font-body-sm text-label-sm text-outline">EST-003 · 78% prom. asistencia</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center justify-center p-1 bg-surface-container-low rounded-lg gap-1 max-w-[260px] mx-auto">
+<button class="btn-status flex-1 flex items-center justify-center gap-1 py-1 px-2 rounded-md font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all" onclick="setAttendance(this, 'present')" type="button">
+<span class="material-symbols-outlined text-[16px]">check</span>
+<span>P</span>
+</button>
+<button class="btn-status flex-1 flex items-center justify-center gap-1 py-1 px-2 rounded-md font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all" onclick="setAttendance(this, 'late')" type="button">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<span>T</span>
+</button>
+<button class="btn-status flex-1 flex items-center justify-center gap-1 py-1 px-2 rounded-md font-label-md text-label-md transition-all bg-error text-on-error font-bold shadow-xs" onclick="setAttendance(this, 'absent')" type="button">
+<span class="material-symbols-outlined text-[16px]">close</span>
+<span>A</span>
+</button>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-1.5">
+<span class="px-2 py-0.5 rounded bg-surface-container text-primary font-label-sm text-label-sm shrink-0 font-medium">Justificada</span>
+<input class="w-full text-body-sm font-body-sm bg-surface-container-low hover:bg-surface-container px-3 py-1.5 rounded text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest focus:ring-1 focus:ring-primary-container transition-all" placeholder="Añadir nota rápida..." type="text" value="Constancia médica N° 4091 adjunta"/>
+</div>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<span class="status-badge inline-flex items-center gap-1 px-2 py-0.5 rounded-full font-label-sm text-label-sm bg-error-container text-on-error-container font-semibold">
+<span class="material-symbols-outlined text-[14px]">chat</span> WhatsApp OK
+              </span>
+</td>
+</tr>
+<!-- Row 4: Presente -->
+<tr class="student-row hover:bg-surface-container-low/50 transition-colors" data-id="EST-004" data-status="present">
+<td class="py-3.5 px-space-md font-body-sm text-body-sm text-outline text-center">04</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-3">
+<img class="w-9 h-9 rounded-full object-cover shrink-0" data-alt="Portrait of smiling female high school student with brown ponytail wearing crisp white polo school shirt indoors" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYfoRf--h_CSrj6K8-sMaSI_AA0zuAhNiTZCdY665WaKB2ntpPE5_6R-Ffc9wVR-6pkbkw42F5sOFLWF3Cwbcq611Yt4IFog5WlDb__VtHS7eImzy-T7HoA_O_5PyP1jOWYjKOQvoaamR0fMMzfucEf-hBEBwaiM488GyOkDyMgzQKyMo1LJIWPDTkZZhTE2eihXkkpSp5EH51E4Zz4Ebk_IqwrJUHu2D5dGv0Jtk"/>
+<div class="flex flex-col min-w-0">
+<span class="student-name font-title-md text-body-sm text-on-surface truncate">Espinoza Castillo, Camila Andrea</span>
+<span class="student-id font-body-sm text-label-sm text-outline">EST-004 · 95% prom. asistencia</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center justify-center p-1 bg-surface-container-low rounded-lg gap-1 max-w-[260px] mx-auto">
+<button class="btn-status flex-1 flex items-center justify-center gap-1 py-1 px-2 rounded-md font-label-md text-label-md transition-all bg-secondary text-on-secondary shadow-xs" onclick="setAttendance(this, 'present')" type="button">
+<span class="material-symbols-outlined text-[16px]">check</span>
+<span>P</span>
+</button>
+<button class="btn-status flex-1 flex items-center justify-center gap-1 py-1 px-2 rounded-md font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all" onclick="setAttendance(this, 'late')" type="button">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<span>T</span>
+</button>
+<button class="btn-status flex-1 flex items-center justify-center gap-1 py-1 px-2 rounded-md font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all" onclick="setAttendance(this, 'absent')" type="button">
+<span class="material-symbols-outlined text-[16px]">close</span>
+<span>A</span>
+</button>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<input class="w-full text-body-sm font-body-sm bg-surface-container-low hover:bg-surface-container px-3 py-1.5 rounded text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest focus:ring-1 focus:ring-primary-container transition-all" placeholder="Añadir nota rápida..." type="text" value=""/>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<span class="status-badge inline-flex items-center gap-1 px-2 py-0.5 rounded-full font-label-sm text-label-sm bg-surface-container text-outline">
+<span class="material-symbols-outlined text-[13px]">done</span> No requiere alerta
+              </span>
+</td>
+</tr>
+<!-- Row 5: Ausente Injustificada -->
+<tr class="student-row hover:bg-surface-container-low/50 transition-colors" data-id="EST-005" data-status="absent">
+<td class="py-3.5 px-space-md font-body-sm text-body-sm text-outline text-center">05</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-3">
+<img class="w-9 h-9 rounded-full object-cover shrink-0" data-alt="Portrait photograph of young male teenage student looking forward with soft focus background in educational institution library" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB86QayT_VZuiaKrGQxqjEQCHg3zYR9F6oCBfJZ1MAtAFiKO_b09xi1PeQogZpfbYqknzAVKL5Xa-rEnlf6QNyZK-GWtVCEbK_FaDH0cprj_DNra50JvVXo7lno21FQY62wGjgGN2rZYE2QZKzr7Pzzw37P3CWIg3Zh3cTb5SZ0h1IJE2E4xxbCEBXjoUCn1ctJIpOfP2tSiqq0DvoQbMkjpGFykPZKCwGvZA5-wEM"/>
+<div class="flex flex-col min-w-0">
+<span class="student-name font-title-md text-body-sm text-on-surface truncate">Gómez Paredes, Diego Alonso</span>
+<span class="student-id font-body-sm text-label-sm text-outline">EST-005 · 70% prom. asistencia (Riesgo)</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center justify-center p-1 bg-surface-container-low rounded-lg gap-1 max-w-[260px] mx-auto">
+<button class="btn-status flex-1 flex items-center justify-center gap-1 py-1 px-2 rounded-md font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all" onclick="setAttendance(this, 'present')" type="button">
+<span class="material-symbols-outlined text-[16px]">check</span>
+<span>P</span>
+</button>
+<button class="btn-status flex-1 flex items-center justify-center gap-1 py-1 px-2 rounded-md font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all" onclick="setAttendance(this, 'late')" type="button">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<span>T</span>
+</button>
+<button class="btn-status flex-1 flex items-center justify-center gap-1 py-1 px-2 rounded-md font-label-md text-label-md transition-all bg-error text-on-error font-bold shadow-xs" onclick="setAttendance(this, 'absent')" type="button">
+<span class="material-symbols-outlined text-[16px]">close</span>
+<span>A</span>
+</button>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-1.5">
+<span class="px-2 py-0.5 rounded bg-error-container text-on-error-container font-label-sm text-label-sm shrink-0 font-medium">Injustificada</span>
+<input class="w-full text-body-sm font-body-sm bg-surface-container-low hover:bg-surface-container px-3 py-1.5 rounded text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest focus:ring-1 focus:ring-primary-container transition-all" placeholder="Añadir nota rápida..." type="text" value="Sin aviso de acudiente al inicio de bloque"/>
+</div>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<span class="status-badge inline-flex items-center gap-1 px-2 py-0.5 rounded-full font-label-sm text-label-sm bg-error-container text-on-error-container font-semibold animate-pulse">
+<span class="material-symbols-outlined text-[14px]">send</span> Notificando Apoderado
+              </span>
+</td>
+</tr>
+<!-- Row 6: Tardanza -->
+<tr class="student-row hover:bg-surface-container-low/50 transition-colors" data-id="EST-006" data-status="late">
+<td class="py-3.5 px-space-md font-body-sm text-body-sm text-outline text-center">06</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-3">
+<img class="w-9 h-9 rounded-full object-cover shrink-0" data-alt="Portrait photography of young Latina student with curly hair and blue uniform sweater in soft natural sunlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAr8dAEmKSChn00qeLa43ioebizwpnSsVOLkuqMI-iGyQ9ui8zePa4PSYjmU1HwmOn-6QSZ8DPeHxBPn3tXKl9AncU1ctgXNm7TthZL7Ij15vZyHXmvWOplxSVIVthaBKW_-B7XPexzfLlmSEksNZHiwDemNlj6c-UVMDIUsBFtjcnM8XZ_ttWUkeGwvGW7ign2RFjmks-9Km3XJfScO3vEcKhseaOwyo8cr-zgXkI"/>
+<div class="flex flex-col min-w-0">
+<span class="student-name font-title-md text-body-sm text-on-surface truncate">Hernández Rivas, Sofía Belén</span>
+<span class="student-id font-body-sm text-label-sm text-outline">EST-006 · 91% prom. asistencia</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center justify-center p-1 bg-surface-container-low rounded-lg gap-1 max-w-[260px] mx-auto">
+<button class="btn-status flex-1 flex items-center justify-center gap-1 py-1 px-2 rounded-md font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all" onclick="setAttendance(this, 'present')" type="button">
+<span class="material-symbols-outlined text-[16px]">check</span>
+<span>P</span>
+</button>
+<button class="btn-status flex-1 flex items-center justify-center gap-1 py-1 px-2 rounded-md font-label-md text-label-md transition-all bg-tertiary-fixed text-on-tertiary-fixed font-bold shadow-xs" onclick="setAttendance(this, 'late')" type="button">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<span>08:08</span>
+</button>
+<button class="btn-status flex-1 flex items-center justify-center gap-1 py-1 px-2 rounded-md font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all" onclick="setAttendance(this, 'absent')" type="button">
+<span class="material-symbols-outlined text-[16px]">close</span>
+<span>A</span>
+</button>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<input class="w-full text-body-sm font-body-sm bg-surface-container-low hover:bg-surface-container px-3 py-1.5 rounded text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest focus:ring-1 focus:ring-primary-container transition-all" placeholder="Añadir nota rápida..." type="text" value="Demora en portería por carnet"/>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<span class="status-badge inline-flex items-center gap-1 px-2 py-0.5 rounded-full font-label-sm text-label-sm bg-tertiary-fixed/50 text-tertiary-container font-semibold">
+<span class="material-symbols-outlined text-[14px]">sms</span> SMS Enviado
+              </span>
+</td>
+</tr>
+<!-- Row 7: Presente -->
+<tr class="student-row hover:bg-surface-container-low/50 transition-colors" data-id="EST-007" data-status="present">
+<td class="py-3.5 px-space-md font-body-sm text-body-sm text-outline text-center">07</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-3">
+<img class="w-9 h-9 rounded-full object-cover shrink-0" data-alt="Portrait photography of teenage male student with friendly gaze wearing standard high school uniform polo shirt" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVgS23cpOW2K0NrkdRhZ6AtJJUO37UhgYHiWNtDyXQUQ6n_xg19q0nQtyf0aD-pUh1TDyXSGHkwso81ADFqdpieXuharW6U6XDJlhFsDrL1VDLzN_dIRQ4wr9ZPRjp7AwIHGBXEuFtWv96JPw2EaREIEQ3VJVbw7va1hjI_PGo6r_dS2pQEnYCRxOJM72JdNqNXYd4QB2dsdw4MftsTTFHC0yF4HcRJc-D_gLY-wk"/>
+<div class="flex flex-col min-w-0">
+<span class="student-name font-title-md text-body-sm text-on-surface truncate">Ibarra Mendoza, Joaquín Tomás</span>
+<span class="student-id font-body-sm text-label-sm text-outline">EST-007 · 98% prom. asistencia</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center justify-center p-1 bg-surface-container-low rounded-lg gap-1 max-w-[260px] mx-auto">
+<button class="btn-status flex-1 flex items-center justify-center gap-1 py-1 px-2 rounded-md font-label-md text-label-md transition-all bg-secondary text-on-secondary shadow-xs" onclick="setAttendance(this, 'present')" type="button">
+<span class="material-symbols-outlined text-[16px]">check</span>
+<span>P</span>
+</button>
+<button class="btn-status flex-1 flex items-center justify-center gap-1 py-1 px-2 rounded-md font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all" onclick="setAttendance(this, 'late')" type="button">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<span>T</span>
+</button>
+<button class="btn-status flex-1 flex items-center justify-center gap-1 py-1 px-2 rounded-md font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all" onclick="setAttendance(this, 'absent')" type="button">
+<span class="material-symbols-outlined text-[16px]">close</span>
+<span>A</span>
+</button>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<input class="w-full text-body-sm font-body-sm bg-surface-container-low hover:bg-surface-container px-3 py-1.5 rounded text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest focus:ring-1 focus:ring-primary-container transition-all" placeholder="Añadir nota rápida..." type="text" value=""/>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<span class="status-badge inline-flex items-center gap-1 px-2 py-0.5 rounded-full font-label-sm text-label-sm bg-surface-container text-outline">
+<span class="material-symbols-outlined text-[13px]">done</span> No requiere alerta
+              </span>
+</td>
+</tr>
+<!-- Row 8: Presente -->
+<tr class="student-row hover:bg-surface-container-low/50 transition-colors" data-id="EST-008" data-status="present">
+<td class="py-3.5 px-space-md font-body-sm text-body-sm text-outline text-center">08</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-3">
+<img class="w-9 h-9 rounded-full object-cover shrink-0" data-alt="Portrait photography of young female student smiling gently wearing navy blazer against soft classroom background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBc_HM_0j2Q6FfBE3v8oJNJljVMZRkMGCYaomgtwZ_Ek3mb4p39Dfy_afP2Fy6kDsPbo-Ju-_QY0plceY6rGvMmNvCeUds-wbpO6OGM8BQZCq_O0j0txzptvcFmqKW2OerOid7M-Kb66Fe4HEB0fOuhwak-VsU9ljW5g6OyevbqL5SIchzjAamX6r4b_F4CL1zejH0sClRcCHNG5RRuzOX2ceSYSb3ajyBOCnI47k4"/>
+<div class="flex flex-col min-w-0">
+<span class="student-name font-title-md text-body-sm text-on-surface truncate">López Quintana, Mariana Paz</span>
+<span class="student-id font-body-sm text-label-sm text-outline">EST-008 · 94% prom. asistencia</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center justify-center p-1 bg-surface-container-low rounded-lg gap-1 max-w-[260px] mx-auto">
+<button class="btn-status flex-1 flex items-center justify-center gap-1 py-1 px-2 rounded-md font-label-md text-label-md transition-all bg-secondary text-on-secondary shadow-xs" onclick="setAttendance(this, 'present')" type="button">
+<span class="material-symbols-outlined text-[16px]">check</span>
+<span>P</span>
+</button>
+<button class="btn-status flex-1 flex items-center justify-center gap-1 py-1 px-2 rounded-md font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all" onclick="setAttendance(this, 'late')" type="button">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<span>T</span>
+</button>
+<button class="btn-status flex-1 flex items-center justify-center gap-1 py-1 px-2 rounded-md font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all" onclick="setAttendance(this, 'absent')" type="button">
+<span class="material-symbols-outlined text-[16px]">close</span>
+<span>A</span>
+</button>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<input class="w-full text-body-sm font-body-sm bg-surface-container-low hover:bg-surface-container px-3 py-1.5 rounded text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest focus:ring-1 focus:ring-primary-container transition-all" placeholder="Añadir nota rápida..." type="text" value=""/>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<span class="status-badge inline-flex items-center gap-1 px-2 py-0.5 rounded-full font-label-sm text-label-sm bg-surface-container text-outline">
+<span class="material-symbols-outlined text-[13px]">done</span> No requiere alerta
+              </span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Paginación / Resumen de visualización -->
+<div class="p-space-md bg-surface-container-low flex flex-col sm:flex-row items-center justify-between gap-space-sm">
+<div class="flex items-center gap-2">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Mostrando <span class="font-semibold text-on-surface">1 a 8</span> de <span class="font-semibold text-on-surface">30</span> estudiantes (22 estudiantes omitidos en vista previa compacta)</span>
+</div>
+<div class="flex items-center gap-1">
+<button class="px-3 py-1.5 rounded bg-surface-container-lowest text-primary font-title-md text-body-sm shadow-xs" type="button">1</button>
+<button class="px-3 py-1.5 rounded text-on-surface-variant hover:bg-surface-container font-title-md text-body-sm" type="button">2</button>
+<button class="px-3 py-1.5 rounded text-on-surface-variant hover:bg-surface-container font-title-md text-body-sm" type="button">3</button>
+<button class="px-3 py-1.5 rounded text-on-surface-variant hover:bg-surface-container font-title-md text-body-sm" type="button">4</button>
+</div>
+</div>
+</div>
+<!-- Pie de Página de Finalización y Firma Digital Docente -->
+<div class="bg-surface-container-lowest rounded-xl shadow-md p-space-lg flex flex-col lg:flex-row lg:items-center justify-between gap-space-lg">
+<!-- Indicador de Completitud -->
+<div class="flex items-center gap-space-md">
+<div class="w-14 h-14 rounded-2xl bg-secondary-container/40 flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined text-[32px]">task_alt</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-headline-md text-headline-md text-on-surface">Control Completo del Aula</span>
+<span class="px-2 py-0.5 rounded-full font-label-sm text-label-sm bg-secondary text-on-secondary font-semibold">Listo para emisión</span>
+</div>
+<div class="flex items-center gap-2 mt-1">
+<div class="w-36 h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="w-full h-full bg-secondary"></div>
+</div>
+<span class="font-title-md text-body-sm font-semibold text-on-surface">30 de 30 marcados (100%)</span>
+<span class="font-body-sm text-body-sm text-outline">· Ningún alumno sin registrar</span>
+</div>
+</div>
+</div>
+<!-- Firma Digital y Botón de Finalización -->
+<div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-space-md">
+<!-- Verificación del Docente -->
+<div class="flex items-center gap-space-sm p-space-sm bg-surface-container-low rounded-lg">
+<span class="material-symbols-outlined text-secondary text-[22px]">verified_user</span>
+<div class="flex flex-col text-left">
+<span class="font-title-md text-label-md text-on-surface leading-tight">Firma Digital: Token Activo</span>
+<span class="font-body-sm text-label-sm text-outline leading-tight">Prof. Martín Benítez · ID-DOC-409</span>
+</div>
+</div>
+<!-- Botón Primario de Cierre -->
+<button class="group relative flex items-center justify-center gap-2 px-space-lg py-3 rounded-xl bg-primary text-on-primary font-title-md text-title-md shadow-md hover:bg-primary-container hover:shadow-lg transition-all active:scale-[0.99]" id="btn-finalizar-asistencia" type="button">
+<span class="material-symbols-outlined text-[20px] transition-transform group-hover:scale-110">lock</span>
+<span>Confirmar y Finalizar Registro</span>
+</button>
+</div>
+</div>
+<!-- Notification Toast Container (Dynamic feedback) -->
+<div class="fixed bottom-6 right-6 bg-inverse-surface text-inverse-on-surface px-space-md py- space-sm py-3 rounded-xl shadow-xl flex items-center gap-3 z-50 transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none" id="toast-feedback">
+<span class="material-symbols-outlined text-secondary text-[22px]" id="toast-icon">check_circle</span>
+<div class="flex flex-col">
+<span class="font-title-md text-body-sm font-semibold leading-tight" id="toast-title">Asistencia Registrada</span>
+<span class="font-body-sm text-label-sm opacity-90 leading-tight" id="toast-message">El registro se ha sincronizado con la dirección escolar.</span>
+</div>
+</div>
+</div>
+<script>
+  // Dynamic State Handler for Student Rows
+  function showToast(title, message, isSuccess = true) {
+    const toast = document.getElementById('toast-feedback');
+    const toastTitle = document.getElementById('toast-title');
+    const toastMsg = document.getElementById('toast-message');
+    const toastIcon = document.getElementById('toast-icon');
+
+    if (!toast) return;
+
+    toastTitle.textContent = title;
+    toastMsg.textContent = message;
+    toastIcon.textContent = isSuccess ? 'check_circle' : 'info';
+    toastIcon.className = isSuccess 
+      ? 'material-symbols-outlined text-secondary text-[22px]'
+      : 'material-symbols-outlined text-on-primary-container text-[22px]';
+
+    toast.classList.remove('translate-y-24', 'opacity-0');
+    toast.classList.add('translate-y-0', 'opacity-100');
+
+    setTimeout(() => {
+      toast.classList.add('translate-y-24', 'opacity-0');
+      toast.classList.remove('translate-y-0', 'opacity-100');
+    }, 3200);
+  }
+
+  function setAttendance(buttonElement, statusType) {
+    const parentContainer = buttonElement.parentElement;
+    const row = buttonElement.closest('tr');
+    if (!parentContainer || !row) return;
+
+    const allButtons = parentContainer.querySelectorAll('.btn-status');
+    allButtons.forEach(btn => {
+      btn.className = 'btn-status flex-1 flex items-center justify-center gap-1 py-1 px-2 rounded-md font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all';
+      if (btn.querySelector('span:last-child')) {
+        const textSpan = btn.querySelector('span:last-child');
+        if (btn.textContent.includes(':')) {
+          textSpan.textContent = 'T';
+        }
+      }
+    });
+
+    const badgeCell = row.querySelector('.status-badge');
+
+    if (statusType === 'present') {
+      buttonElement.className = 'btn-status flex-1 flex items-center justify-center gap-1 py-1 px-2 rounded-md font-label-md text-label-md transition-all bg-secondary text-on-secondary shadow-xs';
+      row.dataset.status = 'present';
+      if (badgeCell) {
+        badgeCell.className = 'status-badge inline-flex items-center gap-1 px-2 py-0.5 rounded-full font-label-sm text-label-sm bg-surface-container text-outline';
+        badgeCell.innerHTML = '<span class="material-symbols-outlined text-[13px]">done</span> No requiere alerta';
+      }
+    } else if (statusType === 'late') {
+      const now = new Date();
+      const timeStr = `${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}`;
+      buttonElement.className = 'btn-status flex-1 flex items-center justify-center gap-1 py-1 px-2 rounded-md font-label-md text-label-md transition-all bg-tertiary-fixed text-on-tertiary-fixed font-bold shadow-xs';
+      const label = buttonElement.querySelector('span:last-child');
+      if (label) label.textContent = timeStr;
+      row.dataset.status = 'late';
+      if (badgeCell) {
+        badgeCell.className = 'status-badge inline-flex items-center gap-1 px-2 py-0.5 rounded-full font-label-sm text-label-sm bg-tertiary-fixed/50 text-tertiary-container font-semibold';
+        badgeCell.innerHTML = '<span class="material-symbols-outlined text-[14px]">sms</span> SMS Enviado';
+      }
+    } else if (statusType === 'absent') {
+      buttonElement.className = 'btn-status flex-1 flex items-center justify-center gap-1 py-1 px-2 rounded-md font-label-md text-label-md transition-all bg-error text-on-error font-bold shadow-xs';
+      row.dataset.status = 'absent';
+      if (badgeCell) {
+        badgeCell.className = 'status-badge inline-flex items-center gap-1 px-2 py-0.5 rounded-full font-label-sm text-label-sm bg-error-container text-on-error-container font-semibold animate-pulse';
+        badgeCell.innerHTML = '<span class="material-symbols-outlined text-[14px]">send</span> WhatsApp Apoderado';
+      }
+    }
+
+    recalcMetrics();
+  }
+
+  function recalcMetrics() {
+    const rows = document.querySelectorAll('.student-row');
+    let presentCount = 0;
+    let lateCount = 0;
+    let absentCount = 0;
+
+    rows.forEach(r => {
+      const status = r.dataset.status;
+      if (status === 'present') presentCount++;
+      else if (status === 'late') lateCount++;
+      else if (status === 'absent') absentCount++;
+    });
+
+    const totalStudents = 30; // 30 total en la nómina
+    // Escalar proporciones en los contadores informativos superiores
+    const calculatedPresents = 26 + (presentCount - 5);
+    const metricPresent = document.getElementById('metric-present');
+    if (metricPresent) metricPresent.textContent = Math.max(0, Math.min(30, calculatedPresents));
+  }
+
+  // Quick Action: Todos Presentes
+  document.getElementById('btn-mark-all-present')?.addEventListener('click', () => {
+    const rows = document.querySelectorAll('.student-row');
+    rows.forEach(row => {
+      const presentBtn = row.querySelectorAll('.btn-status')[0];
+      if (presentBtn) setAttendance(presentBtn, 'present');
+    });
+    showToast('Acción Masiva Aplicada', 'Se ha marcado a todos los alumnos como Presentes.');
+  });
+
+  // Quick Action: Reiniciar
+  document.getElementById('btn-reset-attendance')?.addEventListener('click', () => {
+    showToast('Selección Restablecida', 'Los estados han vuelto al valor predeterminado del pase.', false);
+  });
+
+  // Botón Guardar Borrador
+  document.getElementById('btn-quick-save')?.addEventListener('click', () => {
+    showToast('Borrador Guardado', 'Se preservaron los cambios locales en el servidor.');
+  });
+
+  // Finalizar Registro
+  document.getElementById('btn-finalizar-asistencia')?.addEventListener('click', () => {
+    showToast('Asistencia Finalizada', 'Registro oficial firmado con token criptográfico docente. Notificaciones despachadas.', true);
+  });
+
+  // Filtrado de tabla
+  const searchInput = document.getElementById('student-search-input');
+  if (searchInput) {
+    searchInput.addEventListener('input', (e) => {
+      const query = e.target.value.toLowerCase().trim();
+      const rows = document.querySelectorAll('.student-row');
+      rows.forEach(row => {
+        const text = row.textContent.toLowerCase();
+        row.style.display = text.includes(query) ? '' : 'none';
+      });
+    });
+  }
+
+  // Filtros rápidos
+  const filterBtns = [
+    { id: 'filter-all', filter: 'all' },
+    { id: 'filter-present', filter: 'present' },
+    { id: 'filter-late', filter: 'late' },
+    { id: 'filter-absent', filter: 'absent' }
+  ];
+
+  filterBtns.forEach(item => {
+    const btn = document.getElementById(item.id);
+    if (!btn) return;
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => {
+        const el = document.getElementById(b.id);
+        if (el) {
+          el.className = 'px-2.5 py-1 text-label-sm font-body-sm rounded text-on-surface-variant hover:text-on-surface';
+        }
+      });
+      btn.className = 'px-2.5 py-1 text-label-sm font-title-md rounded bg-surface-container-lowest text-primary shadow-xs';
+
+      const rows = document.querySelectorAll('.student-row');
+      rows.forEach(row => {
+        if (item.filter === 'all' || row.dataset.status === item.filter) {
+          row.style.display = '';
+        } else {
+          row.style.display = 'none';
+        }
+      });
+    });
+  });
+</script></main></div></body></html>

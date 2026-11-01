@@ -1,0 +1,1058 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><title>EduAsiste</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"surface-container":"#e5eeff","on-surface":"#0b1c30","secondary-fixed-dim":"#68dba9","on-error":"#ffffff","on-primary-fixed":"#001453","inverse-surface":"#213145","surface-container-high":"#dce9ff","on-tertiary-fixed":"#2f1500","primary":"#00288e","outline":"#757684","on-secondary-fixed-variant":"#005137","tertiary-container":"#743d00","surface-tint":"#3755c3","tertiary-fixed":"#ffdcc3","on-secondary-fixed":"#002114","on-primary-container":"#a8b8ff","on-background":"#0b1c30","on-tertiary-fixed-variant":"#6e3900","tertiary":"#532a00","surface-variant":"#d3e4fe","inverse-primary":"#b8c4ff","on-tertiary-container":"#ffa85d","on-secondary":"#ffffff","secondary":"#006c4a","primary-fixed":"#dde1ff","surface-container-highest":"#d3e4fe","background":"#f8f9ff","on-error-container":"#93000a","on-tertiary":"#ffffff","outline-variant":"#c4c5d5","surface-container-low":"#eff4ff","secondary-container":"#82f5c1","on-primary":"#ffffff","surface-bright":"#f8f9ff","surface-dim":"#cbdbf5","primary-fixed-dim":"#b8c4ff","inverse-on-surface":"#eaf1ff","surface":"#f8f9ff","on-secondary-container":"#00714e","on-primary-fixed-variant":"#173bab","error-container":"#ffdad6","secondary-fixed":"#85f8c4","surface-container-lowest":"#ffffff","error":"#ba1a1a","tertiary-fixed-dim":"#ffb77d","primary-container":"#1e40af","on-surface-variant":"#444653"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-lg":"1.5rem","space-md":"1rem","space-sm":"0.5rem","space-xs":"0.25rem","space-xl":"2rem","gutter-sm":"1rem","gutter":"1.5rem","margin":"2rem","margin-sm":"1rem"},"fontFamily":{"body-lg":["Inter"],"headline-lg":["Plus Jakarta Sans"],"headline-lg-mobile":["Plus Jakarta Sans"],"body-md":["Inter"],"display-lg":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"label-md":["Inter"],"body-sm":["Inter"],"title-md":["Inter"],"label-sm":["Inter"],"display-lg-mobile":["Plus Jakarta Sans"]},"fontSize":{"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"headline-lg":["28px",{"lineHeight":"36px","letterSpacing":"-0.02em","fontWeight":"600"}],"headline-lg-mobile":["22px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"display-lg":["40px",{"lineHeight":"48px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-md":["20px",{"lineHeight":"26px","letterSpacing":"-0.01em","fontWeight":"600"}],"label-md":["13px",{"lineHeight":"18px","letterSpacing":"0.01em","fontWeight":"600"}],"body-sm":["12px",{"lineHeight":"16px","fontWeight":"400"}],"title-md":["16px",{"lineHeight":"24px","fontWeight":"600"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.03em","fontWeight":"600"}],"display-lg-mobile":["30px",{"lineHeight":"38px","letterSpacing":"-0.01em","fontWeight":"700"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between"><div class="flex flex-col flex-1 overflow-y-auto"><div class="h-16 px-space-md flex items-center gap-space-sm bg-surface-container-lowest"><img alt="EduAsiste Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WNhigynvS7BsCPKvLxDgd3EGouNqulCln-VgeOICNZThmcCeen72_GYZrSje4BQpotAt_ourMKjRsGu7wREgurFDcgF51yn-UdCFxbLG1_2y-eqLUt4ZyzMEXKC4WPEPTKdcKoaii-kkRaPN4fJkzoJYaBvWcxNY5WC4AZfd_0YuZfN6JOSVoPPeCBoJJcHDPyKH6XU1CuXwwJAnWiKoNuUMAEwrpBTs9pIPrridZb"/><div class="flex flex-col"><span class="font-headline-md text-headline-md text-primary leading-none tracking-tight">EduAsiste</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mt-space-xs">Gestión Escolar</span></div></div><div class="px-space-md py-space-sm"><div class="px-space-sm py-space-xs font-label-sm text-label-sm uppercase tracking-wider text-outline">Menú Principal</div></div><nav class="flex-1 px-space-sm space-y-space-xs" data-active-classes="bg-primary text-on-primary font-title-md shadow-[0_1px_3px_rgba(15,23,42,0.08)]"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">dashboard</span><span>Dashboard</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all" data-path="registro-diario" href="#"><span class="material-symbols-outlined text-[20px]">fact_check</span><span>Asistencia Diaria</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg transition-all bg-primary text-on-primary font-title-md shadow-[0_1px_3px_rgba(15,23,42,0.08)]" data-path="estudiantes" href="#"><span class="material-symbols-outlined text-[20px]">group</span><span>Estudiantes</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all" data-path="nuevo-estudiante" href="#"><span class="material-symbols-outlined text-[20px]">person_add</span><span>Nuevo Estudiante</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all" data-path="historial" href="#"><span class="material-symbols-outlined text-[20px]">calendar_month</span><span>Historial</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all" data-path="reportes" href="#"><span class="material-symbols-outlined text-[20px]">analytics</span><span>Reportes</span></a><div class="pt-space-sm px-space-sm py-space-xs font-label-sm text-label-sm uppercase tracking-wider text-outline">Ajustes</div><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all" data-path="configuracion" href="#"><span class="material-symbols-outlined text-[20px]">settings</span><span>Configuración</span></a></nav></div><div class="p-space-md bg-surface-container-low m-space-sm rounded-xl"><div class="flex items-center gap-space-sm mb-space-sm"><div class="h-2 w-2 rounded-full bg-secondary"></div><span class="font-label-sm text-label-sm text-secondary font-semibold">Periodo Lectivo 2024</span></div><a class="flex items-center gap-space-sm px-space-sm py-space-xs text-error hover:bg-error-container hover:text-on-error-container rounded-lg transition-colors font-label-md text-label-md" data-path="login" href="#"><span class="material-symbols-outlined text-[18px]">logout</span><span>Cerrar Sesión</span></a></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs px-space-md py-space-xs bg-surface-container rounded-full text-primary font-label-md text-label-md"><span class="material-symbols-outlined text-[16px]">today</span><span>Hoy: 24 de Octubre, 2024</span></div><div class="hidden lg:flex items-center gap-space-xs bg-surface-container-low px-space-md py-space-xs rounded-lg text-outline"><span class="material-symbols-outlined text-[18px]">search</span><span class="font-body-sm text-body-sm">Buscar estudiante, carnet o curso...</span></div></div><div class="flex items-center gap-space-md"><button aria-label="Notificaciones" class="relative p-space-xs rounded-full text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1 right-1 w-2 h-2 rounded-full bg-error"></span></button><div class="flex items-center gap-space-sm pl-space-sm"><div class="flex flex-col text-right hidden sm:flex"><span class="font-title-md text-body-sm font-semibold text-on-surface leading-tight">Prof. Martín Benítez</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-tight">Docente Principal</span></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCU6SbgMpYI1jp9C3RhVnxiWjiik-q9tmzLzXVGIVPI61TA5giSFdaekj_eaXti2EIn4jRKgIWM_BYM-WDaGBWxQBtuFM2BlN18wKx9rwGztsDZOeyFFyep71Wr-fPiujNkfVPnqjZ3Fh4wFrAYTz7UsXYQyck2r1e15ci3WOJwg_Hx0cmGzddc8FisWrojhMGLChKrfxDjhNeFZEM6902wzTRJKucBcgfQudI-CB0"/></div></div></header><main class="relative w-full pt-16 px-gutter bg-background min-h-screen"><div class="flex flex-col w-full pb-space-xl">
+<!-- Top Stat Highlights & Breadcrumb Bar -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md mb-space-lg">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm mb-space-xs">
+<span>Gestión Académica</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-primary font-semibold">Directorio de Estudiantes</span>
+</div>
+<div class="flex items-baseline gap-space-md">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Directorio de Estudiantes</h1>
+<span class="inline-flex items-center px-space-sm py-0.5 rounded-full bg-surface-container font-label-md text-label-md text-primary font-semibold">
+          1,248 estudiantes registrados
+        </span>
+</div>
+</div>
+<!-- Main Global Action CTA Group -->
+<div class="flex flex-wrap items-center gap-space-sm">
+<div class="relative inline-block text-left" id="bulkActionsMenu">
+<button class="inline-flex items-center gap-space-xs px-space-md py-2.5 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-title-md text-body-sm transition-all shadow-sm" id="bulkBtn" type="button">
+<span class="material-symbols-outlined text-[18px]">checklist</span>
+<span>Acciones Masivas</span>
+<span class="hidden px-1.5 py-0.2 rounded-full bg-primary text-on-primary text-[10px] font-bold" id="selectedCounterBadge">0</span>
+<span class="material-symbols-outlined text-[18px]">expand_more</span>
+</button>
+</div>
+<div class="relative inline-block text-left" id="exportMenu">
+<button class="inline-flex items-center gap-space-xs px-space-md py-2.5 rounded-lg bg-surface-container-lowest hover:bg-surface-container-low text-on-surface-variant hover:text-on-surface font-title-md text-body-sm transition-all shadow-sm" id="exportDropdownBtn" type="button">
+<span class="material-symbols-outlined text-[18px]">file_download</span>
+<span>Exportar Lista</span>
+<span class="material-symbols-outlined text-[18px]">arrow_drop_down</span>
+</button>
+</div>
+<a class="inline-flex items-center gap-space-xs px-space-lg py-2.5 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-title-md text-body-sm transition-all shadow-sm" data-path="nuevo-estudiante" href="#">
+<span class="material-symbols-outlined text-[20px]">person_add</span>
+<span>+ Nuevo Estudiante</span>
+</a>
+</div>
+</div>
+<!-- Key Metrics Strip -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md mb-space-lg">
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Matrícula Activa</span>
+<span class="font-headline-lg text-headline-lg text-on-surface mt-space-xs">1,218</span>
+<span class="font-body-sm text-body-sm text-secondary flex items-center gap-0.5 mt-0.5 font-medium">
+<span class="material-symbols-outlined text-[14px]">arrow_upward</span> 97.6% del total
+        </span>
+</div>
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[26px]">groups</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Asistencia Promedio</span>
+<span class="font-headline-lg text-headline-lg text-secondary mt-space-xs">94.2%</span>
+<span class="font-body-sm text-body-sm text-secondary flex items-center gap-0.5 mt-0.5 font-medium">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> Nivel óptimo general
+        </span>
+</div>
+<div class="w-12 h-12 rounded-xl bg-secondary-container/30 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[26px]">fact_check</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Alumnos en Riesgo</span>
+<span class="font-headline-lg text-headline-lg text-tertiary-container mt-space-xs">24</span>
+<span class="font-body-sm text-body-sm text-tertiary-container flex items-center gap-0.5 mt-0.5 font-medium">
+<span class="material-symbols-outlined text-[14px]">warning</span> Entre 75% y 89%
+        </span>
+</div>
+<div class="w-12 h-12 rounded-xl bg-tertiary-fixed/60 flex items-center justify-center text-tertiary-container">
+<span class="material-symbols-outlined text-[26px]">switch_right</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Casos Críticos (&lt;75%)</span>
+<span class="font-headline-lg text-headline-lg text-error mt-space-xs">6</span>
+<span class="font-body-sm text-body-sm text-error flex items-center gap-0.5 mt-0.5 font-medium">
+<span class="material-symbols-outlined text-[14px]">error</span> Notificación enviada
+        </span>
+</div>
+<div class="w-12 h-12 rounded-xl bg-error-container/40 flex items-center justify-center text-error">
+<span class="material-symbols-outlined text-[26px]">crisis_alert</span>
+</div>
+</div>
+</div>
+<!-- Search & Dynamic Filter Command Center -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm mb-space-md">
+<div class="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-space-md">
+<!-- Universal Quick Search Input -->
+<div class="relative flex-1 min-w-[280px]">
+<span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-[20px] text-outline">search</span>
+<input class="w-full pl-10 pr-10 py-2.5 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all" id="studentSearchInput" placeholder="Buscar estudiante por nombre, apellidos, Código de estudiante o carnet..." type="text"/>
+<button class="hidden absolute right-3 top-1/2 -translate-y-1/2 text-outline hover:text-on-surface" id="clearSearchBtn" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<!-- Filters Dropdown Matrix -->
+<div class="flex flex-wrap items-center gap-space-xs">
+<!-- Nivel -->
+<div class="relative">
+<select class="appearance-none bg-surface-container-low hover:bg-surface-container pl-3.5 pr-8 py-2.5 rounded-lg font-label-md text-label-md text-on-surface focus:outline-none cursor-pointer transition-colors" id="filterNivel">
+<option value="">Nivel: Todos</option>
+<option value="Primaria">Primaria</option>
+<option value="Secundaria">Secundaria</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 text-[16px] text-outline pointer-events-none">expand_more</span>
+</div>
+<!-- Curso / Grado -->
+<div class="relative">
+<select class="appearance-none bg-surface-container-low hover:bg-surface-container pl-3.5 pr-8 py-2.5 rounded-lg font-label-md text-label-md text-on-surface focus:outline-none cursor-pointer transition-colors" id="filterGrado">
+<option value="">Grado: Todos</option>
+<option value="1°">1° Grado</option>
+<option value="2°">2° Grado</option>
+<option value="3°">3° Grado</option>
+<option value="4°">4° Grado</option>
+<option value="5°">5° Grado</option>
+<option value="6°">6° Grado</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 text-[16px] text-outline pointer-events-none">expand_more</span>
+</div>
+<!-- Sección -->
+<div class="relative">
+<select class="appearance-none bg-surface-container-low hover:bg-surface-container pl-3.5 pr-8 py-2.5 rounded-lg font-label-md text-label-md text-on-surface focus:outline-none cursor-pointer transition-colors" id="filterSeccion">
+<option value="">Sección: Todas</option>
+<option value="A">Sección A</option>
+<option value="B">Sección B</option>
+<option value="C">Sección C</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 text-[16px] text-outline pointer-events-none">expand_more</span>
+</div>
+<!-- Estado de Asistencia General -->
+<div class="relative">
+<select class="appearance-none bg-surface-container-low hover:bg-surface-container pl-3.5 pr-8 py-2.5 rounded-lg font-label-md text-label-md text-on-surface focus:outline-none cursor-pointer transition-colors" id="filterAsistencia">
+<option value="">Asistencia: Todos los estados</option>
+<option value="regular">Regular (&gt;90%)</option>
+<option value="riesgo">En Riesgo (75% - 89%)</option>
+<option value="critico">Crítico (&lt;75%)</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 text-[16px] text-outline pointer-events-none">expand_more</span>
+</div>
+<!-- Clear Filters Button -->
+<button class="inline-flex items-center gap-1 px-3 py-2.5 rounded-lg bg-surface-container text-primary hover:bg-surface-variant font-label-md text-label-md transition-colors" id="resetFiltersBtn" title="Limpiar todos los filtros" type="button">
+<span class="material-symbols-outlined text-[16px]">restart_alt</span>
+<span class="hidden sm:inline">Limpiar</span>
+</button>
+</div>
+</div>
+<!-- Active Filters Indicators & Count Bar -->
+<div class="mt-space-sm pt-space-sm flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs text-on-surface-variant font-body-sm text-body-sm">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Filtros aplicados:</span>
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container-low text-on-surface text-[12px]">
+          Año Lectivo: 2024
+        </span>
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container-low text-on-surface text-[12px]">
+          Sede Principal
+        </span>
+</div>
+<div class="font-label-md text-label-md text-on-surface">
+        Mostrando <span class="font-semibold text-primary" id="visibleStudentsCount">30</span> de <span class="font-semibold">1,248</span> estudiantes
+      </div>
+</div>
+</div>
+<!-- Students Data Table Canvas -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse" id="studentsTable">
+<thead>
+<tr class="bg-surface-container-low text-outline font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-3.5 pl-space-md pr-2 w-10">
+<input class="w-4 h-4 rounded text-primary focus:ring-0 cursor-pointer accent-primary" id="selectAllCheckbox" type="checkbox"/>
+</th>
+<th class="py-3.5 px-space-md font-semibold">Estudiante</th>
+<th class="py-3.5 px-space-md font-semibold">Nivel &amp; Grado</th>
+<th class="py-3.5 px-space-md font-semibold">Tutor / Apoderado</th>
+<th class="py-3.5 px-space-md font-semibold text-center">% Asistencia</th>
+<th class="py-3.5 px-space-md font-semibold">Última Asistencia</th>
+<th class="py-3.5 px-space-md font-semibold">Estado</th>
+<th class="py-3.5 pr-space-md pl-space-sm font-semibold text-right">Acciones</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-low font-body-md text-body-md text-on-surface" id="studentsTbody">
+<!-- Row 1: Excelente / Regular -->
+<tr class="hover:bg-surface-container-low/60 transition-colors group">
+<td class="py-3 pl-space-md pr-2">
+<input class="student-checkbox w-4 h-4 rounded text-primary cursor-pointer accent-primary" type="checkbox"/>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="relative w-10 h-10 rounded-full overflow-hidden flex-shrink-0 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Close-up headshot portrait of a cheerful Latin American schoolboy wearing a crisp navy blue collared uniform, smiling warmly against a brightly lit modern library background with warm natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBY98muUOuPAP95TEypHXFFIWjylvGLMaXz9kKrV2lfAo-7msHZxdVhRKpCdg0tTuIPcYHZCYQqgVMA5V9GJlSeVBaYbrsVDjNgh3EdLa4wKlr8fJEkZQ_117OkxDRTiSvXE7btWaPYVzTVwxiVyhmi4RmAqkltu0sHDSswAjt9R2SSK_Ehj8yfpmpAzc5mQ7L2s0AiiymA9uGU-Al0iVO5UKxirezCijl1bVmown8"/>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-body-md font-semibold text-on-surface truncate group-hover:text-primary transition-colors">Alonso Ramos, Mateo Gabriel</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">ID: EST-2024-0891 • Código de estudiante 74819203</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Secundaria</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">3° Grado • Sección B</span>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex flex-col">
+<span class="font-body-md text-body-md text-on-surface font-medium truncate">Carla Ramos (Madre)</span>
+<a class="inline-flex items-center gap-1 font-body-sm text-body-sm text-secondary hover:underline" href="https://wa.me/51987654321" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[14px]">chat</span>
+<span>+1 987 654 321</span>
+</a>
+</div>
+</td>
+<td class="py-3 px-space-md text-center">
+<div class="flex flex-col items-center">
+<div class="flex items-center gap-1.5 font-label-md text-label-md font-bold text-secondary">
+<span>96.5%</span>
+<span class="material-symbols-outlined text-[14px]">trending_up</span>
+</div>
+<div class="w-24 h-2 bg-surface-container rounded-full overflow-hidden mt-1">
+<div class="h-full bg-secondary rounded-full" style="width: 96.5%"></div>
+</div>
+<span class="text-[11px] text-outline mt-0.5">76/78 asistencias</span>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-secondary-container/40 text-on-secondary-container font-label-md text-label-md font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>Hoy • Presente</span>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-surface-container text-primary font-label-sm text-label-sm font-semibold">
+                Activo
+              </span>
+</td>
+<td class="py-3 pr-space-md pl-space-sm text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded-lg text-outline hover:text-primary hover:bg-surface-container transition-colors" title="Ver Historial Completo" type="button">
+<span class="material-symbols-outlined text-[18px]">history</span>
+</button>
+<button class="p-1.5 rounded-lg text-outline hover:text-primary hover:bg-surface-container transition-colors" title="Editar Ficha" type="button">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1.5 rounded-lg text-outline hover:text-secondary hover:bg-surface-container transition-colors" title="Notificar a Apoderado" type="button">
+<span class="material-symbols-outlined text-[18px]">send</span>
+</button>
+<button class="p-1.5 rounded-lg text-outline hover:text-on-surface hover:bg-surface-container transition-colors" title="Más opciones" type="button">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2: En Riesgo (Ámbar) -->
+<tr class="hover:bg-surface-container-low/60 transition-colors group bg-tertiary-fixed/5">
+<td class="py-3 pl-space-md pr-2">
+<input class="student-checkbox w-4 h-4 rounded text-primary cursor-pointer accent-primary" type="checkbox"/>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="relative w-10 h-10 rounded-full overflow-hidden flex-shrink-0 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Portrait photo of a thoughtful teenage student girl with braided hair and studious look, softly smiling with neutral clean academic background and pleasant morning sunlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuATsHH-b98m71pMehvZnHGYxkFoByaDN3GgMvU577XYOkh7yKRsq8xyn3QeKPVUyjzU0uFLxQ7wAms4uHN7JvN2gbj0OVXgC9OqWE-pOvUGFSwxQ9GfHsvbXOCgAGqcifr1JewPKJNQyNlLQ_aa-zL26vIdlqdrBNStiOQmIkw76F9yvnUs5Bs7BxLOljfeGVat5ijLRTdgpMWVm6BiPQVpQmuOR2imVVzifasvA9c"/>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-body-md font-semibold text-on-surface truncate group-hover:text-primary transition-colors">Benavides Soto, Lucía Valeria</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">ID: EST-2024-0412 • Código de estudiante 78945612</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Secundaria</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">5° Grado • Sección A</span>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex flex-col">
+<span class="font-body-md text-body-md text-on-surface font-medium truncate">Fernando Benavides (Padre)</span>
+<a class="inline-flex items-center gap-1 font-body-sm text-body-sm text-secondary hover:underline" href="https://wa.me/51944112233" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[14px]">chat</span>
+<span>+1 944 112 233</span>
+</a>
+</div>
+</td>
+<td class="py-3 px-space-md text-center">
+<div class="flex flex-col items-center">
+<div class="flex items-center gap-1.5 font-label-md text-label-md font-bold text-tertiary-container">
+<span>82.0%</span>
+<span class="material-symbols-outlined text-[14px]">trending_down</span>
+</div>
+<div class="w-24 h-2 bg-surface-container rounded-full overflow-hidden mt-1">
+<div class="h-full bg-tertiary-fixed-dim rounded-full" style="width: 82%"></div>
+</div>
+<span class="text-[11px] text-outline mt-0.5">64/78 asistencias</span>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-md text-label-md font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-container"></span>
+<span>23 Oct • Tardanza</span>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-tertiary-fixed/60 text-on-tertiary-fixed font-label-sm text-label-sm font-semibold">
+                En Observación
+              </span>
+</td>
+<td class="py-3 pr-space-md pl-space-sm text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded-lg text-outline hover:text-primary hover:bg-surface-container transition-colors" title="Ver Historial Completo" type="button">
+<span class="material-symbols-outlined text-[18px]">history</span>
+</button>
+<button class="p-1.5 rounded-lg text-outline hover:text-primary hover:bg-surface-container transition-colors" title="Editar Ficha" type="button">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1.5 rounded-lg text-tertiary-container hover:bg-surface-container transition-colors" title="Notificar a Apoderado" type="button">
+<span class="material-symbols-outlined text-[18px]">send</span>
+</button>
+<button class="p-1.5 rounded-lg text-outline hover:text-on-surface hover:bg-surface-container transition-colors" title="Más opciones" type="button">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3: Crítico (Rojo) -->
+<tr class="hover:bg-surface-container-low/60 transition-colors group bg-error-container/10">
+<td class="py-3 pl-space-md pr-2">
+<input class="student-checkbox w-4 h-4 rounded text-primary cursor-pointer accent-primary" type="checkbox"/>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="relative w-10 h-10 rounded-full overflow-hidden flex-shrink-0 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Portrait shot of a young elementary male student with short neat haircut and white collared school polo looking into camera, soft classroom ambient bokeh in background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsmMXH8LCj2khwWBv0gnwrbpKc5Z46-uRS66gVyLOOQl1L9BT7asNRsXgRGDLycZj4pbSVgPg-78KKRBNOv7nu8nBkL3_e7PXaIj8aE7_QvFgzVTnmLwzcoZRh54VnMsdGC9Bj-N5EgMCj2LPbLj5zAW0S_YePeymBn4s4VOcv_t6XCe8nVhypRl9FXPiNeD2xeWnXaG5-DSOpjOqh40jiaSh1Nlyve5-_eyF6168"/>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-body-md font-semibold text-on-surface truncate group-hover:text-primary transition-colors">Castillo Paredes, Diego André</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">ID: EST-2024-1102 • Código de estudiante 76321900</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Primaria</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">4° Grado • Sección C</span>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex flex-col">
+<span class="font-body-md text-body-md text-on-surface font-medium truncate">Mónica Paredes (Madre)</span>
+<a class="inline-flex items-center gap-1 font-body-sm text-body-sm text-secondary hover:underline" href="https://wa.me/51955667788" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[14px]">chat</span>
+<span>+1 955 667 788</span>
+</a>
+</div>
+</td>
+<td class="py-3 px-space-md text-center">
+<div class="flex flex-col items-center">
+<div class="flex items-center gap-1.5 font-label-md text-label-md font-bold text-error">
+<span>68.0%</span>
+<span class="material-symbols-outlined text-[14px]">arrow_downward</span>
+</div>
+<div class="w-24 h-2 bg-surface-container rounded-full overflow-hidden mt-1">
+<div class="h-full bg-error rounded-full" style="width: 68%"></div>
+</div>
+<span class="text-[11px] text-outline mt-0.5">53/78 asistencias</span>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-error-container text-on-error-container font-label-md text-label-md font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+<span>22 Oct • Ausente</span>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-error text-on-error font-label-sm text-label-sm font-semibold">
+                En Observación
+              </span>
+</td>
+<td class="py-3 pr-space-md pl-space-sm text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded-lg text-outline hover:text-primary hover:bg-surface-container transition-colors" title="Ver Historial Completo" type="button">
+<span class="material-symbols-outlined text-[18px]">history</span>
+</button>
+<button class="p-1.5 rounded-lg text-outline hover:text-primary hover:bg-surface-container transition-colors" title="Editar Ficha" type="button">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1.5 rounded-lg text-error hover:bg-error-container transition-colors animate-pulse" title="Alerta Urgente a Apoderado" type="button">
+<span class="material-symbols-outlined text-[18px]">notification_important</span>
+</button>
+<button class="p-1.5 rounded-lg text-outline hover:text-on-surface hover:bg-surface-container transition-colors" title="Más opciones" type="button">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4: Excelente / Justificado reciente -->
+<tr class="hover:bg-surface-container-low/60 transition-colors group">
+<td class="py-3 pl-space-md pr-2">
+<input class="student-checkbox w-4 h-4 rounded text-primary cursor-pointer accent-primary" type="checkbox"/>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="relative w-10 h-10 rounded-full overflow-hidden flex-shrink-0 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Portrait of an enthusiastic teenage female student with round glasses and stylish haircut wearing navy cardigan school uniform with bright friendly expression" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfuqmGtehePyHn7tjrFwf-FZM4bSIair8TA3FMTH46PqJOw6OKO4GV5E-lT5-ySAwsip9d4JMeXIe2SRx1HsWr4GwQGYfcASnKgsLLK_VGvwZ9czpVCS-EDG2NqDmFybCo-cvBAZ1qU3mJOO9SEBA-jcceZlJpby2yCzhyzBFqQgFrhci63pvuglsfQ4W0zs5kF0Cbn_D70F_07zIqAKIpFMgDAlgX--tA8y-3uMI"/>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-body-md font-semibold text-on-surface truncate group-hover:text-primary transition-colors">Díaz Morales, Sofía Valentina</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">ID: EST-2024-0329 • Código de estudiante 71298450</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Primaria</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">5° Grado • Sección A</span>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex flex-col">
+<span class="font-body-md text-body-md text-on-surface font-medium truncate">Raúl Díaz (Padre)</span>
+<a class="inline-flex items-center gap-1 font-body-sm text-body-sm text-secondary hover:underline" href="https://wa.me/51966334455" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[14px]">chat</span>
+<span>+1 966 334 455</span>
+</a>
+</div>
+</td>
+<td class="py-3 px-space-md text-center">
+<div class="flex flex-col items-center">
+<div class="flex items-center gap-1.5 font-label-md text-label-md font-bold text-secondary">
+<span>94.8%</span>
+<span class="material-symbols-outlined text-[14px]">trending_up</span>
+</div>
+<div class="w-24 h-2 bg-surface-container rounded-full overflow-hidden mt-1">
+<div class="h-full bg-secondary rounded-full" style="width: 94.8%"></div>
+</div>
+<span class="text-[11px] text-outline mt-0.5">74/78 asistencias</span>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container text-primary font-label-md text-label-md font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span>21 Oct • Justificado</span>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-surface-container text-primary font-label-sm text-label-sm font-semibold">
+                Activo
+              </span>
+</td>
+<td class="py-3 pr-space-md pl-space-sm text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded-lg text-outline hover:text-primary hover:bg-surface-container transition-colors" title="Ver Historial Completo" type="button">
+<span class="material-symbols-outlined text-[18px]">history</span>
+</button>
+<button class="p-1.5 rounded-lg text-outline hover:text-primary hover:bg-surface-container transition-colors" title="Editar Ficha" type="button">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1.5 rounded-lg text-outline hover:text-secondary hover:bg-surface-container transition-colors" title="Notificar a Apoderado" type="button">
+<span class="material-symbols-outlined text-[18px]">send</span>
+</button>
+<button class="p-1.5 rounded-lg text-outline hover:text-on-surface hover:bg-surface-container transition-colors" title="Más opciones" type="button">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 5: Asistencia Perfecta (100%) -->
+<tr class="hover:bg-surface-container-low/60 transition-colors group">
+<td class="py-3 pl-space-md pr-2">
+<input class="student-checkbox w-4 h-4 rounded text-primary cursor-pointer accent-primary" type="checkbox"/>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="relative w-10 h-10 rounded-full overflow-hidden flex-shrink-0 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Close up portrait photo of an attentive male high school student smiling politely in high school uniform with soft lighting inside an academic classroom" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDizLv13OOBQGVVZRF3gvKk0oCsQzyI7xGmJNayfEbuARaAvDGKimhVBHF_AKKRjcgvWZOTyHSJCMp2x10iz3u5kWPAWgyDec_6jhQ7S0B-U6N86RBae6iJ915T3P4x2IDJrh6M120Xc5QhvGhJ8q_nfv75zgTE9htE0X_MtVYzJj0ZVF05m2mNdKLpX4xOsll0DcwbxeuLMsKAdxuAAAQI0U79bB6xBiFYRoKYsyc"/>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-body-md font-semibold text-on-surface truncate group-hover:text-primary transition-colors">García Mendoza, Joaquín Emilio</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">ID: EST-2024-0044 • Código de estudiante 75112099</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Secundaria</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">3° Grado • Sección B</span>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex flex-col">
+<span class="font-body-md text-body-md text-on-surface font-medium truncate">Patricia Mendoza (Madre)</span>
+<a class="inline-flex items-center gap-1 font-body-sm text-body-sm text-secondary hover:underline" href="https://wa.me/51977889900" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[14px]">chat</span>
+<span>+1 977 889 900</span>
+</a>
+</div>
+</td>
+<td class="py-3 px-space-md text-center">
+<div class="flex flex-col items-center">
+<div class="flex items-center gap-1.5 font-label-md text-label-md font-bold text-secondary">
+<span>100%</span>
+<span class="material-symbols-outlined text-[14px]">star</span>
+</div>
+<div class="w-24 h-2 bg-surface-container rounded-full overflow-hidden mt-1">
+<div class="h-full bg-secondary rounded-full" style="width: 100%"></div>
+</div>
+<span class="text-[11px] text-outline mt-0.5">78/78 asistencias</span>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-secondary-container/40 text-on-secondary-container font-label-md text-label-md font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>Hoy • Presente</span>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-surface-container text-primary font-label-sm text-label-sm font-semibold">
+                Activo
+              </span>
+</td>
+<td class="py-3 pr-space-md pl-space-sm text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded-lg text-outline hover:text-primary hover:bg-surface-container transition-colors" title="Ver Historial Completo" type="button">
+<span class="material-symbols-outlined text-[18px]">history</span>
+</button>
+<button class="p-1.5 rounded-lg text-outline hover:text-primary hover:bg-surface-container transition-colors" title="Editar Ficha" type="button">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1.5 rounded-lg text-outline hover:text-secondary hover:bg-surface-container transition-colors" title="Notificar a Apoderado" type="button">
+<span class="material-symbols-outlined text-[18px]">send</span>
+</button>
+<button class="p-1.5 rounded-lg text-outline hover:text-on-surface hover:bg-surface-container transition-colors" title="Más opciones" type="button">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 6: Riesgo Leve -->
+<tr class="hover:bg-surface-container-low/60 transition-colors group">
+<td class="py-3 pl-space-md pr-2">
+<input class="student-checkbox w-4 h-4 rounded text-primary cursor-pointer accent-primary" type="checkbox"/>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="relative w-10 h-10 rounded-full overflow-hidden flex-shrink-0 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Portrait photography of a Hispanic middle school girl with high ponytail smiling in white school shirt with bright classroom background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBq0B6hxv3tRN7cLiXvVcHrwD5Qwh-Ivgazy-aa6_kSeeXdQuaPmJ8q_nuzGlk9eoKjUHy9xW9_OBtDPLO8fYrFYvGJI8i1OvQY0coh5B2HWKsuaRUJqAqp7HXYi4LywsHO5IcASBtNJ7DnzKXhbPX-3J36htNkES_l7xxTF-Tu-uADr8HwXmZe5t1cJOpv-17jhdwFxsuQzd5j04-sjVXCGkz2m_xK_wn4iJe8ho0"/>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-body-md font-semibold text-on-surface truncate group-hover:text-primary transition-colors">Huamán Cárdenas, Camila Belén</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">ID: EST-2024-0731 • Código de estudiante 79148201</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Secundaria</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">1° Grado • Sección A</span>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex flex-col">
+<span class="font-body-md text-body-md text-on-surface font-medium truncate">Renzo Huamán (Padre)</span>
+<a class="inline-flex items-center gap-1 font-body-sm text-body-sm text-secondary hover:underline" href="https://wa.me/51933221100" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[14px]">chat</span>
+<span>+1 933 221 100</span>
+</a>
+</div>
+</td>
+<td class="py-3 px-space-md text-center">
+<div class="flex flex-col items-center">
+<div class="flex items-center gap-1.5 font-label-md text-label-md font-bold text-secondary">
+<span>91.0%</span>
+<span class="material-symbols-outlined text-[14px]">trending_flat</span>
+</div>
+<div class="w-24 h-2 bg-surface-container rounded-full overflow-hidden mt-1">
+<div class="h-full bg-secondary rounded-full" style="width: 91%"></div>
+</div>
+<span class="text-[11px] text-outline mt-0.5">71/78 asistencias</span>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-secondary-container/40 text-on-secondary-container font-label-md text-label-md font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>Hoy • Presente</span>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-surface-container text-primary font-label-sm text-label-sm font-semibold">
+                Activo
+              </span>
+</td>
+<td class="py-3 pr-space-md pl-space-sm text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded-lg text-outline hover:text-primary hover:bg-surface-container transition-colors" title="Ver Historial Completo" type="button">
+<span class="material-symbols-outlined text-[18px]">history</span>
+</button>
+<button class="p-1.5 rounded-lg text-outline hover:text-primary hover:bg-surface-container transition-colors" title="Editar Ficha" type="button">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1.5 rounded-lg text-outline hover:text-secondary hover:bg-surface-container transition-colors" title="Notificar a Apoderado" type="button">
+<span class="material-symbols-outlined text-[18px]">send</span>
+</button>
+<button class="p-1.5 rounded-lg text-outline hover:text-on-surface hover:bg-surface-container transition-colors" title="Más opciones" type="button">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 7: Tardanza reciente -->
+<tr class="hover:bg-surface-container-low/60 transition-colors group">
+<td class="py-3 pl-space-md pr-2">
+<input class="student-checkbox w-4 h-4 rounded text-primary cursor-pointer accent-primary" type="checkbox"/>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="relative w-10 h-10 rounded-full overflow-hidden flex-shrink-0 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Portrait of an elementary boy student with happy face in bright navy school uniform polo on a clean school hall background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqmeJNgECPM14kNdW6M9e40kzCRGVjtIneW3exWDnImiwGMwY2fnZXewIzY3NRtp2bJZD5Yxff_RgP2uUfC-bbJkK68xSTIq7qs8VJ2nVdkLq9JQAIOUht8qgtVDZcuiLTr63pwdXAfHemSfr0Fb7KLXE9qRy2WaLkDD0Z6FXiyFW3qeIqp_ajfAO8d7hJ3LauCXLCO4KgRRwC-yXDxZV4UB8zWfQTwbxBmMxZWJI"/>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-body-md font-semibold text-on-surface truncate group-hover:text-primary transition-colors">Morales Vega, Benjamín Nicolás</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">ID: EST-2024-0518 • Código de estudiante 72451992</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Primaria</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">2° Grado • Sección B</span>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex flex-col">
+<span class="font-body-md text-body-md text-on-surface font-medium truncate">Gloria Vega (Madre)</span>
+<a class="inline-flex items-center gap-1 font-body-sm text-body-sm text-secondary hover:underline" href="https://wa.me/51922119988" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[14px]">chat</span>
+<span>+1 922 119 988</span>
+</a>
+</div>
+</td>
+<td class="py-3 px-space-md text-center">
+<div class="flex flex-col items-center">
+<div class="flex items-center gap-1.5 font-label-md text-label-md font-bold text-secondary">
+<span>93.6%</span>
+<span class="material-symbols-outlined text-[14px]">trending_up</span>
+</div>
+<div class="w-24 h-2 bg-surface-container rounded-full overflow-hidden mt-1">
+<div class="h-full bg-secondary rounded-full" style="width: 93.6%"></div>
+</div>
+<span class="text-[11px] text-outline mt-0.5">73/78 asistencias</span>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-md text-label-md font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-container"></span>
+<span>24 Oct • Tardanza</span>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-surface-container text-primary font-label-sm text-label-sm font-semibold">
+                Activo
+              </span>
+</td>
+<td class="py-3 pr-space-md pl-space-sm text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded-lg text-outline hover:text-primary hover:bg-surface-container transition-colors" title="Ver Historial Completo" type="button">
+<span class="material-symbols-outlined text-[18px]">history</span>
+</button>
+<button class="p-1.5 rounded-lg text-outline hover:text-primary hover:bg-surface-container transition-colors" title="Editar Ficha" type="button">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1.5 rounded-lg text-outline hover:text-secondary hover:bg-surface-container transition-colors" title="Notificar a Apoderado" type="button">
+<span class="material-symbols-outlined text-[18px]">send</span>
+</button>
+<button class="p-1.5 rounded-lg text-outline hover:text-on-surface hover:bg-surface-container transition-colors" title="Más opciones" type="button">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 8: En Riesgo con ausencias acumuladas -->
+<tr class="hover:bg-surface-container-low/60 transition-colors group bg-tertiary-fixed/5">
+<td class="py-3 pl-space-md pr-2">
+<input class="student-checkbox w-4 h-4 rounded text-primary cursor-pointer accent-primary" type="checkbox"/>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="relative w-10 h-10 rounded-full overflow-hidden flex-shrink-0 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Portrait of an intelligent teenage boy with black hair and glasses wearing dark blue school uniform shirt, gentle expression with soft daylight in a modern high school setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCM4S0n6eJXmwW3hyJg1mRZiwudwEUoY49UG4tsfvLzIAp450eRM_-_VLemQVd3ylC6WOiLhTTWz9GUNhrh9yb3HDqi1rgwL1QaDSIQCDlz0TRqc6YjiNtZZOOJl3OtNclZkUdi9MfP4LTKQA7FTDKZlQrQ_6tlFO5Z1UqDAE1TMGrfx5F_Sq1b56UqZdnhB6OB7Yb_zExoGLYc--Blbh6Q7opvIgL4ppqfD1NDIE4"/>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-body-md font-semibold text-on-surface truncate group-hover:text-primary transition-colors">Ríos Salazar, Rodrigo Andrés</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">ID: EST-2024-0199 • Código de estudiante 73581290</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Secundaria</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">4° Grado • Sección B</span>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<div class="flex flex-col">
+<span class="font-body-md text-body-md text-on-surface font-medium truncate">Mariana Salazar (Madre)</span>
+<a class="inline-flex items-center gap-1 font-body-sm text-body-sm text-secondary hover:underline" href="https://wa.me/51911447722" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[14px]">chat</span>
+<span>+1 911 447 722</span>
+</a>
+</div>
+</td>
+<td class="py-3 px-space-md text-center">
+<div class="flex flex-col items-center">
+<div class="flex items-center gap-1.5 font-label-md text-label-md font-bold text-tertiary-container">
+<span>78.2%</span>
+<span class="material-symbols-outlined text-[14px]">trending_down</span>
+</div>
+<div class="w-24 h-2 bg-surface-container rounded-full overflow-hidden mt-1">
+<div class="h-full bg-tertiary-fixed-dim rounded-full" style="width: 78.2%"></div>
+</div>
+<span class="text-[11px] text-outline mt-0.5">61/78 asistencias</span>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-error-container text-on-error-container font-label-md text-label-md font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+<span>24 Oct • Ausente</span>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-tertiary-fixed/60 text-on-tertiary-fixed font-label-sm text-label-sm font-semibold">
+                En Observación
+              </span>
+</td>
+<td class="py-3 pr-space-md pl-space-sm text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded-lg text-outline hover:text-primary hover:bg-surface-container transition-colors" title="Ver Historial Completo" type="button">
+<span class="material-symbols-outlined text-[18px]">history</span>
+</button>
+<button class="p-1.5 rounded-lg text-outline hover:text-primary hover:bg-surface-container transition-colors" title="Editar Ficha" type="button">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1.5 rounded-lg text-tertiary-container hover:bg-surface-container transition-colors" title="Notificar a Apoderado" type="button">
+<span class="material-symbols-outlined text-[18px]">send</span>
+</button>
+<button class="p-1.5 rounded-lg text-outline hover:text-on-surface hover:bg-surface-container transition-colors" title="Más opciones" type="button">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Empty State Placeholder (hidden by default) -->
+<div class="hidden flex-col items-center justify-center p-space-xl text-center" id="noResultsState">
+<div class="w-16 h-16 rounded-full bg-surface-container flex items-center justify-center text-outline mb-space-sm">
+<span class="material-symbols-outlined text-[32px]">person_search</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">No se encontraron estudiantes</h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md mt-1">
+        Ningún alumno coincide con los criterios de búsqueda o filtros seleccionados. Intenta restablecer los parámetros.
+      </p>
+<button class="mt-space-md px-space-md py-2 rounded-lg bg-primary text-on-primary font-title-md text-body-sm shadow-sm hover:bg-primary-container transition-all" id="resetFromEmptyBtn" type="button">
+        Restablecer Filtros
+      </button>
+</div>
+<!-- Complete Pagination & Density Controls -->
+<div class="p-space-md bg-surface-container-lowest flex flex-col md:flex-row items-center justify-between gap-space-md border-t border-surface-container-low">
+<!-- Rows per Page Selector -->
+<div class="flex items-center gap-space-sm font-body-sm text-body-sm text-on-surface-variant">
+<span>Filas por página:</span>
+<div class="relative">
+<select class="appearance-none bg-surface-container-low hover:bg-surface-container pl-3 pr-7 py-1.5 rounded-lg font-label-md text-label-md text-on-surface focus:outline-none cursor-pointer transition-colors" id="rowsPerPageSelect">
+<option value="10">10</option>
+<option value="25">25</option>
+<option value="50">50</option>
+<option value="100">100</option>
+</select>
+<span class="material-symbols-outlined absolute right-1.5 top-1/2 -translate-y-1/2 text-[16px] text-outline pointer-events-none">expand_more</span>
+</div>
+<span class="text-outline">|</span>
+<span class="text-on-surface">Página <strong class="font-semibold">1</strong> de <strong class="font-semibold">42</strong></span>
+</div>
+<!-- Pagination Buttons -->
+<div class="flex items-center gap-1">
+<button class="p-2 rounded-lg text-outline opacity-40 cursor-not-allowed flex items-center justify-center" disabled="" type="button">
+<span class="material-symbols-outlined text-[20px]">first_page</span>
+</button>
+<button class="px-2.5 py-1.5 rounded-lg text-outline opacity-40 cursor-not-allowed flex items-center gap-1 font-label-md text-label-md" disabled="" type="button">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+<span>Anterior</span>
+</button>
+<div class="flex items-center gap-1 mx-space-xs">
+<button class="w-8 h-8 rounded-lg bg-primary text-on-primary font-label-md text-label-md font-bold shadow-sm" type="button">1</button>
+<button class="w-8 h-8 rounded-lg text-on-surface-variant hover:bg-surface-container-low font-label-md text-label-md transition-colors" type="button">2</button>
+<button class="w-8 h-8 rounded-lg text-on-surface-variant hover:bg-surface-container-low font-label-md text-label-md transition-colors" type="button">3</button>
+<span class="w-6 text-center text-outline font-label-md text-label-md">...</span>
+<button class="w-8 h-8 rounded-lg text-on-surface-variant hover:bg-surface-container-low font-label-md text-label-md transition-colors" type="button">42</button>
+</div>
+<button class="px-2.5 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors flex items-center gap-1 font-label-md text-label-md" type="button">
+<span>Siguiente</span>
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+<button class="p-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors flex items-center justify-center" type="button">
+<span class="material-symbols-outlined text-[20px]">last_page</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Interactive Popovers / Modals via Client Vanilla Script -->
+<div class="fixed inset-0 z-50 bg-inverse-surface/40 backdrop-blur-sm hidden items-center justify-center p-space-md" id="exportModalOverlay">
+<div class="bg-surface-container-lowest rounded-xl shadow-xl w-full max-w-md p-space-lg">
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex items-center gap-space-xs text-primary">
+<span class="material-symbols-outlined text-[24px]">cloud_download</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Exportar Directorio</h3>
+</div>
+<button class="p-1 rounded-lg text-outline hover:text-on-surface" id="closeExportModal">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-md">
+        Selecciona el formato y los datos que deseas consolidar del listado de estudiantes:
+      </p>
+<div class="space-y-space-sm mb-space-lg">
+<label class="flex items-center gap-space-sm p-space-sm rounded-lg hover:bg-surface-container-low cursor-pointer transition-colors">
+<input checked="" class="accent-primary w-4 h-4" name="exportFormat" type="radio" value="xlsx"/>
+<div class="flex flex-col">
+<span class="font-title-md text-body-md text-on-surface font-semibold">Formato Excel (.xlsx)</span>
+<span class="font-body-sm text-body-sm text-outline">Incluye fórmulas de porcentaje, métricas y datos de contacto</span>
+</div>
+</label>
+<label class="flex items-center gap-space-sm p-space-sm rounded-lg hover:bg-surface-container-low cursor-pointer transition-colors">
+<input class="accent-primary w-4 h-4" name="exportFormat" type="radio" value="pdf"/>
+<div class="flex flex-col">
+<span class="font-title-md text-body-md text-on-surface font-semibold">Documento Oficial PDF (.pdf)</span>
+<span class="font-body-sm text-body-sm text-outline">Diseño maquetado listo para impresión y archivo institucional</span>
+</div>
+</label>
+</div>
+<div class="flex items-center justify-end gap-space-sm">
+<button class="px-space-md py-2 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-title-md text-body-sm transition-colors" id="cancelExportBtn" type="button">
+          Cancelar
+        </button>
+<button class="inline-flex items-center gap-1.5 px-space-md py-2 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-title-md text-body-sm transition-all shadow-sm" id="confirmExportBtn" type="button">
+<span class="material-symbols-outlined text-[18px]">download</span>
+<span>Descargar Reporte</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Toast Notification Feedback Container -->
+<div class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none" id="toastNotification">
+<div class="bg-inverse-surface text-inverse-on-surface px-space-md py-3 rounded-xl shadow-xl flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[20px] text-secondary-fixed">check_circle</span>
+<span class="font-body-md text-body-md font-medium" id="toastMessage">Acción completada con éxito</span>
+</div>
+</div>
+</div>
+<script>
+  (function initDirectoryPage() {
+    const searchInput = document.getElementById('studentSearchInput');
+    const clearSearchBtn = document.getElementById('clearSearchBtn');
+    const filterNivel = document.getElementById('filterNivel');
+    const filterGrado = document.getElementById('filterGrado');
+    const filterSeccion = document.getElementById('filterSeccion');
+    const filterAsistencia = document.getElementById('filterAsistencia');
+    const resetFiltersBtn = document.getElementById('resetFiltersBtn');
+    const resetFromEmptyBtn = document.getElementById('resetFromEmptyBtn');
+    const tbody = document.getElementById('studentsTbody');
+    const rows = tbody ? Array.from(tbody.querySelectorAll('tr')) : [];
+    const noResults = document.getElementById('noResultsState');
+    const countDisplay = document.getElementById('visibleStudentsCount');
+    const selectAllCheckbox = document.getElementById('selectAllCheckbox');
+    const rowCheckboxes = document.querySelectorAll('.student-checkbox');
+    const selectedBadge = document.getElementById('selectedCounterBadge');
+
+    // Export Modal Controls
+    const exportDropdownBtn = document.getElementById('exportDropdownBtn');
+    const exportModalOverlay = document.getElementById('exportModalOverlay');
+    const closeExportModal = document.getElementById('closeExportModal');
+    const cancelExportBtn = document.getElementById('cancelExportBtn');
+    const confirmExportBtn = document.getElementById('confirmExportBtn');
+
+    // Toast Utility
+    const toast = document.getElementById('toastNotification');
+    const toastMsg = document.getElementById('toastMessage');
+
+    function showToast(text) {
+      if (!toast || !toastMsg) return;
+      toastMsg.textContent = text;
+      toast.classList.remove('translate-y-20', 'opacity-0', 'pointer-events-none');
+      setTimeout(() => {
+        toast.classList.add('translate-y-20', 'opacity-0', 'pointer-events-none');
+      }, 3200);
+    }
+
+    // Filter Logic
+    function applyFiltering() {
+      const query = (searchInput?.value || '').toLowerCase().trim();
+      const nivelVal = filterNivel?.value || '';
+      const gradoVal = filterGrado?.value || '';
+      const seccionVal = filterSeccion?.value || '';
+      const asistVal = filterAsistencia?.value || '';
+
+      if (clearSearchBtn) {
+        if (query.length > 0) {
+          clearSearchBtn.classList.remove('hidden');
+        } else {
+          clearSearchBtn.classList.add('hidden');
+        }
+      }
+
+      let visibleCount = 0;
+
+      rows.forEach(row => {
+        const text = row.innerText.toLowerCase();
+        let matches = true;
+
+        if (query && !text.includes(query)) matches = false;
+        if (nivelVal && !text.includes(nivelVal.toLowerCase())) matches = false;
+        if (gradoVal && !text.includes(gradoVal.toLowerCase())) matches = false;
+        if (seccionVal && !text.includes('sección ' + seccionVal.toLowerCase())) matches = false;
+
+        if (asistVal) {
+          if (asistVal === 'regular' && (text.includes('en observación') || text.includes('68.0%') || text.includes('82.0%') || text.includes('78.2%'))) {
+            matches = false;
+          }
+          if (asistVal === 'riesgo' && !(text.includes('82.0%') || text.includes('78.2%'))) {
+            matches = false;
+          }
+          if (asistVal === 'critico' && !text.includes('68.0%')) {
+            matches = false;
+          }
+        }
+
+        if (matches) {
+          row.style.display = '';
+          visibleCount++;
+        } else {
+          row.style.display = 'none';
+        }
+      });
+
+      if (countDisplay) countDisplay.textContent = visibleCount;
+
+      if (visibleCount === 0) {
+        if (noResults) noResults.classList.remove('hidden');
+        if (tbody) tbody.classList.add('hidden');
+      } else {
+        if (noResults) noResults.classList.add('hidden');
+        if (tbody) tbody.classList.remove('hidden');
+      }
+    }
+
+    function resetAllFilters() {
+      if (searchInput) searchInput.value = '';
+      if (filterNivel) filterNivel.value = '';
+      if (filterGrado) filterGrado.value = '';
+      if (filterSeccion) filterSeccion.value = '';
+      if (filterAsistencia) filterAsistencia.value = '';
+      applyFiltering();
+      showToast('Filtros restablecidos al valor predeterminado');
+    }
+
+    if (searchInput) searchInput.addEventListener('input', applyFiltering);
+    if (clearSearchBtn) clearSearchBtn.addEventListener('click', () => {
+      searchInput.value = '';
+      applyFiltering();
+      searchInput.focus();
+    });
+
+    [filterNivel, filterGrado, filterSeccion, filterAsistencia].forEach(select => {
+      if (select) select.addEventListener('change', applyFiltering);
+    });
+
+    if (resetFiltersBtn) resetFiltersBtn.addEventListener('click', resetAllFilters);
+    if (resetFromEmptyBtn) resetFromEmptyBtn.addEventListener('click', resetAllFilters);
+
+    // Multi-Selection Checkbox Handling
+    function updateSelectedCounter() {
+      const selected = Array.from(rowCheckboxes).filter(cb => cb.checked).length;
+      if (selectedBadge) {
+        if (selected > 0) {
+          selectedBadge.textContent = selected;
+          selectedBadge.classList.remove('hidden');
+        } else {
+          selectedBadge.classList.add('hidden');
+        }
+      }
+      if (selectAllCheckbox) {
+        selectAllCheckbox.checked = selected > 0 && selected === rowCheckboxes.length;
+        selectAllCheckbox.indeterminate = selected > 0 && selected < rowCheckboxes.length;
+      }
+    }
+
+    if (selectAllCheckbox) {
+      selectAllCheckbox.addEventListener('change', (e) => {
+        rowCheckboxes.forEach(cb => {
+          const row = cb.closest('tr');
+          if (row && row.style.display !== 'none') {
+            cb.checked = e.target.checked;
+          }
+        });
+        updateSelectedCounter();
+      });
+    }
+
+    rowCheckboxes.forEach(cb => {
+      cb.addEventListener('change', updateSelectedCounter);
+    });
+
+    // Bulk actions button notification feedback
+    const bulkBtn = document.getElementById('bulkBtn');
+    if (bulkBtn) {
+      bulkBtn.addEventListener('click', () => {
+        const count = Array.from(rowCheckboxes).filter(cb => cb.checked).length;
+        if (count === 0) {
+          showToast('Selecciona al menos un estudiante para aplicar acciones masivas');
+        } else {
+          showToast(`Abriendo menú de acciones para ${count} estudiantes seleccionados`);
+        }
+      });
+    }
+
+    // Export Modal Events
+    if (exportDropdownBtn && exportModalOverlay) {
+      exportDropdownBtn.addEventListener('click', () => {
+        exportModalOverlay.classList.remove('hidden');
+        exportModalOverlay.classList.add('flex');
+      });
+    }
+
+    function closeModal() {
+      if (exportModalOverlay) {
+        exportModalOverlay.classList.add('hidden');
+        exportModalOverlay.classList.remove('flex');
+      }
+    }
+
+    if (closeExportModal) closeExportModal.addEventListener('click', closeModal);
+    if (cancelExportBtn) cancelExportBtn.addEventListener('click', closeModal);
+    if (confirmExportBtn) {
+      confirmExportBtn.addEventListener('click', () => {
+        closeModal();
+        showToast('Generando archivo de exportación... La descarga iniciará enseguida.');
+      });
+    }
+  })();
+</script></main></div></body></html>

@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><title>EduAsiste</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"surface-container":"#e5eeff","on-surface":"#0b1c30","secondary-fixed-dim":"#68dba9","on-error":"#ffffff","on-primary-fixed":"#001453","inverse-surface":"#213145","surface-container-high":"#dce9ff","on-tertiary-fixed":"#2f1500","primary":"#00288e","outline":"#757684","on-secondary-fixed-variant":"#005137","tertiary-container":"#743d00","surface-tint":"#3755c3","tertiary-fixed":"#ffdcc3","on-secondary-fixed":"#002114","on-primary-container":"#a8b8ff","on-background":"#0b1c30","on-tertiary-fixed-variant":"#6e3900","tertiary":"#532a00","surface-variant":"#d3e4fe","inverse-primary":"#b8c4ff","on-tertiary-container":"#ffa85d","on-secondary":"#ffffff","secondary":"#006c4a","primary-fixed":"#dde1ff","surface-container-highest":"#d3e4fe","background":"#f8f9ff","on-error-container":"#93000a","on-tertiary":"#ffffff","outline-variant":"#c4c5d5","surface-container-low":"#eff4ff","secondary-container":"#82f5c1","on-primary":"#ffffff","surface-bright":"#f8f9ff","surface-dim":"#cbdbf5","primary-fixed-dim":"#b8c4ff","inverse-on-surface":"#eaf1ff","surface":"#f8f9ff","on-secondary-container":"#00714e","on-primary-fixed-variant":"#173bab","error-container":"#ffdad6","secondary-fixed":"#85f8c4","surface-container-lowest":"#ffffff","error":"#ba1a1a","tertiary-fixed-dim":"#ffb77d","primary-container":"#1e40af","on-surface-variant":"#444653"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-lg":"1.5rem","space-md":"1rem","space-sm":"0.5rem","space-xs":"0.25rem","space-xl":"2rem","gutter-sm":"1rem","gutter":"1.5rem","margin":"2rem","margin-sm":"1rem"},"fontFamily":{"body-lg":["Inter"],"headline-lg":["Plus Jakarta Sans"],"headline-lg-mobile":["Plus Jakarta Sans"],"body-md":["Inter"],"display-lg":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"label-md":["Inter"],"body-sm":["Inter"],"title-md":["Inter"],"label-sm":["Inter"],"display-lg-mobile":["Plus Jakarta Sans"]},"fontSize":{"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"headline-lg":["28px",{"lineHeight":"36px","letterSpacing":"-0.02em","fontWeight":"600"}],"headline-lg-mobile":["22px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"display-lg":["40px",{"lineHeight":"48px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-md":["20px",{"lineHeight":"26px","letterSpacing":"-0.01em","fontWeight":"600"}],"label-md":["13px",{"lineHeight":"18px","letterSpacing":"0.01em","fontWeight":"600"}],"body-sm":["12px",{"lineHeight":"16px","fontWeight":"400"}],"title-md":["16px",{"lineHeight":"24px","fontWeight":"600"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.03em","fontWeight":"600"}],"display-lg-mobile":["30px",{"lineHeight":"38px","letterSpacing":"-0.01em","fontWeight":"700"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between"><div class="flex flex-col flex-1 overflow-y-auto"><div class="h-16 px-space-md flex items-center gap-space-sm bg-surface-container-lowest"><img alt="EduAsiste Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WNhigynvS7BsCPKvLxDgd3EGouNqulCln-VgeOICNZThmcCeen72_GYZrSje4BQpotAt_ourMKjRsGu7wREgurFDcgF51yn-UdCFxbLG1_2y-eqLUt4ZyzMEXKC4WPEPTKdcKoaii-kkRaPN4fJkzoJYaBvWcxNY5WC4AZfd_0YuZfN6JOSVoPPeCBoJJcHDPyKH6XU1CuXwwJAnWiKoNuUMAEwrpBTs9pIPrridZb"/><div class="flex flex-col"><span class="font-headline-md text-headline-md text-primary leading-none tracking-tight">EduAsiste</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mt-space-xs">Gestión Escolar</span></div></div><div class="px-space-md py-space-sm"><div class="px-space-sm py-space-xs font-label-sm text-label-sm uppercase tracking-wider text-outline">Menú Principal</div></div><nav class="flex-1 px-space-sm space-y-space-xs" data-active-classes="bg-primary text-on-primary font-title-md shadow-[0_1px_3px_rgba(15,23,42,0.08)]"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">dashboard</span><span>Dashboard</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all" data-path="registro-diario" href="#"><span class="material-symbols-outlined text-[20px]">fact_check</span><span>Asistencia Diaria</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all" data-path="estudiantes" href="#"><span class="material-symbols-outlined text-[20px]">group</span><span>Estudiantes</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg transition-all bg-primary text-on-primary font-title-md shadow-[0_1px_3px_rgba(15,23,42,0.08)]" data-path="nuevo-estudiante" href="#"><span class="material-symbols-outlined text-[20px]">person_add</span><span>Nuevo Estudiante</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all" data-path="historial" href="#"><span class="material-symbols-outlined text-[20px]">calendar_month</span><span>Historial</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all" data-path="reportes" href="#"><span class="material-symbols-outlined text-[20px]">analytics</span><span>Reportes</span></a><div class="pt-space-sm px-space-sm py-space-xs font-label-sm text-label-sm uppercase tracking-wider text-outline">Ajustes</div><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all" data-path="configuracion" href="#"><span class="material-symbols-outlined text-[20px]">settings</span><span>Configuración</span></a></nav></div><div class="p-space-md bg-surface-container-low m-space-sm rounded-xl"><div class="flex items-center gap-space-sm mb-space-sm"><div class="h-2 w-2 rounded-full bg-secondary"></div><span class="font-label-sm text-label-sm text-secondary font-semibold">Periodo Lectivo 2024</span></div><a class="flex items-center gap-space-sm px-space-sm py-space-xs text-error hover:bg-error-container hover:text-on-error-container rounded-lg transition-colors font-label-md text-label-md" data-path="login" href="#"><span class="material-symbols-outlined text-[18px]">logout</span><span>Cerrar Sesión</span></a></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs px-space-md py-space-xs bg-surface-container rounded-full text-primary font-label-md text-label-md"><span class="material-symbols-outlined text-[16px]">today</span><span>Hoy: 24 de Octubre, 2024</span></div><div class="hidden lg:flex items-center gap-space-xs bg-surface-container-low px-space-md py-space-xs rounded-lg text-outline"><span class="material-symbols-outlined text-[18px]">search</span><span class="font-body-sm text-body-sm">Buscar estudiante, carnet o curso...</span></div></div><div class="flex items-center gap-space-md"><button aria-label="Notificaciones" class="relative p-space-xs rounded-full text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1 right-1 w-2 h-2 rounded-full bg-error"></span></button><div class="flex items-center gap-space-sm pl-space-sm"><div class="flex flex-col text-right hidden sm:flex"><span class="font-title-md text-body-sm font-semibold text-on-surface leading-tight">Prof. Martín Benítez</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-tight">Docente Principal</span></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCU6SbgMpYI1jp9C3RhVnxiWjiik-q9tmzLzXVGIVPI61TA5giSFdaekj_eaXti2EIn4jRKgIWM_BYM-WDaGBWxQBtuFM2BlN18wKx9rwGztsDZOeyFFyep71Wr-fPiujNkfVPnqjZ3Fh4wFrAYTz7UsXYQyck2r1e15ci3WOJwg_Hx0cmGzddc8FisWrojhMGLChKrfxDjhNeFZEM6902wzTRJKucBcgfQudI-CB0"/></div></div></header><main class="relative w-full pt-16 px-gutter bg-background min-h-screen"><div class="flex flex-col w-full pb-24">
+<!-- Top Navigation & Action Banner -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md mb-space-lg">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs font-label-md text-label-md text-on-surface-variant">
+<a class="hover:text-primary transition-colors flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-[16px]">home</span>
+<span>Inicio</span>
+</a>
+<span>/</span>
+<a class="hover:text-primary transition-colors" href="#">Estudiantes</a>
+<span>/</span>
+<span class="text-primary font-semibold">Nuevo Registro</span>
+</div>
+<div class="flex items-center gap-space-sm mt-space-xs">
+<div class="w-10 h-10 rounded-xl bg-primary-fixed flex items-center justify-center text-primary shadow-sm">
+<span class="material-symbols-outlined text-[24px]">person_add</span>
+</div>
+<div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight">Registrar Nuevo Estudiante</h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Complete los expedientes institucionales y asigne la vacante para el Ciclo Lectivo 2024</p>
+</div>
+</div>
+</div>
+<!-- Right Header Actions -->
+<div class="flex items-center gap-space-sm self-start md:self-auto">
+<a class="flex items-center gap-space-xs px-space-md py-space-sm bg-surface-container-lowest text-on-surface font-label-md text-label-md rounded-lg shadow-sm hover:bg-surface-container-low transition-all" href="#">
+<span class="material-symbols-outlined text-[18px]">arrow_back</span>
+<span>Volver al Listado</span>
+</a>
+<button class="flex items-center gap-space-xs px-space-md py-space-sm bg-surface-container-high text-primary font-label-md text-label-md rounded-lg shadow-sm hover:bg-primary hover:text-on-primary transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">upload_file</span>
+<span>Importar Excel (.xlsx / .csv)</span>
+</button>
+</div>
+</div>
+<!-- Stepper Indicator Ribbon -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm mb-space-lg">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center font-label-md text-label-md font-bold">1</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Identidad y Biometría</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Datos del menor y fotografía</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm opacity-90">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest text-primary flex items-center justify-center font-label-md text-label-md font-bold">2</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Asignación de Aula</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Nivel, grado, sección y orden</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm opacity-90">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest text-primary flex items-center justify-center font-label-md text-label-md font-bold">3</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Vínculo Familiar</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Tutor, WhatsApp y residencia</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Main Grid Content: 8 cols Form + 4 cols Interactive Section Summary -->
+<form class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start" id="studentRegistrationForm" onsubmit="event.preventDefault();">
+<!-- Left Column: Form Sections (8 Cols) -->
+<div class="lg:col-span-8 flex flex-col gap-space-lg">
+<!-- SECCIÓN 1: DATOS PERSONALES -->
+<section class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm">
+<div class="flex items-center justify-between pb-space-sm mb-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[22px]">badge</span>
+<div>
+<h2 class="font-title-md text-title-md text-on-surface font-bold">1. Datos Personales del Estudiante</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Información oficial requerida por el Ministerio de Educación</p>
+</div>
+</div>
+<span class="px-space-sm py-space-xs bg-surface-container-low text-primary font-label-sm text-label-sm rounded-md">Fase 1 de 3</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-md">
+<!-- Photo Upload (Dropzone Area) -->
+<div class="md:col-span-4 flex flex-col">
+<label class="font-label-md text-label-md text-on-surface font-medium mb-space-xs">Fotografía del Alumno</label>
+<div class="flex flex-col items-center justify-center p-space-md bg-surface-container-low rounded-xl text-center cursor-pointer hover:bg-surface-variant/40 transition-all group min-h-[190px]" id="dropzoneContainer">
+<div class="relative w-24 h-24 mb-space-xs rounded-full overflow-hidden shadow-sm bg-surface-container-lowest flex items-center justify-center" id="avatarPreviewContainer">
+<img class="w-full h-full object-cover" data-alt="Close up warm studio portrait of a cheerful Hispanic school student wearing a neat formal navy blue school uniform against an clean neutral background" id="studentAvatarPreview" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsdmSaVTAhvqFkK9U7ODvhBzF1D4Xwhpj_U-MoGUBGo_rQbK9eajHn5NJADGHN9DFA10DrataVXUE-FE-6ZmKzG65dRnVhu6HF3cEaTdFWyhSJKT_KnA21dJgF-6NgYS9871rWyqHgx9GVUyoUVeTPa4IUewMDXRZvat4a8xv0cQdj8n9aj1DXggMUe2LwGH6cJTYQdl413B3ygl-CjT6R-r6EZ8-eykUP6T1oXuI"/>
+<div class="absolute inset-0 bg-primary/40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity text-on-primary">
+<span class="material-symbols-outlined text-[24px]">photo_camera</span>
+</div>
+</div>
+<p class="font-label-sm text-label-sm text-primary font-semibold">Subir archivo o arrastrar</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-[11px] leading-tight mt-1">PNG, JPG máx. 5MB (Fondo blanco sugerido)</p>
+<input accept="image/*" class="hidden" id="fileInput" type="file"/>
+</div>
+</div>
+<!-- Personal Fields Block -->
+<div class="md:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<!-- Nombres -->
+<div class="sm:col-span-2 flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-on-surface font-medium flex items-center justify-between" for="studentNames">
+<span>Nombres Completos <span class="text-error">*</span></span>
+<span class="font-body-sm text-body-sm text-outline">Segun Código de estudiante/Partida</span>
+</label>
+<input class="w-full h-10 px-space-md bg-surface-container-lowest rounded-lg font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest shadow-sm" id="studentNames" placeholder="Ej. Mateo Alejandro" required="" type="text"/>
+</div>
+<!-- Apellido Paterno -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-on-surface font-medium" for="paternalSurname">Apellido Paterno <span class="text-error">*</span></label>
+<input class="w-full h-10 px-space-md bg-surface-container-lowest rounded-lg font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest shadow-sm" id="paternalSurname" placeholder="Ej. Quispe" required="" type="text"/>
+</div>
+<!-- Apellido Materno -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-on-surface font-medium" for="maternalSurname">Apellido Materno <span class="text-error">*</span></label>
+<input class="w-full h-10 px-space-md bg-surface-container-lowest rounded-lg font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest shadow-sm" id="maternalSurname" placeholder="Ej. Huamán" required="" type="text"/>
+</div>
+<!-- Tipo y Número de Documento -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-on-surface font-medium" for="docType">Tipo de Documento <span class="text-error">*</span></label>
+<select class="w-full h-10 px-space-md bg-surface-container-lowest rounded-lg font-body-md text-body-md text-on-surface focus:outline-none shadow-sm cursor-pointer" id="docType">
+<option value="Código de estudiante">Código de estudiante (Documento Nacional)</option>
+<option value="CE">Carné de Extranjería</option>
+<option value="PASSPORT">Pasaporte Ordinario</option>
+</select>
+</div>
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-on-surface font-medium" for="docNumber">N° de Documento <span class="text-error">*</span></label>
+<div class="relative">
+<input class="w-full h-10 pl-space-md pr-9 bg-surface-container-lowest rounded-lg font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none shadow-sm" id="docNumber" maxlength="12" placeholder="74839210" type="text"/>
+<span class="material-symbols-outlined absolute right-2.5 top-2.5 text-secondary text-[18px]">verified</span>
+</div>
+</div>
+<!-- Fecha de Nacimiento -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-on-surface font-medium" for="birthDate">Fecha de Nacimiento <span class="text-error">*</span></label>
+<input class="w-full h-10 px-space-md bg-surface-container-lowest rounded-lg font-body-md text-body-md text-on-surface focus:outline-none shadow-sm cursor-pointer" id="birthDate" type="date" value="2014-06-18"/>
+</div>
+<!-- Género -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-on-surface font-medium">Género <span class="text-error">*</span></label>
+<div class="grid grid-cols-3 gap-space-xs h-10">
+<button class="gender-btn flex items-center justify-center gap-1 rounded-lg font-label-md text-label-md bg-primary text-on-primary transition-all shadow-sm" onclick="setGender(this, 'M')" type="button">
+<span>Masc</span>
+</button>
+<button class="gender-btn flex items-center justify-center gap-1 rounded-lg font-label-md text-label-md bg-surface-container-low text-on-surface-variant hover:bg-surface-variant transition-all" onclick="setGender(this, 'F')" type="button">
+<span>Fem</span>
+</button>
+<button class="gender-btn flex items-center justify-center gap-1 rounded-lg font-label-md text-label-md bg-surface-container-low text-on-surface-variant hover:bg-surface-variant transition-all" onclick="setGender(this, 'O')" type="button">
+<span>Otro</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECCIÓN 2: ASIGNACIÓN ACADÉMICA -->
+<section class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm">
+<div class="flex items-center justify-between pb-space-sm mb-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[22px]">school</span>
+<div>
+<h2 class="font-title-md text-title-md text-on-surface font-bold">2. Asignación Académica y Matrícula</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Configuración de aula, correlativo de lista y credencial estudiantil</p>
+</div>
+</div>
+<span class="px-space-sm py-space-xs bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold rounded-md">Vigente 2024</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-space-md">
+<!-- Nivel Educativo -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-on-surface font-medium" for="academicLevel">Nivel Educativo <span class="text-error">*</span></label>
+<select class="w-full h-10 px-space-md bg-surface-container-lowest rounded-lg font-body-md text-body-md text-on-surface focus:outline-none shadow-sm cursor-pointer" id="academicLevel" onchange="updateClassSummary()">
+<option selected="" value="Primaria">Primaria Regular</option>
+<option value="Secundaria">Secundaria Regular</option>
+</select>
+</div>
+<!-- Curso / Grado -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-on-surface font-medium" for="academicGrade">Grado Lectivo <span class="text-error">*</span></label>
+<select class="w-full h-10 px-space-md bg-surface-container-lowest rounded-lg font-body-md text-body-md text-on-surface focus:outline-none shadow-sm cursor-pointer" id="academicGrade" onchange="updateClassSummary()">
+<option value="1°">1° Grado</option>
+<option value="2°">2° Grado</option>
+<option selected="" value="3°">3° Grado</option>
+<option value="4°">4° Grado</option>
+<option value="5°">5° Grado</option>
+<option value="6°">6° Grado</option>
+</select>
+</div>
+<!-- Sección -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-on-surface font-medium" for="academicSection">Sección <span class="text-error">*</span></label>
+<select class="w-full h-10 px-space-md bg-surface-container-lowest rounded-lg font-body-md text-body-md text-on-surface focus:outline-none shadow-sm cursor-pointer" id="academicSection" onchange="updateClassSummary()">
+<option value="A">Sección "A"</option>
+<option selected="" value="B">Sección "B"</option>
+<option value="C">Sección "C"</option>
+<option value="D">Sección "D"</option>
+</select>
+</div>
+<!-- Turno -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-on-surface font-medium" for="academicShift">Turno <span class="text-error">*</span></label>
+<select class="w-full h-10 px-space-md bg-surface-container-lowest rounded-lg font-body-md text-body-md text-on-surface focus:outline-none shadow-sm cursor-pointer" id="academicShift">
+<option selected="" value="Mañana">Mañana (07:45 - 13:30)</option>
+<option value="Tarde">Tarde (13:45 - 19:00)</option>
+</select>
+</div>
+<!-- Número de Orden en Lista -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-on-surface font-medium" for="listOrder">N° de Orden (Lista) <span class="text-error">*</span></label>
+<div class="relative">
+<input class="w-full h-10 pl-space-md pr-8 bg-surface-container-lowest rounded-lg font-body-md text-body-md font-semibold text-primary focus:outline-none shadow-sm" id="listOrder" max="50" min="1" type="number" value="14"/>
+<span class="material-symbols-outlined absolute right-2.5 top-2.5 text-outline text-[18px]">format_list_numbered</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[11px]">Siguiente correlativo libre</span>
+</div>
+<!-- Código de Matrícula (Auto-generado) -->
+<div class="sm:col-span-3 flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-on-surface font-medium flex items-center justify-between">
+<span>Código Único Institucional</span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">Generado por Algoritmo</span>
+</label>
+<div class="flex items-center gap-space-sm">
+<div class="flex-1 h-10 px-space-md bg-surface-container-low rounded-lg font-title-md text-title-md font-bold tracking-wider text-primary flex items-center justify-between shadow-sm">
+<span id="matriculaCode">EST-2024-0492</span>
+<span class="material-symbols-outlined text-primary text-[18px]">qr_code_2</span>
+</div>
+<button class="h-10 px-space-md bg-surface-container-high hover:bg-surface-variant text-primary rounded-lg font-label-md text-label-md flex items-center gap-1 transition-colors" onclick="regenerateCode()" title="Regenerar código aleatorio" type="button">
+<span class="material-symbols-outlined text-[18px]">sync</span>
+<span class="hidden sm:inline">Refrescar</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- SECCIÓN 3: DATOS DE CONTACTO Y APODERADO / TUTOR -->
+<section class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm">
+<div class="flex items-center justify-between pb-space-sm mb-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[22px]">family_restroom</span>
+<div>
+<h2 class="font-title-md text-title-md text-on-surface font-bold">3. Contacto y Apoderado Legal</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Receptor directo de alertas de inasistencia inmediata y notificaciones escolares</p>
+</div>
+</div>
+<span class="px-space-sm py-space-xs bg-surface-container-low text-primary font-label-sm text-label-sm rounded-md">Canal WhatsApp Activo</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<!-- Nombre Apoderado -->
+<div class="sm:col-span-2 flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-on-surface font-medium" for="guardianName">Nombre Completo del Padre, Madre o Tutor <span class="text-error">*</span></label>
+<div class="relative">
+<input class="w-full h-10 pl-space-md pr-10 bg-surface-container-lowest rounded-lg font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none shadow-sm" id="guardianName" placeholder="Ej. Carmen Rosa Huamán Mendoza" required="" type="text"/>
+<span class="material-symbols-outlined absolute right-3 top-2.5 text-outline text-[18px]">person</span>
+</div>
+</div>
+<!-- Parentesco -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-on-surface font-medium" for="guardianRelation">Parentesco Legal <span class="text-error">*</span></label>
+<select class="w-full h-10 px-space-md bg-surface-container-lowest rounded-lg font-body-md text-body-md text-on-surface focus:outline-none shadow-sm cursor-pointer" id="guardianRelation">
+<option selected="" value="Madre">Madre</option>
+<option value="Padre">Padre</option>
+<option value="Abuelo/a">Abuelo / Abuela</option>
+<option value="Tutor Legal">Tutor Legal Certificado</option>
+</select>
+</div>
+<!-- Teléfono / WhatsApp -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-on-surface font-medium flex items-center justify-between" for="guardianPhone">
+<span>Teléfono / WhatsApp <span class="text-error">*</span></span>
+<span class="font-body-sm text-body-sm text-secondary font-semibold flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-secondary"></span> Alertas SMS/WA
+              </span>
+</label>
+<div class="relative">
+<span class="absolute left-3 top-2.5 font-label-md text-label-md text-on-surface-variant font-semibold">+1</span>
+<input class="w-full h-10 pl-12 pr-space-md bg-surface-container-lowest rounded-lg font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none shadow-sm" id="guardianPhone" placeholder="987 654 321" required="" type="tel"/>
+</div>
+</div>
+<!-- Correo Electrónico -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-on-surface font-medium" for="guardianEmail">Correo Electrónico Institucional/Personal</label>
+<div class="relative">
+<input class="w-full h-10 pl-space-md pr-10 bg-surface-container-lowest rounded-lg font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none shadow-sm" id="guardianEmail" placeholder="carmen.huaman@gmail.com" type="email"/>
+<span class="material-symbols-outlined absolute right-3 top-2.5 text-outline text-[18px]">mail</span>
+</div>
+</div>
+<!-- Domicilio -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-on-surface font-medium" for="homeAddress">Dirección Domiciliaria Exacta <span class="text-error">*</span></label>
+<div class="relative">
+<input class="w-full h-10 pl-space-md pr-10 bg-surface-container-lowest rounded-lg font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none shadow-sm" id="homeAddress" placeholder="Av. Los Ruiseñores 420, Dpto 302" required="" type="text"/>
+<span class="material-symbols-outlined absolute right-3 top-2.5 text-outline text-[18px]">location_on</span>
+</div>
+</div>
+</div>
+<!-- Alerta Informativa de Vinculación -->
+<div class="mt-space-md p-space-md bg-surface-container-low rounded-xl flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0 mt-0.5">mark_chat_unread</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-primary font-semibold">Configuración de Envío Automático Activada</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">El sistema EduAsiste emitirá un mensaje instantáneo de texto al número registrado cada vez que el docente registre una falta injustificada o tardanza en el pase de lista de las 08:15 AM.</span>
+</div>
+</div>
+</section>
+</div>
+<!-- Right Column: Aula Resumen & Vacantes Card (4 Cols Sticky) -->
+<div class="lg:col-span-4 flex flex-col gap-space-md lg:sticky lg:top-20">
+<!-- Card Resumen de Capacidad del Aula Seleccionada -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[22px]">meeting_room</span>
+<span class="font-title-md text-title-md font-bold text-on-surface">Capacidad de Aula</span>
+</div>
+<span class="px-space-xs py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold">4 Vacantes</span>
+</div>
+<div class="bg-surface-container-low p-space-md rounded-xl flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-primary flex items-center justify-center text-on-primary font-headline-md text-headline-md font-bold shadow-sm">
+<span id="cardGradeBadge">3B</span>
+</div>
+<div class="flex flex-col">
+<h3 class="font-title-md text-title-md text-on-surface font-bold leading-tight" id="cardGradeTitle">3° Grado Primaria</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant" id="cardSectionSubtitle">Sección "B" · Turno Mañana</p>
+</div>
+</div>
+<!-- Visual Capacity Progress Bar & Numbers -->
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<div class="flex justify-between items-baseline">
+<span class="font-label-md text-label-md text-on-surface-variant">Ocupación Actual:</span>
+<div class="flex items-baseline gap-1">
+<span class="font-headline-lg text-headline-lg text-primary font-bold">28</span>
+<span class="font-body-md text-body-md text-outline">/ 32 alumnos</span>
+</div>
+</div>
+<!-- Inline Bar with Gradient Segment -->
+<div class="w-full h-3 bg-surface-container rounded-full overflow-hidden flex">
+<div class="h-full bg-primary rounded-full transition-all duration-500" style="width: 87.5%;"></div>
+</div>
+<div class="flex justify-between text-[11px] font-label-sm text-on-surface-variant pt-1">
+<span>87.5% de aforo cubierto</span>
+<span class="text-secondary font-semibold">Aula Recomendada</span>
+</div>
+</div>
+<!-- Docente Tutor Asignado -->
+<div class="flex items-center gap-space-sm p-space-sm bg-surface-container-lowest rounded-lg shadow-sm">
+<img class="w-10 h-10 rounded-full object-cover" data-alt="Portrait of an experienced female teacher with warm welcoming expression holding a notebook in a modern bright school classroom" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKrZGglJFY0OnqcMqSwIopYnF4J2-bLP1ao4KUq86157Qo-fJXnqMwJtWEnVjTJwgEElTJzS0jYH7vIK427YQ_JCWDupOFiyJ3iql9_ocZA5JXDIjdMBVOHTHF5olj02mpHtHRReGYH4N98BJv-Bg0g3_Jy6dDHKMgAicEdQ04DZMmOlXL0lOQVMHYRYpPSyojbFCPUSorBz43Juxa2q2gcQ43nOBiMIdxp9UHb5g"/>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Prof. Elena Morales</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Tutor/a titular del aula</span>
+</div>
+</div>
+<!-- Mini Stats Grid -->
+<div class="grid grid-cols-2 gap-space-sm pt-space-xs">
+<div class="bg-surface-container-low p-space-sm rounded-lg flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Puntualidad</span>
+<span class="font-title-md text-title-md font-bold text-secondary">96.2%</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[11px]">Promedio mensual</span>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded-lg flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Ratio Género</span>
+<span class="font-title-md text-title-md font-bold text-primary">15 M / 13 F</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[11px]">Equilibrado</span>
+</div>
+</div>
+<!-- Normativa Institucional Card Note -->
+<div class="flex items-start gap-space-xs p-space-sm bg-surface-container-high/60 rounded-lg">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">policy</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-[12px] leading-tight">
+            El límite reglamentario de 32 escolares está fijado para garantizar la supervisión y calidad del aprendizaje presencial.
+          </p>
+</div>
+</div>
+<!-- Quick Tips Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm">
+<span class="font-label-md text-label-md text-on-surface font-semibold flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-tertiary-container text-[18px]">lightbulb</span>
+          Requisitos de Expediente
+        </span>
+<ul class="font-body-sm text-body-sm text-on-surface-variant space-y-space-xs list-disc list-inside text-[12px]">
+<li>Copia fotostática legible del Código de estudiante del menor.</li>
+<li>Ficha única de matrícula (SIAGIE) previa.</li>
+<li>Certificado médico y tarjeta de vacunación.</li>
+</ul>
+</div>
+</div>
+</form>
+<!-- Sticky Bottom Action Footer -->
+<aside aria-label="Acciones de guardado de formulario" class="fixed bottom-0 left-64 right-0 bg-surface-container-lowest/95 backdrop-blur-xl shadow-[0_-4px_16px_rgba(15,23,42,0.06)] py-space-sm px-space-lg z-30 flex items-center justify-between">
+<div class="flex items-center gap-space-md">
+<button class="flex items-center gap-space-xs px-space-md py-space-sm rounded-lg font-label-md text-label-md text-outline hover:text-error hover:bg-error-container/30 transition-all" onclick="resetForm()" type="button">
+<span class="material-symbols-outlined text-[18px]">restart_alt</span>
+<span>Limpiar Formulario</span>
+</button>
+<span class="hidden md:inline font-body-sm text-body-sm text-on-surface-variant">Todos los cambios no guardados se perderán si sale sin confirmar.</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<button class="flex items-center gap-space-xs px-space-lg py-space-sm bg-surface-container rounded-lg text-primary hover:bg-surface-variant font-label-md text-label-md font-semibold transition-all shadow-sm" onclick="saveDraft()" type="button">
+<span class="material-symbols-outlined text-[18px]">save_as</span>
+<span>Guardar Borrador</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-xl py-space-sm bg-primary hover:bg-primary-container text-on-primary rounded-lg font-title-md text-title-md font-bold shadow-md hover:shadow-lg transition-all active:scale-[0.98]" onclick="submitStudent()" type="button">
+<span class="material-symbols-outlined text-[20px]">check_circle</span>
+<span>Guardar y Registrar Estudiante</span>
+</button>
+</div>
+</aside>
+<!-- Success Notification Toast (Hidden by default) -->
+<div class="fixed bottom-20 right-8 bg-secondary text-on-secondary px-space-lg py-space-md rounded-xl shadow-xl z-50 flex items-center gap-space-sm transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none" id="toastSuccess">
+<span class="material-symbols-outlined text-[24px]">verified</span>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md font-bold">¡Estudiante Matriculado con Éxito!</span>
+<span class="font-body-sm text-body-sm text-on-secondary/90">Ficha asignada a la Sección "B" - Turno Mañana.</span>
+</div>
+</div>
+</div>
+<script>
+  // Gender buttons handler
+  function setGender(button, code) {
+    document.querySelectorAll('.gender-btn').forEach(btn => {
+      btn.className = 'gender-btn flex items-center justify-center gap-1 rounded-lg font-label-md text-label-md bg-surface-container-low text-on-surface-variant hover:bg-surface-variant transition-all';
+    });
+    button.className = 'gender-btn flex items-center justify-center gap-1 rounded-lg font-label-md text-label-md bg-primary text-on-primary transition-all shadow-sm';
+  }
+
+  // File Upload Trigger Micro-interaction
+  const dropzone = document.getElementById('dropzoneContainer');
+  const fileInput = document.getElementById('fileInput');
+  const studentAvatarPreview = document.getElementById('studentAvatarPreview');
+
+  if (dropzone && fileInput) {
+    dropzone.addEventListener('click', () => fileInput.click());
+    fileInput.addEventListener('change', (e) => {
+      const file = e.target.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = (event) => {
+          studentAvatarPreview.src = event.target.result;
+        };
+        reader.readAsDataURL(file);
+      }
+    });
+  }
+
+  // Update dynamic summary card based on select dropdowns
+  function updateClassSummary() {
+    const gradeVal = document.getElementById('academicGrade').value;
+    const secVal = document.getElementById('academicSection').value;
+    const levelVal = document.getElementById('academicLevel').value;
+
+    const badge = document.getElementById('cardGradeBadge');
+    const title = document.getElementById('cardGradeTitle');
+    const sub = document.getElementById('cardSectionSubtitle');
+
+    if (badge) badge.innerText = gradeVal.replace('°', '') + secVal;
+    if (title) title.innerText = gradeVal + ' Grado ' + levelVal;
+    if (sub) sub.innerText = 'Sección "' + secVal + '" · Turno Mañana';
+  }
+
+  // Generate randomized alphanumeric school ID
+  function regenerateCode() {
+    const randomNum = Math.floor(1000 + Math.random() * 9000);
+    const codeElem = document.getElementById('matriculaCode');
+    if (codeElem) {
+      codeElem.innerText = `EST-2024-${randomNum}`;
+    }
+  }
+
+  // Submit and trigger alert toast
+  function submitStudent() {
+    const toast = document.getElementById('toastSuccess');
+    if (toast) {
+      toast.classList.remove('translate-y-24', 'opacity-0', 'pointer-events-none');
+      setTimeout(() => {
+        toast.classList.add('translate-y-24', 'opacity-0', 'pointer-events-none');
+      }, 4000);
+    }
+  }
+
+  function saveDraft() {
+    alert("Borrador de inscripción guardado en el almacenamiento temporal.");
+  }
+
+  function resetForm() {
+    if (confirm("¿Está seguro de que desea limpiar todos los campos del formulario?")) {
+      document.getElementById('studentRegistrationForm').reset();
+    }
+  }
+</script></main></div></body></html>
