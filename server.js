@@ -9,7 +9,7 @@ const path = require('path');
 const app = express();
 app.use(helmet({contentSecurityPolicy:false}));
 app.use(cors()); app.use(express.json());
-app.use(express.static(path.join(__dirname,'public')));
+app.use(express.static(path.join(__dirname)));
 const pool = new Pool({connectionString:process.env.DATABASE_URL,ssl:process.env.DATABASE_URL && !process.env.DATABASE_URL.includes('localhost') ? {rejectUnauthorized:false}:false});
 const auth=(req,res,next)=>{try{const h=req.headers.authorization||'';req.user=jwt.verify(h.replace(/^Bearer\s+/i,''),process.env.JWT_SECRET);next();}catch{return res.status(401).json({error:'No autorizado'});}};
 app.get('/api/health',async(req,res)=>{try{await pool.query('SELECT 1');res.json({status:'ok',database:'connected'});}catch(e){res.status(503).json({status:'error',database:'disconnected'});}});
