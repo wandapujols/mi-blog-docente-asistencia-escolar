@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><title>EduAsiste</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"surface-container":"#e5eeff","on-surface":"#0b1c30","secondary-fixed-dim":"#68dba9","on-error":"#ffffff","on-primary-fixed":"#001453","inverse-surface":"#213145","surface-container-high":"#dce9ff","on-tertiary-fixed":"#2f1500","primary":"#00288e","outline":"#757684","on-secondary-fixed-variant":"#005137","tertiary-container":"#743d00","surface-tint":"#3755c3","tertiary-fixed":"#ffdcc3","on-secondary-fixed":"#002114","on-primary-container":"#a8b8ff","on-background":"#0b1c30","on-tertiary-fixed-variant":"#6e3900","tertiary":"#532a00","surface-variant":"#d3e4fe","inverse-primary":"#b8c4ff","on-tertiary-container":"#ffa85d","on-secondary":"#ffffff","secondary":"#006c4a","primary-fixed":"#dde1ff","surface-container-highest":"#d3e4fe","background":"#f8f9ff","on-error-container":"#93000a","on-tertiary":"#ffffff","outline-variant":"#c4c5d5","surface-container-low":"#eff4ff","secondary-container":"#82f5c1","on-primary":"#ffffff","surface-bright":"#f8f9ff","surface-dim":"#cbdbf5","primary-fixed-dim":"#b8c4ff","inverse-on-surface":"#eaf1ff","surface":"#f8f9ff","on-secondary-container":"#00714e","on-primary-fixed-variant":"#173bab","error-container":"#ffdad6","secondary-fixed":"#85f8c4","surface-container-lowest":"#ffffff","error":"#ba1a1a","tertiary-fixed-dim":"#ffb77d","primary-container":"#1e40af","on-surface-variant":"#444653"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-lg":"1.5rem","space-md":"1rem","space-sm":"0.5rem","space-xs":"0.25rem","space-xl":"2rem","gutter-sm":"1rem","gutter":"1.5rem","margin":"2rem","margin-sm":"1rem"},"fontFamily":{"body-lg":["Inter"],"headline-lg":["Plus Jakarta Sans"],"headline-lg-mobile":["Plus Jakarta Sans"],"body-md":["Inter"],"display-lg":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"label-md":["Inter"],"body-sm":["Inter"],"title-md":["Inter"],"label-sm":["Inter"],"display-lg-mobile":["Plus Jakarta Sans"]},"fontSize":{"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"headline-lg":["28px",{"lineHeight":"36px","letterSpacing":"-0.02em","fontWeight":"600"}],"headline-lg-mobile":["22px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"display-lg":["40px",{"lineHeight":"48px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-md":["20px",{"lineHeight":"26px","letterSpacing":"-0.01em","fontWeight":"600"}],"label-md":["13px",{"lineHeight":"18px","letterSpacing":"0.01em","fontWeight":"600"}],"body-sm":["12px",{"lineHeight":"16px","fontWeight":"400"}],"title-md":["16px",{"lineHeight":"24px","fontWeight":"600"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.03em","fontWeight":"600"}],"display-lg-mobile":["30px",{"lineHeight":"38px","letterSpacing":"-0.01em","fontWeight":"700"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between"><div class="flex flex-col flex-1 overflow-y-auto"><div class="h-16 px-space-md flex items-center gap-space-sm bg-surface-container-lowest"><img alt="EduAsiste Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WNhigynvS7BsCPKvLxDgd3EGouNqulCln-VgeOICNZThmcCeen72_GYZrSje4BQpotAt_ourMKjRsGu7wREgurFDcgF51yn-UdCFxbLG1_2y-eqLUt4ZyzMEXKC4WPEPTKdcKoaii-kkRaPN4fJkzoJYaBvWcxNY5WC4AZfd_0YuZfN6JOSVoPPeCBoJJcHDPyKH6XU1CuXwwJAnWiKoNuUMAEwrpBTs9pIPrridZb"/><div class="flex flex-col"><span class="font-headline-md text-headline-md text-primary leading-none tracking-tight">EduAsiste</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mt-space-xs">Gestión Escolar</span></div></div><div class="px-space-md py-space-sm"><div class="px-space-sm py-space-xs font-label-sm text-label-sm uppercase tracking-wider text-outline">Menú Principal</div></div><nav class="flex-1 px-space-sm space-y-space-xs" data-active-classes="bg-primary text-on-primary font-title-md shadow-[0_1px_3px_rgba(15,23,42,0.08)]"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">dashboard</span><span>Dashboard</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all" data-path="registro-diario" href="#"><span class="material-symbols-outlined text-[20px]">fact_check</span><span>Asistencia Diaria</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all" data-path="estudiantes" href="#"><span class="material-symbols-outlined text-[20px]">group</span><span>Estudiantes</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all" data-path="nuevo-estudiante" href="#"><span class="material-symbols-outlined text-[20px]">person_add</span><span>Nuevo Estudiante</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all" data-path="historial" href="#"><span class="material-symbols-outlined text-[20px]">calendar_month</span><span>Historial</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg transition-all bg-primary text-on-primary font-title-md shadow-[0_1px_3px_rgba(15,23,42,0.08)]" data-path="reportes" href="#"><span class="material-symbols-outlined text-[20px]">analytics</span><span>Reportes</span></a><div class="pt-space-sm px-space-sm py-space-xs font-label-sm text-label-sm uppercase tracking-wider text-outline">Ajustes</div><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all" data-path="configuracion" href="#"><span class="material-symbols-outlined text-[20px]">settings</span><span>Configuración</span></a></nav></div><div class="p-space-md bg-surface-container-low m-space-sm rounded-xl"><div class="flex items-center gap-space-sm mb-space-sm"><div class="h-2 w-2 rounded-full bg-secondary"></div><span class="font-label-sm text-label-sm text-secondary font-semibold">Periodo Lectivo 2024</span></div><a class="flex items-center gap-space-sm px-space-sm py-space-xs text-error hover:bg-error-container hover:text-on-error-container rounded-lg transition-colors font-label-md text-label-md" data-path="login" href="#"><span class="material-symbols-outlined text-[18px]">logout</span><span>Cerrar Sesión</span></a></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs px-space-md py-space-xs bg-surface-container rounded-full text-primary font-label-md text-label-md"><span class="material-symbols-outlined text-[16px]">today</span><span>Hoy: 24 de Octubre, 2024</span></div><div class="hidden lg:flex items-center gap-space-xs bg-surface-container-low px-space-md py-space-xs rounded-lg text-outline"><span class="material-symbols-outlined text-[18px]">search</span><span class="font-body-sm text-body-sm">Buscar estudiante, carnet o curso...</span></div></div><div class="flex items-center gap-space-md"><button aria-label="Notificaciones" class="relative p-space-xs rounded-full text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1 right-1 w-2 h-2 rounded-full bg-error"></span></button><div class="flex items-center gap-space-sm pl-space-sm"><div class="flex flex-col text-right hidden sm:flex"><span class="font-title-md text-body-sm font-semibold text-on-surface leading-tight">Prof. Martín Benítez</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-tight">Docente Principal</span></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCU6SbgMpYI1jp9C3RhVnxiWjiik-q9tmzLzXVGIVPI61TA5giSFdaekj_eaXti2EIn4jRKgIWM_BYM-WDaGBWxQBtuFM2BlN18wKx9rwGztsDZOeyFFyep71Wr-fPiujNkfVPnqjZ3Fh4wFrAYTz7UsXYQyck2r1e15ci3WOJwg_Hx0cmGzddc8FisWrojhMGLChKrfxDjhNeFZEM6902wzTRJKucBcgfQudI-CB0"/></div></div></header><main class="relative w-full pt-16 px-gutter bg-background min-h-screen"><div class="flex flex-col w-full pb-space-xl">
+<!-- Top Ambient Glow Decorator -->
+<div class="relative w-full overflow-hidden">
+<div class="absolute -top-24 right-10 w-96 h-96 bg-primary/5 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute -top-12 left-1/3 w-72 h-72 bg-secondary/5 rounded-full blur-3xl pointer-events-none"></div>
+<!-- Header Section -->
+<section class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-space-md pt-space-md mb-space-lg">
+<div class="space-y-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container font-label-sm text-label-sm text-primary uppercase tracking-wider font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+            Supervisión Directiva · 2024
+          </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Actualizado hace 15 min</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Centro de Reportes y Estadísticas de Asistencia</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">Monitoreo normativo, trazabilidad de ausentismo y analítica preventiva de deserción escolar.</p>
+</div>
+<!-- Quick Action Controls & Export Buttons -->
+<div class="flex flex-wrap items-center gap-space-xs sm:gap-space-sm">
+<div class="flex items-center bg-surface-container-lowest shadow-sm rounded-lg p-1">
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-on-surface hover:bg-surface-container-low transition-colors font-label-md text-label-md" type="button">
+<span class="material-symbols-outlined text-[18px] text-primary">domain</span>
+<span>Sede Central San Isidro</span>
+<span class="material-symbols-outlined text-[16px] text-outline">expand_more</span>
+</button>
+<div class="w-px h-5 bg-surface-container"></div>
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-on-surface hover:bg-surface-container-low transition-colors font-label-md text-label-md" type="button">
+<span class="material-symbols-outlined text-[18px] text-secondary">date_range</span>
+<span class="font-semibold text-primary">Bimestre III - 2024</span>
+<span class="material-symbols-outlined text-[16px] text-outline">expand_more</span>
+</button>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="flex items-center gap-1.5 px-3 py-2 bg-surface-container-lowest hover:bg-surface-container shadow-sm text-on-surface rounded-lg font-title-md text-body-sm transition-all" title="Descargar PDF Ejecutivo" type="button">
+<span class="material-symbols-outlined text-[18px] text-error">picture_as_pdf</span>
+<span class="hidden sm:inline">PDF Ejecutivo</span>
+</button>
+<button class="flex items-center gap-1.5 px-3 py-2 bg-surface-container-lowest hover:bg-surface-container shadow-sm text-on-surface rounded-lg font-title-md text-body-sm transition-all" title="Exportar a Excel" type="button">
+<span class="material-symbols-outlined text-[18px] text-secondary">table_view</span>
+<span class="hidden sm:inline">Excel (.xlsx)</span>
+</button>
+<button class="flex items-center gap-2 px-4 py-2 bg-primary text-on-primary hover:bg-primary-container shadow-md rounded-lg font-title-md text-body-sm transition-all group" type="button">
+<span class="material-symbols-outlined text-[18px] text-primary-fixed group-hover:scale-110 transition-transform">verified</span>
+<span>Reporte Oficial MINEDU</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Filters Strip -->
+<section class="mb-space-lg bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<!-- Temporal Segmented Filter -->
+<div class="flex items-center gap-space-xs overflow-x-auto pb-1 lg:pb-0">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider mr-2 hidden xl:inline">Rango:</span>
+<div class="flex items-center bg-surface-container-low p-1 rounded-lg">
+<button class="px-3 py-1.5 rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" type="button">Últimos 30 días</button>
+<button class="px-3 py-1.5 rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" type="button">Este Mes</button>
+<button class="px-3 py-1.5 rounded-lg font-label-md text-label-md bg-surface-container-lowest text-primary shadow-sm font-semibold transition-all" type="button">Bimestre Actual</button>
+<button class="px-3 py-1.5 rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" type="button">Año Completo</button>
+</div>
+</div>
+<!-- Grade, Shift and Search Dropdowns -->
+<div class="flex flex-wrap items-center gap-space-xs sm:gap-space-sm">
+<div class="flex items-center bg-surface-container-low rounded-lg px-3 py-1.5 text-on-surface">
+<span class="material-symbols-outlined text-[18px] text-outline mr-2">school</span>
+<select class="bg-transparent font-label-md text-label-md focus:outline-none cursor-pointer text-on-surface">
+<option>Todos los Niveles</option>
+<option selected="">Secundaria Regular</option>
+<option>Primaria Integral</option>
+<option>Inicial / Parvulario</option>
+</select>
+</div>
+<div class="flex items-center bg-surface-container-low rounded-lg px-3 py-1.5 text-on-surface">
+<span class="material-symbols-outlined text-[18px] text-outline mr-2">class</span>
+<select class="bg-transparent font-label-md text-label-md focus:outline-none cursor-pointer text-on-surface">
+<option>Todos los Grados (1° a 5°)</option>
+<option>1° Año Secundaria</option>
+<option>2° Año Secundaria</option>
+<option>3° Año Secundaria</option>
+<option>4° Año Secundaria</option>
+<option>5° Año Secundaria</option>
+</select>
+</div>
+<div class="flex items-center bg-surface-container-low rounded-lg px-3 py-1.5 text-on-surface">
+<span class="material-symbols-outlined text-[18px] text-outline mr-2">wb_twilight</span>
+<select class="bg-transparent font-label-md text-label-md focus:outline-none cursor-pointer text-on-surface">
+<option>Todos los Turnos</option>
+<option selected="">Turno Mañana</option>
+<option>Turno Tarde</option>
+</select>
+</div>
+<button class="p-2 bg-surface-container-low hover:bg-surface-container rounded-lg text-primary transition-colors" title="Restablecer filtros" type="button">
+<span class="material-symbols-outlined text-[20px]">refresh</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Key Executive KPI Stat Grid -->
+<section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md mb-space-lg">
+<!-- Metric 1: Institutional Attendance -->
+<div class="relative bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-md transition-shadow overflow-hidden group">
+<div class="flex items-start justify-between">
+<div class="w-10 h-10 rounded-lg bg-secondary/10 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[22px]">how_to_reg</span>
+</div>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">arrow_upward</span>
+            +2.2% vs Bim II
+          </span>
+</div>
+<div class="mt-space-md">
+<div class="flex items-baseline gap-2">
+<span class="font-display-lg text-display-lg text-on-surface font-bold tracking-tight">94.2%</span>
+<span class="font-label-sm text-label-sm text-secondary font-medium uppercase tracking-wider">Cumple Meta</span>
+</div>
+<h2 class="font-title-md text-body-sm font-semibold text-on-surface-variant mt-1">Asistencia Institucional</h2>
+<div class="mt-3 flex items-center justify-between text-body-sm font-body-sm text-outline">
+<span>Meta requerida: 92.0%</span>
+<span class="font-semibold text-on-surface">812/862 alumnos</span>
+</div>
+<!-- Progress bar -->
+<div class="w-full bg-surface-container h-1.5 rounded-full mt-1.5 overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 94.2%"></div>
+</div>
+</div>
+</div>
+<!-- Metric 2: Lective Hours Dictated -->
+<div class="relative bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-md transition-shadow overflow-hidden group">
+<div class="flex items-start justify-between">
+<div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">timer</span>
+</div>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container font-label-sm text-label-sm text-primary font-semibold">
+            98.6% planificado
+          </span>
+</div>
+<div class="mt-space-md">
+<div class="flex items-baseline gap-2">
+<span class="font-display-lg text-display-lg text-on-surface font-bold tracking-tight">1,450</span>
+<span class="font-title-md text-body-lg text-on-surface-variant font-semibold">hrs</span>
+</div>
+<h2 class="font-title-md text-body-sm font-semibold text-on-surface-variant mt-1">Horas de Clase Dictadas</h2>
+<div class="mt-3 flex items-center justify-between text-body-sm font-body-sm text-outline">
+<span>Sesiones registradas</span>
+<span class="font-semibold text-on-surface">36 docentes activos</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full mt-1.5 overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 98.6%"></div>
+</div>
+</div>
+</div>
+<!-- Metric 3: Punctuality Index -->
+<div class="relative bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-md transition-shadow overflow-hidden group">
+<div class="flex items-start justify-between">
+<div class="w-10 h-10 rounded-lg bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed-variant">
+<span class="material-symbols-outlined text-[22px]">schedule</span>
+</div>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-sm text-label-sm font-semibold">
+            Tardanzas: 4.8%
+          </span>
+</div>
+<div class="mt-space-md">
+<div class="flex items-baseline gap-2">
+<span class="font-display-lg text-display-lg text-on-surface font-bold tracking-tight">91.8%</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">A tiempo</span>
+</div>
+<h2 class="font-title-md text-body-sm font-semibold text-on-surface-variant mt-1">Índice de Puntualidad</h2>
+<div class="mt-3 flex items-center justify-between text-body-sm font-body-sm text-outline">
+<span>Hora tope: 07:45 AM</span>
+<span class="font-semibold text-on-surface">Media: 07:38 AM</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full mt-1.5 overflow-hidden">
+<div class="bg-tertiary h-full rounded-full" style="width: 91.8%"></div>
+</div>
+</div>
+</div>
+<!-- Metric 4: Dropout Cases Prevented -->
+<div class="relative bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-md transition-shadow overflow-hidden group">
+<div class="flex items-start justify-between">
+<div class="w-10 h-10 rounded-lg bg-error-container flex items-center justify-center text-error">
+<span class="material-symbols-outlined text-[22px]">family_restroom</span>
+</div>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant font-label-sm text-label-sm font-semibold">
+            100% Intervenidos
+          </span>
+</div>
+<div class="mt-space-md">
+<div class="flex items-baseline gap-2">
+<span class="font-display-lg text-display-lg text-on-surface font-bold tracking-tight">8</span>
+<span class="font-title-md text-body-sm text-secondary font-semibold">Alumnos canalizados</span>
+</div>
+<h2 class="font-title-md text-body-sm font-semibold text-on-surface-variant mt-1">Riesgo de Deserción Prevenido</h2>
+<div class="mt-3 flex items-center justify-between text-body-sm font-body-sm text-outline">
+<span>Protocolo de Tutoría</span>
+<span class="font-semibold text-error">0 deserciones</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full mt-1.5 overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 100%"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Main Visualizations Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg mb-space-lg">
+<!-- Chart 1: Trendline Monthly Evolution (8 cols) -->
+<div class="lg:col-span-8 bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-space-sm">
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Evolución y Tendencia de Asistencia</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Comparativa semana a semana entre el Bimestre II y Bimestre III</p>
+</div>
+<!-- Legend -->
+<div class="flex items-center gap-space-md font-label-sm text-label-sm">
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-3 rounded-full bg-primary inline-block"></span>
+<span class="text-on-surface">Bimestre III (Actual)</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-3 rounded-full bg-surface-dim inline-block"></span>
+<span class="text-outline">Bimestre II (Anterior)</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-0.5 bg-secondary inline-block"></span>
+<span class="text-secondary font-semibold">Umbral MINEDU (90%)</span>
+</div>
+</div>
+</div>
+<!-- Inline SVG Multi-Line Chart with interactive dots -->
+<div class="relative w-full h-64 my-space-sm">
+<svg class="w-full h-full overflow-visible" preserveaspectratio="none" viewbox="0 0 760 220">
+<!-- Background grid lines -->
+<line class="text-surface-container" stroke="currentColor" stroke-dasharray="4 4" x1="40" x2="740" y1="20" y2="20"></line>
+<line class="text-surface-container" stroke="currentColor" stroke-dasharray="4 4" x1="40" x2="740" y1="70" y2="70"></line>
+<line class="text-surface-container" stroke="currentColor" stroke-dasharray="4 4" x1="40" x2="740" y1="120" y2="120"></line>
+<line class="text-surface-container" stroke="currentColor" stroke-dasharray="4 4" x1="40" x2="740" y1="170" y2="170"></line>
+<!-- MINEDU target guideline (90%) at y=100 -->
+<line stroke="#006c4a" stroke-dasharray="6 3" stroke-width="1.5" x1="40" x2="740" y1="100" y2="100"></line>
+<!-- Axis Y labels -->
+<text class="fill-outline text-[11px] font-mono" x="10" y="24">98%</text>
+<text class="fill-outline text-[11px] font-mono" x="10" y="74">94%</text>
+<text class="fill-secondary text-[10px] font-semibold font-mono" x="10" y="104">90%</text>
+<text class="fill-outline text-[11px] font-mono" x="10" y="174">82%</text>
+<!-- Bimestre II previous curve (dim line) -->
+<path d="M 60,110 C 130,125 180,95 240,115 C 310,135 370,105 440,110 C 510,115 580,85 640,95 C 680,100 710,90 730,85" fill="none" stroke="#cbdbf5" stroke-linecap="round" stroke-width="2.5"></path>
+<!-- Area fill for Bimestre III -->
+<defs>
+<lineargradient id="attendanceGradient" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#00288e" stop-opacity="0.18"></stop>
+<stop offset="100%" stop-color="#00288e" stop-opacity="0.0"></stop>
+</lineargradient>
+</defs>
+<path d="M 60,95 C 130,80 180,60 240,55 C 310,50 370,75 440,48 C 510,25 580,50 640,35 C 680,28 710,32 730,28 L 730,200 L 60,200 Z" fill="url(#attendanceGradient)"></path>
+<!-- Bimestre III current curve (vibrant blue line) -->
+<path d="M 60,95 C 130,80 180,60 240,55 C 310,50 370,75 440,48 C 510,25 580,50 640,35 C 680,28 710,32 730,28" fill="none" stroke="#00288e" stroke-linecap="round" stroke-width="3"></path>
+<!-- Data points Bimestre III -->
+<circle class="cursor-pointer" cx="60" cy="95" fill="#00288e" r="4"></circle>
+<circle class="cursor-pointer" cx="240" cy="55" fill="#00288e" r="4"></circle>
+<circle class="cursor-pointer" cx="440" cy="48" fill="#00288e" r="4"></circle>
+<circle class="cursor-pointer" cx="640" cy="35" fill="#00288e" r="4"></circle>
+<circle class="cursor-pointer" cx="730" cy="28" fill="#00288e" r="5" stroke="#ffffff" stroke-width="2"></circle>
+</svg>
+</div>
+<!-- Axis X labels -->
+<div class="flex justify-between pl-8 pr-2 pt-1 font-label-sm text-label-sm text-on-surface-variant border-t border-surface-container">
+<span>Sem 1 (Ago)</span>
+<span>Sem 2</span>
+<span>Sem 3</span>
+<span>Sem 4 (Set)</span>
+<span>Sem 5</span>
+<span>Sem 6</span>
+<span>Sem 7 (Oct)</span>
+<span class="text-primary font-semibold">Sem 8 (Actual)</span>
+</div>
+<div class="mt-space-md p-space-sm bg-surface-container-low rounded-lg flex items-center justify-between text-body-sm font-body-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">insights</span>
+<span class="text-on-surface">Pico máximo registrado en la Semana 8 con <strong class="text-primary font-semibold">96.8%</strong> tras las evaluaciones intermedias.</span>
+</div>
+<button class="text-primary font-title-md text-body-sm hover:underline" type="button">Ver detalle semanal</button>
+</div>
+</div>
+<!-- Chart 2: Cause Distribution Donut (4 cols) -->
+<div class="lg:col-span-4 bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between">
+<h3 class="font-headline-md text-headline-md text-on-surface">Causas de Inasistencia</h3>
+<span class="p-1 rounded-md bg-surface-container-low text-outline">
+<span class="material-symbols-outlined text-[18px]">pie_chart</span>
+</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Distribución de 342 justificaciones recibidas</p>
+</div>
+<!-- SVG Donut Chart with center value -->
+<div class="relative flex items-center justify-center my-space-md">
+<svg class="w-48 h-48 -rotate-90 transform" viewbox="0 0 100 100">
+<!-- Background circle -->
+<circle cx="50" cy="50" fill="none" r="38" stroke="#eff4ff" stroke-width="14"></circle>
+<!-- Salud 54% (dasharray = 54 * 2.387 = 128.9, circumference = 238.7) -->
+<circle cx="50" cy="50" fill="none" r="38" stroke="#00288e" stroke-dasharray="128.9 238.7" stroke-dashoffset="0" stroke-width="14"></circle>
+<!-- Familiares 28% (dasharray = 28 * 2.387 = 66.8) -->
+<circle cx="50" cy="50" fill="none" r="38" stroke="#006c4a" stroke-dasharray="66.8 238.7" stroke-dashoffset="-128.9" stroke-width="14"></circle>
+<!-- Transporte 12% (dasharray = 12 * 2.387 = 28.6) -->
+<circle cx="50" cy="50" fill="none" r="38" stroke="#ffdcc3" stroke-dasharray="28.6 238.7" stroke-dashoffset="-195.7" stroke-width="14"></circle>
+<!-- No especificado 6% (dasharray = 6 * 2.387 = 14.3) -->
+<circle cx="50" cy="50" fill="none" r="38" stroke="#ba1a1a" stroke-dasharray="14.3 238.7" stroke-dashoffset="-224.3" stroke-width="14"></circle>
+</svg>
+<div class="absolute flex flex-col items-center justify-center text-center">
+<span class="font-headline-lg text-headline-lg text-on-surface font-bold leading-none">54%</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium mt-1">Salud / Médico</span>
+</div>
+</div>
+<!-- Legend breakdown list -->
+<div class="space-y-2 pt-space-xs border-t border-surface-container">
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded bg-primary"></span>
+<span class="text-on-surface">Salud y Cita Médica</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-semibold text-on-surface">54%</span>
+<span class="text-outline text-label-sm font-label-sm">(185)</span>
+</div>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded bg-secondary"></span>
+<span class="text-on-surface">Motivos Familiares</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-semibold text-on-surface">28%</span>
+<span class="text-outline text-label-sm font-label-sm">(96)</span>
+</div>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded bg-tertiary-fixed"></span>
+<span class="text-on-surface">Transporte / Bloqueo</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-semibold text-on-surface">12%</span>
+<span class="text-outline text-label-sm font-label-sm">(41)</span>
+</div>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded bg-error"></span>
+<span class="text-on-surface">Sin Justificación</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-semibold text-error">6%</span>
+<span class="text-outline text-label-sm font-label-sm">(20)</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Secondary Charts & Behavioral Analysis -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg mb-space-lg">
+<!-- Chart 3: Comparative Attendance by Classroom (Horizontal Bar Chart) (7 cols) -->
+<div class="lg:col-span-7 bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between pb-space-sm">
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Asistencia por Grado y Sección</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Aulas destacadas vs. secciones con alerta de inasistencia</p>
+</div>
+<span class="text-body-sm font-body-sm text-outline">Meta: ≥ 92%</span>
+</div>
+<div class="space-y-space-sm my-space-xs">
+<!-- Item 1: Top Classroom -->
+<div>
+<div class="flex justify-between items-center mb-1 text-body-sm font-body-sm">
+<div class="flex items-center gap-2">
+<span class="font-semibold text-on-surface">5° A Secundaria</span>
+<span class="inline-flex items-center px-1.5 py-0.5 rounded bg-secondary/10 text-secondary font-label-sm text-label-sm font-semibold">Óptimo</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-outline">Tutor: Prof. Vargas</span>
+<span class="font-bold text-secondary">97.0%</span>
+</div>
+</div>
+<div class="w-full bg-surface-container h-3 rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full transition-all duration-500" style="width: 97.0%"></div>
+</div>
+</div>
+<!-- Item 2 -->
+<div>
+<div class="flex justify-between items-center mb-1 text-body-sm font-body-sm">
+<div class="flex items-center gap-2">
+<span class="font-semibold text-on-surface">3° B Secundaria</span>
+<span class="inline-flex items-center px-1.5 py-0.5 rounded bg-secondary/10 text-secondary font-label-sm text-label-sm font-semibold">Excelente</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-outline">Tutora: Prof. Ramos</span>
+<span class="font-bold text-secondary">95.4%</span>
+</div>
+</div>
+<div class="w-full bg-surface-container h-3 rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full transition-all duration-500" style="width: 95.4%"></div>
+</div>
+</div>
+<!-- Item 3 -->
+<div>
+<div class="flex justify-between items-center mb-1 text-body-sm font-body-sm">
+<div class="flex items-center gap-2">
+<span class="font-semibold text-on-surface">1° A Secundaria</span>
+<span class="inline-flex items-center px-1.5 py-0.5 rounded bg-surface-container text-primary font-label-sm text-label-sm font-medium">Regular</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-outline">Tutor: Prof. Quiroz</span>
+<span class="font-bold text-primary">93.2%</span>
+</div>
+</div>
+<div class="w-full bg-surface-container h-3 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full transition-all duration-500" style="width: 93.2%"></div>
+</div>
+</div>
+<!-- Item 4 -->
+<div>
+<div class="flex justify-between items-center mb-1 text-body-sm font-body-sm">
+<div class="flex items-center gap-2">
+<span class="font-semibold text-on-surface">4° C Secundaria</span>
+<span class="inline-flex items-center px-1.5 py-0.5 rounded bg-surface-container text-primary font-label-sm text-label-sm font-medium">Regular</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-outline">Tutora: Prof. Morales</span>
+<span class="font-bold text-primary">92.1%</span>
+</div>
+</div>
+<div class="w-full bg-surface-container h-3 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full transition-all duration-500" style="width: 92.1%"></div>
+</div>
+</div>
+<!-- Item 5: Low Classroom (Requires intervention) -->
+<div>
+<div class="flex justify-between items-center mb-1 text-body-sm font-body-sm">
+<div class="flex items-center gap-2">
+<span class="font-semibold text-on-surface">2° B Secundaria</span>
+<span class="inline-flex items-center px-1.5 py-0.5 rounded bg-error-container text-error font-label-sm text-label-sm font-semibold">Requiere Refuerzo</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-outline">Tutor: Prof. Cáceres</span>
+<span class="font-bold text-error">88.0%</span>
+</div>
+</div>
+<div class="w-full bg-surface-container h-3 rounded-full overflow-hidden">
+<div class="bg-error h-full rounded-full transition-all duration-500" style="width: 88.0%"></div>
+</div>
+</div>
+</div>
+<div class="mt-space-md flex items-center justify-between pt-space-xs border-t border-surface-container font-label-sm text-label-sm text-outline">
+<span>Sección 2° B presenta 14 inasistencias acumuladas los días lunes.</span>
+<button class="text-primary font-semibold hover:underline" type="button">Ver Plan de Refuerzo →</button>
+</div>
+</div>
+<!-- Chart 4: Day-of-Week Absenteeism Pattern (5 cols) -->
+<div class="lg:col-span-5 bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between">
+<h3 class="font-headline-md text-headline-md text-on-surface">Patrón de Ausentismo Semanal</h3>
+<span class="px-2 py-0.5 rounded bg-surface-container text-primary font-label-sm text-label-sm font-semibold">Día Crítico: Lunes</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Tasa promedio de inasistencia según el día lectivo</p>
+</div>
+<!-- Vertical bars by weekday -->
+<div class="grid grid-cols-5 gap-3 items-end h-44 my-space-md px-2">
+<!-- Lunes -->
+<div class="flex flex-col items-center gap-2 h-full justify-end group">
+<span class="font-label-sm text-label-sm font-bold text-error group-hover:-translate-y-1 transition-transform">8.2%</span>
+<div class="w-full bg-surface-container-low rounded-t-lg h-36 flex items-end overflow-hidden p-1">
+<div class="w-full bg-error rounded-t transition-all duration-500 group-hover:opacity-90" style="height: 82%"></div>
+</div>
+<span class="font-label-md text-label-md font-semibold text-on-surface">Lun</span>
+</div>
+<!-- Martes -->
+<div class="flex flex-col items-center gap-2 h-full justify-end group">
+<span class="font-label-sm text-label-sm text-on-surface-variant group-hover:-translate-y-1 transition-transform">4.6%</span>
+<div class="w-full bg-surface-container-low rounded-t-lg h-36 flex items-end overflow-hidden p-1">
+<div class="w-full bg-primary rounded-t transition-all duration-500 opacity-70 group-hover:opacity-100" style="height: 46%"></div>
+</div>
+<span class="font-label-md text-label-md text-on-surface-variant">Mar</span>
+</div>
+<!-- Miércoles (Best Day) -->
+<div class="flex flex-col items-center gap-2 h-full justify-end group">
+<span class="font-label-sm text-label-sm font-bold text-secondary group-hover:-translate-y-1 transition-transform">3.4%</span>
+<div class="w-full bg-surface-container-low rounded-t-lg h-36 flex items-end overflow-hidden p-1">
+<div class="w-full bg-secondary rounded-t transition-all duration-500 group-hover:opacity-90" style="height: 34%"></div>
+</div>
+<span class="font-label-md text-label-md font-semibold text-secondary">Mié</span>
+</div>
+<!-- Jueves -->
+<div class="flex flex-col items-center gap-2 h-full justify-end group">
+<span class="font-label-sm text-label-sm text-on-surface-variant group-hover:-translate-y-1 transition-transform">4.8%</span>
+<div class="w-full bg-surface-container-low rounded-t-lg h-36 flex items-end overflow-hidden p-1">
+<div class="w-full bg-primary rounded-t transition-all duration-500 opacity-70 group-hover:opacity-100" style="height: 48%"></div>
+</div>
+<span class="font-label-md text-label-md text-on-surface-variant">Jue</span>
+</div>
+<!-- Viernes -->
+<div class="flex flex-col items-center gap-2 h-full justify-end group">
+<span class="font-label-sm text-label-sm font-bold text-error group-hover:-translate-y-1 transition-transform">7.1%</span>
+<div class="w-full bg-surface-container-low rounded-t-lg h-36 flex items-end overflow-hidden p-1">
+<div class="w-full bg-error rounded-t transition-all duration-500 opacity-80 group-hover:opacity-100" style="height: 71%"></div>
+</div>
+<span class="font-label-md text-label-md font-semibold text-on-surface">Vie</span>
+</div>
+</div>
+<div class="p-space-sm bg-surface-container-low rounded-lg text-body-sm font-body-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-outline text-[18px]">calendar_clock</span>
+<span class="text-on-surface-variant">Los <strong class="text-on-surface">Lunes</strong> y <strong class="text-on-surface">Viernes</strong> concentran el <span class="font-semibold text-error">64.8%</span> de todas las faltas registradas.</span>
+</div>
+</div>
+</div>
+<!-- Executive Summary Table & Section Rankings -->
+<section class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden">
+<!-- Table Header & Controls -->
+<div class="p-space-md flex flex-col md:flex-row md:items-center justify-between gap-space-sm border-b border-surface-container">
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Resumen Ejecutivo por Sección Lectiva</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Clasificación de rendimiento de asistencia, puntualidad y estado de seguimiento normativo</p>
+</div>
+<div class="flex items-center gap-space-xs">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-[18px] text-outline">search</span>
+<input class="pl-9 pr-3 py-1.5 text-body-sm font-body-sm bg-surface-container-low rounded-lg text-on-surface placeholder:text-outline focus:outline-none focus:ring-1 focus:ring-primary w-48 lg:w-64" placeholder="Filtrar docente o aula..." type="text"/>
+</div>
+<button class="flex items-center gap-1.5 px-3 py-1.5 bg-surface-container hover:bg-surface-variant text-primary rounded-lg font-label-md text-label-md transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">file_download</span>
+<span>Exportar Todo</span>
+</button>
+</div>
+</div>
+<!-- Responsive Table Container -->
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-3 px-space-md">Grado / Sección</th>
+<th class="py-3 px-space-md">Docente Tutor</th>
+<th class="py-3 px-space-md text-center">Matrícula</th>
+<th class="py-3 px-space-md text-center">% Asistencia</th>
+<th class="py-3 px-space-md text-center">Puntualidad</th>
+<th class="py-3 px-space-md text-center">Inasist. Injustif.</th>
+<th class="py-3 px-space-md text-center">Estado MINEDU</th>
+<th class="py-3 px-space-md text-right">Descarga de Ficha</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container font-body-md text-body-md text-on-surface">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-lg bg-secondary/15 text-secondary flex items-center justify-center font-bold text-label-md">
+                    5A
+                  </div>
+<div>
+<span class="font-semibold text-on-surface block leading-tight">5° Año “A”</span>
+<span class="font-label-sm text-label-sm text-outline">Nivel Secundaria</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-surface-container text-primary flex items-center justify-center font-label-sm text-label-sm font-semibold">
+                    RV
+                  </div>
+<div>
+<span class="font-medium block leading-tight">Prof. Rodrigo Vargas</span>
+<span class="font-label-sm text-label-sm text-outline">Ciencias Sociales</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md text-center font-semibold">32 alumnos</td>
+<td class="py-3.5 px-space-md text-center">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant font-label-md text-label-md font-bold">
+                  97.0%
+                </span>
+</td>
+<td class="py-3.5 px-space-md text-center text-secondary font-medium">96.4%</td>
+<td class="py-3.5 px-space-md text-center text-outline">1 caso</td>
+<td class="py-3.5 px-space-md text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                  Conforme (A+)
+                </span>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<button class="inline-flex items-center gap-1 px-2.5 py-1 bg-surface-container-low hover:bg-surface-container text-primary rounded-lg text-label-md font-label-md transition-colors" title="Descargar informe individual de 5° A" type="button">
+<span class="material-symbols-outlined text-[16px]">download</span>
+<span>Informe</span>
+</button>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-lg bg-secondary/15 text-secondary flex items-center justify-center font-bold text-label-md">
+                    3B
+                  </div>
+<div>
+<span class="font-semibold text-on-surface block leading-tight">3° Año “B”</span>
+<span class="font-label-sm text-label-sm text-outline">Nivel Secundaria</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-surface-container text-primary flex items-center justify-center font-label-sm text-label-sm font-semibold">
+                    MR
+                  </div>
+<div>
+<span class="font-medium block leading-tight">Prof. Mariana Ramos</span>
+<span class="font-label-sm text-label-sm text-outline">Matemáticas</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md text-center font-semibold">30 alumnos</td>
+<td class="py-3.5 px-space-md text-center">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant font-label-md text-label-md font-bold">
+                  95.4%
+                </span>
+</td>
+<td class="py-3.5 px-space-md text-center text-secondary font-medium">93.1%</td>
+<td class="py-3.5 px-space-md text-center text-outline">3 casos</td>
+<td class="py-3.5 px-space-md text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                  Conforme (A)
+                </span>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<button class="inline-flex items-center gap-1 px-2.5 py-1 bg-surface-container-low hover:bg-surface-container text-primary rounded-lg text-label-md font-label-md transition-colors" title="Descargar informe individual de 3° B" type="button">
+<span class="material-symbols-outlined text-[16px]">download</span>
+<span>Informe</span>
+</button>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-lg bg-surface-container text-primary flex items-center justify-center font-bold text-label-md">
+                    1A
+                  </div>
+<div>
+<span class="font-semibold text-on-surface block leading-tight">1° Año “A”</span>
+<span class="font-label-sm text-label-sm text-outline">Nivel Secundaria</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-surface-container text-primary flex items-center justify-center font-label-sm text-label-sm font-semibold">
+                    LQ
+                  </div>
+<div>
+<span class="font-medium block leading-tight">Prof. Luis Quiroz</span>
+<span class="font-label-sm text-label-sm text-outline">Comunicación</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md text-center font-semibold">31 alumnos</td>
+<td class="py-3.5 px-space-md text-center">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container text-primary font-label-md text-label-md font-bold">
+                  93.2%
+                </span>
+</td>
+<td class="py-3.5 px-space-md text-center text-on-surface-variant font-medium">91.0%</td>
+<td class="py-3.5 px-space-md text-center text-outline">4 casos</td>
+<td class="py-3.5 px-space-md text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container text-primary font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                  Aceptable (B)
+                </span>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<button class="inline-flex items-center gap-1 px-2.5 py-1 bg-surface-container-low hover:bg-surface-container text-primary rounded-lg text-label-md font-label-md transition-colors" title="Descargar informe individual de 1° A" type="button">
+<span class="material-symbols-outlined text-[16px]">download</span>
+<span>Informe</span>
+</button>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-lg bg-surface-container text-primary flex items-center justify-center font-bold text-label-md">
+                    4C
+                  </div>
+<div>
+<span class="font-semibold text-on-surface block leading-tight">4° Año “C”</span>
+<span class="font-label-sm text-label-sm text-outline">Nivel Secundaria</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-surface-container text-primary flex items-center justify-center font-label-sm text-label-sm font-semibold">
+                    CM
+                  </div>
+<div>
+<span class="font-medium block leading-tight">Prof. Carla Morales</span>
+<span class="font-label-sm text-label-sm text-outline">Inglés</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md text-center font-semibold">28 alumnos</td>
+<td class="py-3.5 px-space-md text-center">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container text-primary font-label-md text-label-md font-bold">
+                  92.1%
+                </span>
+</td>
+<td class="py-3.5 px-space-md text-center text-on-surface-variant font-medium">89.4%</td>
+<td class="py-3.5 px-space-md text-center text-outline">5 casos</td>
+<td class="py-3.5 px-space-md text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container text-primary font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                  Aceptable (B)
+                </span>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<button class="inline-flex items-center gap-1 px-2.5 py-1 bg-surface-container-low hover:bg-surface-container text-primary rounded-lg text-label-md font-label-md transition-colors" title="Descargar informe individual de 4° C" type="button">
+<span class="material-symbols-outlined text-[16px]">download</span>
+<span>Informe</span>
+</button>
+</td>
+</tr>
+<!-- Row 5 (Critical Warning Alert Row) -->
+<tr class="bg-error-container/20 hover:bg-error-container/30 transition-colors">
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-lg bg-error text-on-error flex items-center justify-center font-bold text-label-md">
+                    2B
+                  </div>
+<div>
+<span class="font-bold text-error block leading-tight">2° Año “B”</span>
+<span class="font-label-sm text-label-sm text-error">Atención Requerida</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-error-container text-error flex items-center justify-center font-label-sm text-label-sm font-semibold">
+                    JC
+                  </div>
+<div>
+<span class="font-medium block leading-tight">Prof. Jorge Cáceres</span>
+<span class="font-label-sm text-label-sm text-outline">Educación Física</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-space-md text-center font-semibold">29 alumnos</td>
+<td class="py-3.5 px-space-md text-center">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-error-container text-error font-label-md text-label-md font-bold">
+                  88.0%
+                </span>
+</td>
+<td class="py-3.5 px-space-md text-center text-error font-medium">84.2%</td>
+<td class="py-3.5 px-space-md text-center font-bold text-error">12 casos</td>
+<td class="py-3.5 px-space-md text-center">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-error text-on-error font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-white"></span>
+                  Observado (C)
+                </span>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<button class="inline-flex items-center gap-1 px-2.5 py-1 bg-error text-on-error hover:bg-error/90 rounded-lg text-label-md font-label-md shadow-sm transition-colors" title="Descargar informe de alerta para 2° B" type="button">
+<span class="material-symbols-outlined text-[16px]">priority_high</span>
+<span>Ficha Alerta</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Footer / Pagination / Summary Note -->
+<div class="p-space-md bg-surface-container-low flex flex-col sm:flex-row items-center justify-between gap-space-sm text-body-sm font-body-sm text-on-surface-variant">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary">verified_user</span>
+<span>Datos validados con el Sistema de Información de Apoyo a la Gestión de la Institución Educativa (SIAGIE - MINEDU).</span>
+</div>
+<div class="flex items-center gap-space-xs font-label-md text-label-md">
+<span class="text-outline">Mostrando 5 de 18 secciones</span>
+<button class="p-1.5 rounded bg-surface-container hover:bg-surface-variant text-on-surface transition-colors disabled:opacity-50" disabled="" type="button">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+</button>
+<button class="p-1.5 rounded bg-surface-container hover:bg-surface-variant text-on-surface transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Bottom Compliance and Sign-off Banner -->
+<section class="mt-space-lg p-space-md bg-surface-container-high rounded-xl flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="flex items-start sm:items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">badge</span>
+</div>
+<div>
+<h4 class="font-title-md text-title-md text-on-surface">Visado Electrónico de Dirección</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">El consolidado del Bimestre III se encuentra listo para firma digital y carga en el portal de la UGEL 07.</p>
+</div>
+</div>
+<div class="flex items-center gap-space-xs shrink-0">
+<button class="px-4 py-2 bg-surface-container-lowest text-on-surface hover:bg-surface-container rounded-lg font-title-md text-body-sm transition-colors" type="button">
+          Auditoría de Cambios
+        </button>
+<button class="flex items-center gap-2 px-4 py-2 bg-secondary text-on-secondary hover:bg-secondary/90 shadow-sm rounded-lg font-title-md text-body-sm transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">draw</span>
+<span>Firmar y Enviar al MINEDU</span>
+</button>
+</div>
+</section>
+</div>
+</div></main></div><script src="/js/app.js"></script>
+</body></html>

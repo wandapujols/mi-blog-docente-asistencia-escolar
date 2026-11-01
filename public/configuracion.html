@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><title>EduAsiste</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"surface-container":"#e5eeff","on-surface":"#0b1c30","secondary-fixed-dim":"#68dba9","on-error":"#ffffff","on-primary-fixed":"#001453","inverse-surface":"#213145","surface-container-high":"#dce9ff","on-tertiary-fixed":"#2f1500","primary":"#00288e","outline":"#757684","on-secondary-fixed-variant":"#005137","tertiary-container":"#743d00","surface-tint":"#3755c3","tertiary-fixed":"#ffdcc3","on-secondary-fixed":"#002114","on-primary-container":"#a8b8ff","on-background":"#0b1c30","on-tertiary-fixed-variant":"#6e3900","tertiary":"#532a00","surface-variant":"#d3e4fe","inverse-primary":"#b8c4ff","on-tertiary-container":"#ffa85d","on-secondary":"#ffffff","secondary":"#006c4a","primary-fixed":"#dde1ff","surface-container-highest":"#d3e4fe","background":"#f8f9ff","on-error-container":"#93000a","on-tertiary":"#ffffff","outline-variant":"#c4c5d5","surface-container-low":"#eff4ff","secondary-container":"#82f5c1","on-primary":"#ffffff","surface-bright":"#f8f9ff","surface-dim":"#cbdbf5","primary-fixed-dim":"#b8c4ff","inverse-on-surface":"#eaf1ff","surface":"#f8f9ff","on-secondary-container":"#00714e","on-primary-fixed-variant":"#173bab","error-container":"#ffdad6","secondary-fixed":"#85f8c4","surface-container-lowest":"#ffffff","error":"#ba1a1a","tertiary-fixed-dim":"#ffb77d","primary-container":"#1e40af","on-surface-variant":"#444653"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-lg":"1.5rem","space-md":"1rem","space-sm":"0.5rem","space-xs":"0.25rem","space-xl":"2rem","gutter-sm":"1rem","gutter":"1.5rem","margin":"2rem","margin-sm":"1rem"},"fontFamily":{"body-lg":["Inter"],"headline-lg":["Plus Jakarta Sans"],"headline-lg-mobile":["Plus Jakarta Sans"],"body-md":["Inter"],"display-lg":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"label-md":["Inter"],"body-sm":["Inter"],"title-md":["Inter"],"label-sm":["Inter"],"display-lg-mobile":["Plus Jakarta Sans"]},"fontSize":{"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"headline-lg":["28px",{"lineHeight":"36px","letterSpacing":"-0.02em","fontWeight":"600"}],"headline-lg-mobile":["22px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"display-lg":["40px",{"lineHeight":"48px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-md":["20px",{"lineHeight":"26px","letterSpacing":"-0.01em","fontWeight":"600"}],"label-md":["13px",{"lineHeight":"18px","letterSpacing":"0.01em","fontWeight":"600"}],"body-sm":["12px",{"lineHeight":"16px","fontWeight":"400"}],"title-md":["16px",{"lineHeight":"24px","fontWeight":"600"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.03em","fontWeight":"600"}],"display-lg-mobile":["30px",{"lineHeight":"38px","letterSpacing":"-0.01em","fontWeight":"700"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between"><div class="flex flex-col flex-1 overflow-y-auto"><div class="h-16 px-space-md flex items-center gap-space-sm bg-surface-container-lowest"><img alt="EduAsiste Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WNhigynvS7BsCPKvLxDgd3EGouNqulCln-VgeOICNZThmcCeen72_GYZrSje4BQpotAt_ourMKjRsGu7wREgurFDcgF51yn-UdCFxbLG1_2y-eqLUt4ZyzMEXKC4WPEPTKdcKoaii-kkRaPN4fJkzoJYaBvWcxNY5WC4AZfd_0YuZfN6JOSVoPPeCBoJJcHDPyKH6XU1CuXwwJAnWiKoNuUMAEwrpBTs9pIPrridZb"/><div class="flex flex-col"><span class="font-headline-md text-headline-md text-primary leading-none tracking-tight">EduAsiste</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mt-space-xs">Gestión Escolar</span></div></div><div class="px-space-md py-space-sm"><div class="px-space-sm py-space-xs font-label-sm text-label-sm uppercase tracking-wider text-outline">Menú Principal</div></div><nav class="flex-1 px-space-sm space-y-space-xs" data-active-classes="bg-primary text-on-primary font-title-md shadow-[0_1px_3px_rgba(15,23,42,0.08)]"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">dashboard</span><span>Dashboard</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all" data-path="registro-diario" href="#"><span class="material-symbols-outlined text-[20px]">fact_check</span><span>Asistencia Diaria</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all" data-path="estudiantes" href="#"><span class="material-symbols-outlined text-[20px]">group</span><span>Estudiantes</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all" data-path="nuevo-estudiante" href="#"><span class="material-symbols-outlined text-[20px]">person_add</span><span>Nuevo Estudiante</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all" data-path="historial" href="#"><span class="material-symbols-outlined text-[20px]">calendar_month</span><span>Historial</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all" data-path="reportes" href="#"><span class="material-symbols-outlined text-[20px]">analytics</span><span>Reportes</span></a><div class="pt-space-sm px-space-sm py-space-xs font-label-sm text-label-sm uppercase tracking-wider text-outline">Ajustes</div><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg transition-all bg-primary text-on-primary font-title-md shadow-[0_1px_3px_rgba(15,23,42,0.08)]" data-path="configuracion" href="#"><span class="material-symbols-outlined text-[20px]">settings</span><span>Configuración</span></a></nav></div><div class="p-space-md bg-surface-container-low m-space-sm rounded-xl"><div class="flex items-center gap-space-sm mb-space-sm"><div class="h-2 w-2 rounded-full bg-secondary"></div><span class="font-label-sm text-label-sm text-secondary font-semibold">Periodo Lectivo 2024</span></div><a class="flex items-center gap-space-sm px-space-sm py-space-xs text-error hover:bg-error-container hover:text-on-error-container rounded-lg transition-colors font-label-md text-label-md" data-path="login" href="#"><span class="material-symbols-outlined text-[18px]">logout</span><span>Cerrar Sesión</span></a></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs px-space-md py-space-xs bg-surface-container rounded-full text-primary font-label-md text-label-md"><span class="material-symbols-outlined text-[16px]">today</span><span>Hoy: 24 de Octubre, 2024</span></div><div class="hidden lg:flex items-center gap-space-xs bg-surface-container-low px-space-md py-space-xs rounded-lg text-outline"><span class="material-symbols-outlined text-[18px]">search</span><span class="font-body-sm text-body-sm">Buscar estudiante, carnet o curso...</span></div></div><div class="flex items-center gap-space-md"><button aria-label="Notificaciones" class="relative p-space-xs rounded-full text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1 right-1 w-2 h-2 rounded-full bg-error"></span></button><div class="flex items-center gap-space-sm pl-space-sm"><div class="flex flex-col text-right hidden sm:flex"><span class="font-title-md text-body-sm font-semibold text-on-surface leading-tight">Prof. Martín Benítez</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-tight">Docente Principal</span></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCU6SbgMpYI1jp9C3RhVnxiWjiik-q9tmzLzXVGIVPI61TA5giSFdaekj_eaXti2EIn4jRKgIWM_BYM-WDaGBWxQBtuFM2BlN18wKx9rwGztsDZOeyFFyep71Wr-fPiujNkfVPnqjZ3Fh4wFrAYTz7UsXYQyck2r1e15ci3WOJwg_Hx0cmGzddc8FisWrojhMGLChKrfxDjhNeFZEM6902wzTRJKucBcgfQudI-CB0"/></div></div></header><main class="relative w-full pt-16 px-gutter bg-background min-h-screen"><div class="flex flex-col w-full pb-space-xl">
+<!-- Top Context Header Bar (No page title duplication with shell) -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md py-space-lg">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="font-headline-lg text-headline-lg text-primary tracking-tight">Configuración del Sistema</span>
+<span class="inline-flex items-center gap-1.5 px-space-sm py-0.5 rounded-full bg-secondary-container/60 text-on-secondary-container font-label-sm text-label-sm font-semibold shadow-sm">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+          Sistema Operativo y Sincronizado
+        </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        Parámetros centrales de la institución, directivas de pase de lista y canales de contacto escolar.
+      </p>
+</div>
+<div class="flex items-center gap-space-sm shrink-0">
+<button class="px-space-md py-2.5 rounded-lg bg-surface-container text-on-surface hover:bg-surface-variant font-title-md text-title-md transition-colors shadow-sm flex items-center gap-space-xs" type="button">
+<span class="material-symbols-outlined text-[18px]">history</span>
+<span>Auditoría de Cambios</span>
+</button>
+<button class="px-space-md py-2.5 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-title-md text-title-md transition-all shadow-md flex items-center gap-space-xs" onclick="notifySave()" type="button">
+<span class="material-symbols-outlined text-[18px]">save</span>
+<span>Guardar Cambios</span>
+</button>
+</div>
+</div>
+<!-- Navigation Tabs -->
+<div class="w-full bg-surface-container-low p-1.5 rounded-xl shadow-sm mb-space-lg overflow-x-auto">
+<nav class="flex items-center gap-1 min-w-max" role="tablist">
+<button class="tab-btn px-space-md py-2 rounded-lg font-title-md text-body-md flex items-center gap-space-xs transition-all bg-surface-container-lowest text-primary shadow-sm" onclick="switchTab(this, 'panel-general')" type="button">
+<span class="material-symbols-outlined text-[18px]">account_balance</span>
+<span>General e Institución</span>
+</button>
+<button class="tab-btn px-space-md py-2 rounded-lg font-title-md text-body-md flex items-center gap-space-xs transition-all text-on-surface-variant hover:text-on-surface hover:bg-surface-container" onclick="switchTab(this, 'panel-horarios')" type="button">
+<span class="material-symbols-outlined text-[18px]">alarm</span>
+<span>Horarios y Tolerancias</span>
+</button>
+<button class="tab-btn px-space-md py-2 rounded-lg font-title-md text-body-md flex items-center gap-space-xs transition-all text-on-surface-variant hover:text-on-surface hover:bg-surface-container" onclick="switchTab(this, 'panel-notificaciones')" type="button">
+<span class="material-symbols-outlined text-[18px]">mark_chat_unread</span>
+<span>Notificaciones SMS / WhatsApp</span>
+</button>
+<button class="tab-btn px-space-md py-2 rounded-lg font-title-md text-body-md flex items-center gap-space-xs transition-all text-on-surface-variant hover:text-on-surface hover:bg-surface-container" onclick="switchTab(this, 'panel-cursos')" type="button">
+<span class="material-symbols-outlined text-[18px]">school</span>
+<span>Cursos, Secciones y Grados</span>
+</button>
+<button class="tab-btn px-space-md py-2 rounded-lg font-title-md text-body-md flex items-center gap-space-xs transition-all text-on-surface-variant hover:text-on-surface hover:bg-surface-container" onclick="switchTab(this, 'panel-usuarios')" type="button">
+<span class="material-symbols-outlined text-[18px]">manage_accounts</span>
+<span>Usuarios y Roles</span>
+</button>
+</nav>
+</div>
+<!-- Main Multi-section Settings Content -->
+<div class="space-y-space-xl">
+<!-- Section 1: Datos Institucionales -->
+<section class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm" id="panel-general">
+<div class="flex items-center justify-between pb-space-md mb-space-lg bg-surface-container-lowest">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-primary-fixed flex items-center justify-center text-on-primary-fixed">
+<span class="material-symbols-outlined text-[24px]">corporate_fare</span>
+</div>
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface leading-tight">Identidad y Datos Institucionales</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Información oficial que figurará en las libretas de control y reportes de inasistencias.</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline px-space-sm py-1 bg-surface-container-low rounded">ID Minedu: 0482910</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- School Visual & Crest -->
+<div class="lg:col-span-4 flex flex-col items-center p-space-md rounded-xl bg-surface-container-low text-center">
+<div class="relative group mb-space-sm">
+<img class="w-28 h-28 rounded-xl object-cover shadow-sm bg-surface-container-lowest p-2" data-alt="Classic institutional emblem crest badge with navy blue and gold accents representing Colegio San Agustin educational institution on a clean soft studio backdrop" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAN7m31UDrjcXfLCMA7x--LF0vUx1lfqe3BE3iXYVcgLsq4S8THcpZlvxuTYmh36RODGJCk1XkfAolsRy6pLSKNcF26vkHI98Vm38d9pBd1UR05F7RzYedlaU0ZrGUTSBRYE9W_IIBwumO61MWqpSiJl0wGMPrr1G3eJhLwJx6RC31-6gBQFdOOZN4lLz69NYeviZPudgh7qDX92hO2QcY9VdLF_xjq3sTgZa4b5DE"/>
+<div class="absolute inset-0 rounded-xl bg-on-surface/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-on-primary cursor-pointer">
+<span class="material-symbols-outlined">photo_camera</span>
+</div>
+</div>
+<span class="font-title-md text-body-md text-on-surface">Escudo Institucional</span>
+<span class="font-body-sm text-body-sm text-outline mb-space-md">PNG, SVG o WebP (Máx. 2MB)</span>
+<div class="flex gap-space-xs w-full">
+<button class="flex-1 py-1.5 px-space-sm bg-surface-container-lowest text-primary font-label-md text-label-md rounded-lg shadow-sm hover:bg-surface-container" type="button">
+              Reemplazar
+            </button>
+<button class="py-1.5 px-space-sm text-error hover:bg-error-container rounded-lg font-label-md text-label-md" type="button">
+              Eliminar
+            </button>
+</div>
+</div>
+<!-- Institutional Form Fields -->
+<div class="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface-variant">Nombre de la Institución Educativa</label>
+<input class="h-10 px-space-md rounded-lg bg-surface-container-lowest shadow-sm text-on-surface font-body-md focus:bg-surface-container-lowest outline-none focus:ring-2 focus:ring-primary-container" type="text" value="Colegio San Agustín"/>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface-variant">Código Modular Escolar</label>
+<input class="h-10 px-space-md rounded-lg bg-surface-container-lowest shadow-sm text-on-surface font-body-md outline-none focus:ring-2 focus:ring-primary-container" type="text" value="0482910-UGEL07"/>
+</div>
+<div class="md:col-span-2 flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface-variant">Dirección de la Sede Principal</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-outline text-[18px]">location_on</span>
+<input class="h-10 pl-10 pr-space-md w-full rounded-lg bg-surface-container-lowest shadow-sm text-on-surface font-body-md outline-none focus:ring-2 focus:ring-primary-container" type="text" value="Av. Javier Prado Este 2580, San Isidro, Lima"/>
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface-variant">Año Lectivo Vigente</label>
+<div class="flex items-center justify-between px-space-md h-10 rounded-lg bg-surface-container-low shadow-sm">
+<span class="font-title-md text-body-md text-primary font-bold">2024 (Ciclo Regular)</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-secondary-container text-on-secondary-container">Activo</span>
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface-variant">Zona Horaria Oficial</label>
+<div class="h-10 px-space-md rounded-lg bg-surface-container-lowest shadow-sm text-on-surface font-body-md flex items-center justify-between">
+<span>America/Lima (UTC -05:00)</span>
+<span class="material-symbols-outlined text-outline text-[18px]">public</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 2: Reglas de Asistencia y Tolerancia (Crucial) -->
+<section class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm" id="panel-horarios">
+<div class="flex items-center justify-between pb-space-md mb-space-lg">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed">
+<span class="material-symbols-outlined text-[24px]">timer</span>
+</div>
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface leading-tight">Reglas de Asistencia y Ventanas de Tolerancia</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Ajustes directos sobre cómo el escáner de carnet y el pase manual catalogan al alumno.</p>
+</div>
+</div>
+<div class="hidden sm:flex items-center gap-space-xs px-space-sm py-1 rounded-full bg-surface-container-high text-primary font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px]">info</span>
+          Afecta a 1,240 alumnos activos
+        </div>
+</div>
+<!-- Timeline Visual of Rules -->
+<div class="bg-surface-container-low p-space-md rounded-xl mb-space-lg">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Línea de Tiempo de Clasificación Matutina</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">Puerta Escolar Abierta 07:30 AM</span>
+</div>
+<div class="relative w-full h-8 bg-surface-container rounded-lg flex overflow-hidden shadow-inner text-label-sm">
+<div class="h-full bg-secondary-container flex items-center justify-center text-on-secondary-container font-semibold" style="width: 50%;">
+            08:00 AM (A Tiempo - Presente)
+          </div>
+<div class="h-full bg-tertiary-fixed flex items-center justify-center text-tertiary-container font-semibold" style="width: 20%;">
+            08:10 AM (Tardanza)
+          </div>
+<div class="h-full bg-error-container flex items-center justify-center text-on-error-container font-semibold" style="width: 30%;">
+            &gt; 08:30 AM (Inasistencia)
+          </div>
+</div>
+<div class="flex justify-between text-body-sm text-outline mt-2 font-label-sm">
+<span>07:30 AM Ingreso</span>
+<span>08:00 AM Cierre puntual</span>
+<span>08:10 AM Margen tardanza</span>
+<span>08:30 AM Puerta cerrada</span>
+</div>
+</div>
+<!-- Config Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Rule 1: Ingreso Oficial -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-md text-label-md text-on-surface-variant">Hora Oficial Ingreso</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">check_circle</span>
+</div>
+<div class="flex items-baseline gap-space-xs mb-space-xs">
+<input class="font-headline-lg text-headline-lg text-primary bg-surface-container-low px-2 py-1 rounded-lg w-full text-center outline-none" type="time" value="08:00"/>
+</div>
+<p class="font-body-sm text-body-sm text-outline">Hasta este minuto el registro se computa verde "Presente".</p>
+</div>
+<!-- Rule 2: Tolerancia Tardanza -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-md text-label-md text-on-surface-variant">Margen de Tardanza</span>
+<span class="material-symbols-outlined text-tertiary-container text-[20px]">hourglass_top</span>
+</div>
+<div class="flex items-center gap-space-sm mb-space-xs">
+<input class="font-headline-lg text-headline-lg text-tertiary-container bg-surface-container-low px-2 py-1 rounded-lg w-24 text-center outline-none" max="60" min="0" type="number" value="10"/>
+<span class="font-title-md text-body-md text-on-surface font-semibold">Minutos</span>
+</div>
+<p class="font-body-sm text-body-sm text-outline">Acepta ingreso marcando "Tardanza Leve" en sistema.</p>
+</div>
+<!-- Rule 3: Límite Ausencia -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-md text-label-md text-on-surface-variant">Tope Límite Ausencia</span>
+<span class="material-symbols-outlined text-error text-[20px]">cancel</span>
+</div>
+<div class="flex items-baseline gap-space-xs mb-space-xs">
+<input class="font-headline-lg text-headline-lg text-error bg-surface-container-low px-2 py-1 rounded-lg w-full text-center outline-none" type="time" value="08:30"/>
+</div>
+<p class="font-body-sm text-body-sm text-outline">Pasada esta hora se asigna "Falta Injustificada" automáticamente.</p>
+</div>
+<!-- Rule 4: Alerta Inasistencias -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-md text-label-md text-on-surface-variant">Alerta Crítica Dirección</span>
+<span class="material-symbols-outlined text-error text-[20px]">warning</span>
+</div>
+<div class="flex items-center gap-space-sm mb-space-xs">
+<input class="font-headline-lg text-headline-lg text-error bg-surface-container-low px-2 py-1 rounded-lg w-20 text-center outline-none" max="10" min="1" type="number" value="3"/>
+<span class="font-title-md text-body-md text-on-surface font-semibold">Faltas Seguidas</span>
+</div>
+<p class="font-body-sm text-body-sm text-outline">Dispara notificación prioritaria a dirección y tutoría.</p>
+</div>
+</div>
+</section>
+<!-- Section 3: Notificaciones Automáticas (SMS / WhatsApp) -->
+<section class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm" id="panel-notificaciones">
+<div class="flex items-center justify-between pb-space-md mb-space-lg">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed">
+<span class="material-symbols-outlined text-[24px]">send_to_mobile</span>
+</div>
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface leading-tight">Canales de Alerta y Notificación a Apoderados</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Conexión con la pasarela de WhatsApp Business y mensajería SMS masiva.</p>
+</div>
+</div>
+<div class="flex items-center gap-space-xs px-space-sm py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+          API WhatsApp Conectada
+        </div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- Switches Column -->
+<div class="lg:col-span-5 flex flex-col gap-space-md">
+<div class="p-space-md rounded-xl bg-surface-container-low flex items-center justify-between">
+<div class="flex flex-col pr-space-md">
+<span class="font-title-md text-body-md text-on-surface font-semibold">Envío de WhatsApp al marcar Ausente</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Despacho inmediato a las 08:35 AM al celular principal del padre.</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer shrink-0">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-outline-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-surface-container-lowest after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-surface-container-lowest after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-secondary"></div>
+</label>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-low flex items-center justify-between">
+<div class="flex flex-col pr-space-md">
+<span class="font-title-md text-body-md text-on-surface font-semibold">Envío de SMS al registrar Tardanza</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Envío de respaldo cuando el estudiante cruza el pórtico tarde.</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer shrink-0">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-outline-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-surface-container-lowest after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-surface-container-lowest after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-secondary"></div>
+</label>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-low flex items-center justify-between">
+<div class="flex flex-col pr-space-md">
+<span class="font-title-md text-body-md text-on-surface font-semibold">Reporte Semanal al correo del apoderado</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Resumen consolidado cada viernes a las 18:00 hrs en PDF.</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer shrink-0">
+<input class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-outline-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-surface-container-lowest after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-surface-container-lowest after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-secondary"></div>
+</label>
+</div>
+</div>
+<!-- Message Template Column -->
+<div class="lg:col-span-7 p-space-md rounded-xl bg-surface-container-low flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-title-md text-body-md text-on-surface font-semibold">Plantilla Predeterminada de Inasistencia</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">Canal: WhatsApp API</span>
+</div>
+<!-- Variable Chips -->
+<div class="flex flex-wrap gap-1.5 mb-space-sm">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container-high text-primary cursor-pointer hover:bg-surface-variant" onclick="insertVariable('{{Nombre_Alumno}}')">+ {{Nombre_Alumno}}</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container-high text-primary cursor-pointer hover:bg-surface-variant" onclick="insertVariable('{{Grado_Seccion}}')">+ {{Grado_Seccion}}</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container-high text-primary cursor-pointer hover:bg-surface-variant" onclick="insertVariable('{{Hora}}')">+ {{Hora}}</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container-high text-primary cursor-pointer hover:bg-surface-variant" onclick="insertVariable('{{Fecha}}')">+ {{Fecha}}</span>
+</div>
+<textarea class="w-full p-space-md rounded-lg bg-surface-container-lowest shadow-sm text-on-surface font-body-md outline-none focus:ring-2 focus:ring-primary-container leading-relaxed" id="template-text" rows="5">Estimado apoderado de {{Nombre_Alumno}}, le informamos que el día de hoy {{Fecha}} su menor hijo(a) no ha registrado ingreso a las instalaciones a la hora límite ({{Hora}}). Si cuenta con justificación médica, por favor comunicarse con Coordinación.</textarea>
+</div>
+<div class="flex items-center justify-between pt-space-sm mt-space-sm">
+<span class="font-body-sm text-body-sm text-outline">164 / 320 caracteres utilizados</span>
+<button class="px-space-md py-1.5 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md hover:bg-surface-variant shadow-sm flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+              Previsualizar en WhatsApp
+            </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 4: Usuarios, Roles y Permisos -->
+<section class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm" id="panel-usuarios">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm pb-space-md mb-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-primary-fixed-dim flex items-center justify-center text-on-primary-fixed">
+<span class="material-symbols-outlined text-[24px]">group_add</span>
+</div>
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface leading-tight">Roles del Sistema y Permisos de Asistencia</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Control de accesos para docentes de aula, directores y auxiliares de puerta.</p>
+</div>
+</div>
+<button class="px-space-md py-2 rounded-lg bg-primary text-on-primary font-title-md text-body-md hover:bg-primary-container shadow-sm flex items-center gap-space-xs self-start md:self-auto" type="button">
+<span class="material-symbols-outlined text-[18px]">person_add</span>
+<span>Nuevo Usuario</span>
+</button>
+</div>
+<!-- Users Compact Table -->
+<div class="overflow-x-auto rounded-xl">
+<table class="w-full text-left">
+<thead class="bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<tr>
+<th class="py-3 px-space-md">Colaborador / Usuario</th>
+<th class="py-3 px-space-md">Rol Asignado</th>
+<th class="py-3 px-space-md">Grado / Nivel Asignado</th>
+<th class="py-3 px-space-md">Pase de Asistencia</th>
+<th class="py-3 px-space-md text-right">Estado</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-low font-body-md text-body-md">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-3 px-space-md flex items-center gap-space-sm">
+<img class="w-9 h-9 rounded-full object-cover shadow-xs" data-alt="Professional portrait headshot of high school male principal in formal attire on soft neutral background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-C8cLeYKPyXmrm5kbPtM5j9i6ooR0fLwnZRKJhtSQd_8NC3Aw1z0snPz7qspGfkzKDMwaJtN8o9jsd3LKEdj4LbKEchS4LYEP3fg2P61Y4CtmDweqo8GGWvRIA-ib8eyotUWMYYKpelUjcycSoDFmadPO1oxdLkLnSMgZvZECByCqoK0JCj1mFvr-KdYYaTAsC7iCDnaXrGJMBjCbbWZfyUvW886QuNl45EoSuSg"/>
+<div class="flex flex-col">
+<span class="font-title-md text-body-md text-on-surface font-semibold">Prof. Martín Benítez</span>
+<span class="font-body-sm text-body-sm text-outline">m.benitez@sanagustin.edu.do</span>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm font-semibold">Director General</span>
+</td>
+<td class="py-3 px-space-md text-on-surface-variant">Acceso Global (Primaria y Secundaria)</td>
+<td class="py-3 px-space-md">
+<span class="text-secondary font-label-md text-label-md font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">verified</span> Total + Justificaciones
+                </span>
+</td>
+<td class="py-3 px-space-md text-right">
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-outline-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-surface-container-lowest after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-surface-container-lowest after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-secondary"></div>
+</label>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-3 px-space-md flex items-center gap-space-sm">
+<img class="w-9 h-9 rounded-full object-cover shadow-xs" data-alt="Portrait headshot of confident female high school teacher with glasses smiling warmly on indoor library environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxZXU9et4Q5xH3o7yPEc7zGNs2_yQ5R5zMT3M8NAQWYUHd3Y3IHnyH8qKvkX0MrwNhq7Ub0D5wYSsRHvkHomNQs3ZSM8W0RVr9Fs373TMAP8r8uUfd4bxWbi-9MesQ0KxrS_7EWSknaPERlw8suc5JWGrrLpAyIfRpA8UPwVP5a9VRhncYpTPd3y6QxKy7a8e24mQc7kqDh-IbzqcjDIrxoHSRAW9FBNgwhvi2Tbc"/>
+<div class="flex flex-col">
+<span class="font-title-md text-body-md text-on-surface font-semibold">Lic. Rosaura Flores M.</span>
+<span class="font-body-sm text-body-sm text-outline">r.flores@sanagustin.edu.do</span>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-primary font-label-sm text-label-sm font-semibold">Docente Titular</span>
+</td>
+<td class="py-3 px-space-md text-on-surface-variant">3° y 4° Secundaria</td>
+<td class="py-3 px-space-md">
+<span class="text-on-surface font-label-md text-label-md">Toma de lista diaria aula</span>
+</td>
+<td class="py-3 px-space-md text-right">
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-outline-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-surface-container-lowest after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-surface-container-lowest after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-secondary"></div>
+</label>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-3 px-space-md flex items-center gap-space-sm">
+<img class="w-9 h-9 rounded-full object-cover shadow-xs" data-alt="Professional portrait shot of young male school security coordinator with neat uniform in clean modern campus foyer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD859WogL-2GM3KKvmQZA9Dn5OXtjOL8S_qAg0mj0kcxkGDqQ79nipIZr1J6U39AcxXUkb4quQ7utW7tNcuyFRh9qtiqh2gxLuo7haKpFp4xDfAFOuvuDDEIM7xJfP67uSPL1Fz9DolvUS2gCfd3EXQ8zNeuQMUEfezLKAJPrnWCDiGrQmyHE1jejLP831y9-UEIfvOvFhdv1uneFKFAXPyFSgWFIsxD7W55XO1hF4"/>
+<div class="flex flex-col">
+<span class="font-title-md text-body-md text-on-surface font-semibold">Carlos Paredes Rios</span>
+<span class="font-body-sm text-body-sm text-outline">puerta.principal@sanagustin.edu.do</span>
+</div>
+</td>
+<td class="py-3 px-space-md">
+<span class="px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-sm text-label-sm font-semibold">Auxiliar de Puerta</span>
+</td>
+<td class="py-3 px-space-md text-on-surface-variant">Pórtico Principal - Huellas / Carnet</td>
+<td class="py-3 px-space-md">
+<span class="text-on-surface font-label-md text-label-md">Sólo lectura y escaneo rápido</span>
+</td>
+<td class="py-3 px-space-md text-right">
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-outline-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-surface-container-lowest after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-surface-container-lowest after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-secondary"></div>
+</label>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</div>
+<!-- Bottom Floating Action Bar for Unsaved Changes Feedback -->
+<div class="sticky bottom-4 mt-space-xl p-space-md rounded-xl bg-surface-container-lowest shadow-xl flex items-center justify-between z-30">
+<div class="flex items-center gap-space-sm">
+<span class="w-3 h-3 rounded-full bg-tertiary-fixed-dim"></span>
+<span class="font-title-md text-body-md text-on-surface">Tienes 2 cambios sin guardar en las ventanas de tolerancia.</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<button class="px-space-md py-2 rounded-lg bg-surface-container-low text-on-surface font-title-md text-title-md hover:bg-surface-container transition-colors" onclick="location.reload()" type="button">
+        Descartar Cambios
+      </button>
+<button class="px-space-lg py-2 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-title-md text-title-md shadow-md flex items-center gap-space-xs transition-all" onclick="notifySave()" type="button">
+<span class="material-symbols-outlined text-[18px]">done_all</span>
+<span>Guardar Parámetros de Asistencia</span>
+</button>
+</div>
+</div>
+<!-- Toast notification banner mock -->
+<div class="fixed bottom-20 right-8 bg-on-surface text-surface-container-lowest px-space-lg py-space-sm rounded-xl shadow-xl flex items-center gap-space-sm transform translate-y-24 opacity-0 transition-all duration-300 z-50" id="save-toast">
+<span class="material-symbols-outlined text-secondary-container">check_circle</span>
+<span class="font-title-md text-body-md">¡Parámetros escolares actualizados correctamente!</span>
+</div>
+</div>
+<script>
+  function switchTab(btn, panelId) {
+    const tabs = document.querySelectorAll('.tab-btn');
+    tabs.forEach(t => {
+      t.className = 'tab-btn px-space-md py-2 rounded-lg font-title-md text-body-md flex items-center gap-space-xs transition-all text-on-surface-variant hover:text-on-surface hover:bg-surface-container';
+    });
+    btn.className = 'tab-btn px-space-md py-2 rounded-lg font-title-md text-body-md flex items-center gap-space-xs transition-all bg-surface-container-lowest text-primary shadow-sm';
+    
+    // Smooth scroll to the target panel
+    const target = document.getElementById(panelId);
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+  function insertVariable(variable) {
+    const textarea = document.getElementById('template-text');
+    if (textarea) {
+      textarea.value += ' ' + variable;
+      textarea.focus();
+    }
+  }
+
+  function notifySave() {
+    const toast = document.getElementById('save-toast');
+    if (toast) {
+      toast.classList.remove('translate-y-24', 'opacity-0');
+      toast.classList.add('translate-y-0', 'opacity-100');
+      setTimeout(() => {
+        toast.classList.add('translate-y-24', 'opacity-0');
+        toast.classList.remove('translate-y-0', 'opacity-100');
+      }, 3500);
+    }
+  }
+</script></main></div><script src="/js/app.js"></script>
+</body></html>
