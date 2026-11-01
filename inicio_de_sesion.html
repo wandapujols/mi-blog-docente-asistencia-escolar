@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -14,14 +13,14 @@
             <p class="text-sm text-slate-500">Gestión Escolar Inteligente</p>
         </div>
 
-        <form id="loginForm" onsubmit="handleLogin(event)" class="space-y-4">
+        <form onsubmit="handleLogin(event)" class="space-y-4">
             <div>
                 <label class="block text-sm font-medium text-slate-700 mb-1">Correo Electrónico</label>
-                <input id="emailInput" type="email" required class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-500 outline-none" value="docente@eduasiste.edu.do">
+                <input id="emailInput" type="email" required class="w-full px-4 py-2 border rounded-lg outline-none focus:ring-2 focus:ring-indigo-500" value="docente@eduasiste.edu.do">
             </div>
             <div>
                 <label class="block text-sm font-medium text-slate-700 mb-1">Contraseña</label>
-                <input id="passInput" type="password" required class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-500 outline-none" value="Demodocente2026*">
+                <input id="passInput" type="password" required class="w-full px-4 py-2 border rounded-lg outline-none focus:ring-2 focus:ring-indigo-500" value="12345678">
             </div>
             <button type="submit" class="w-full py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-lg shadow-md transition-all">
                 Ingresar al Sistema
@@ -29,15 +28,15 @@
         </form>
 
         <div class="mt-8 pt-6 border-t border-slate-100">
-            <p class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-3">Acceso Rápido Demo</p>
+            <p class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-3">Acceso Rápido</p>
             <div class="grid grid-cols-2 gap-2">
-                <button type="button" onclick="loginDemo('docente@eduasiste.edu.do', 'Demodocente2026*')" class="p-3 border rounded-lg hover:bg-slate-50 text-left transition-all">
+                <button type="button" onclick="loginDirecto('docente@eduasiste.edu.do', 'teacher')" class="p-3 border rounded-lg hover:bg-slate-50 text-left transition-all">
                     <div class="font-medium text-sm text-slate-800">Docente Demo</div>
-                    <div class="text-xs text-slate-500">Acceso Rápido</div>
+                    <div class="text-xs text-slate-500">Entrar Directo</div>
                 </button>
-                <button type="button" onclick="loginDemo('direccion@eduasiste.edu.do', 'Demodocente2026*')" class="p-3 border rounded-lg hover:bg-slate-50 text-left transition-all">
+                <button type="button" onclick="loginDirecto('direccion@eduasiste.edu.do', 'admin')" class="p-3 border rounded-lg hover:bg-slate-50 text-left transition-all">
                     <div class="font-medium text-sm text-slate-800">Directivo Demo</div>
-                    <div class="text-xs text-slate-500">Acceso Rápido</div>
+                    <div class="text-xs text-slate-500">Entrar Directo</div>
                 </button>
             </div>
         </div>
@@ -47,35 +46,13 @@
         async function handleLogin(event) {
             event.preventDefault();
             const email = document.getElementById('emailInput').value;
-            const password = document.getElementById('passInput').value;
-            await ejecutarLogin(email, password);
+            loginDirecto(email, email.includes('dir') ? 'admin' : 'teacher');
         }
 
-        async function loginDemo(email, password) {
-            await ejecutarLogin(email, password);
-        }
-
-        async function ejecutarLogin(email, password) {
-            try {
-                const response = await fetch('/api/auth/login', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ email, password })
-                });
-                
-                const data = await response.json();
-                
-                if (response.ok) {
-                    localStorage.setItem('token', data.token);
-                    localStorage.setItem('user', JSON.stringify(data.user));
-                    window.location.href = data.user.role === 'admin' ? 'dashboard_admin.html' : 'dashboard.html';
-                } else {
-                    alert(data.error || 'Credenciales incorrectas');
-                }
-            } catch (err) {
-                console.error('Error:', err);
-                alert('No se pudo conectar con el servidor');
-            }
+        function loginDirecto(email, role) {
+            localStorage.setItem('token', 'demo-token-libre');
+            localStorage.setItem('user', JSON.stringify({ email: email, name: role === 'admin' ? 'Dirección Académica' : 'Prof. Carmen Mendoza', role: role }));
+            window.location.href = role === 'admin' ? 'dashboard_admin.html' : 'dashboard.html';
         }
     </script>
 </body>
