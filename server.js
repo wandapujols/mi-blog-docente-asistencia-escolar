@@ -22,7 +22,7 @@ const isDate = s => /^\d{4}-\d{2}-\d{2}$/.test(s || '');
 // ---------- Autenticación ----------
 app.post('/api/login', h(async (req, res) => {
   const { email, password } = req.body || {};
-  const [u] = await q('SELECT * FROM users WHERE lower(email)=lower($1)', [email || '']);
+  const [u] = await q('SELECT * FROM app_users WHERE lower(email)=lower($1)', [email || '']);
   if (!u || !bcrypt.compareSync(password || '', u.pass_hash)) return res.status(401).json({ error: 'Correo o contraseña incorrectos' });
   const token = jwt.sign({ id: u.id, name: u.name, email: u.email, role: u.role }, SECRET, { expiresIn: '12h' });
   res.cookie('token', token, { httpOnly: true, sameSite: 'lax', secure: process.env.NODE_ENV === 'production', maxAge: 12 * 3600 * 1000 });
@@ -129,19 +129,29 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // ---------- Base de datos: se crea sola al iniciar ----------
 async function init() {
+  // Si quedaron tablas de un intento anterior con otro esquema, y están vacías, se recrean.
+  const cols = await q("SELECT column_name FROM information_schema.columns WHERE table_schema='public' AND table_name='students'");
+  if (cols.length && !cols.some(c => c.column_name === 'section_id')) {
+    for (const t of ['students', 'attendance', 'excuses', 'sections']) {
+      const r = await q('SELECT count(*)::int AS n FROM ' + t).catch(() => [{ n: 0 }]);
+      if (r[0].n > 0) throw new Error('La tabla ' + t + ' tiene datos de un esquema anterior; no se modificó nada.');
+    }
+    await pool.query('DROP TABLE IF EXISTS excuses, attendance, students, sections CASCADE');
+    console.log('Tablas antiguas vacías recreadas con el esquema nuevo.');
+  }
   await pool.query(`
-    CREATE TABLE IF NOT EXISTS users(id SERIAL PRIMARY KEY, email TEXT UNIQUE NOT NULL, name TEXT NOT NULL, role TEXT NOT NULL DEFAULT 'docente', pass_hash TEXT NOT NULL);
+    CREATE TABLE IF NOT EXISTS app_users(id SERIAL PRIMARY KEY, email TEXT UNIQUE NOT NULL, name TEXT NOT NULL, role TEXT NOT NULL DEFAULT 'docente', pass_hash TEXT NOT NULL);
     CREATE TABLE IF NOT EXISTS sections(id SERIAL PRIMARY KEY, name TEXT UNIQUE NOT NULL);
     CREATE TABLE IF NOT EXISTS students(id SERIAL PRIMARY KEY, name TEXT NOT NULL, section_id INT NOT NULL REFERENCES sections(id), guardian_phone TEXT, active BOOLEAN NOT NULL DEFAULT true);
     CREATE TABLE IF NOT EXISTS attendance(student_id INT NOT NULL REFERENCES students(id) ON DELETE CASCADE, day DATE NOT NULL, status CHAR(1) NOT NULL CHECK (status IN ('P','A','T','E')), PRIMARY KEY(student_id, day));
     CREATE TABLE IF NOT EXISTS excuses(id SERIAL PRIMARY KEY, student_id INT NOT NULL REFERENCES students(id) ON DELETE CASCADE, date_from DATE NOT NULL, date_to DATE NOT NULL, motive TEXT NOT NULL, has_doc BOOLEAN NOT NULL DEFAULT false, notes TEXT, created_at TIMESTAMPTZ NOT NULL DEFAULT now());
   `);
-  const [{ n }] = await q('SELECT count(*)::int AS n FROM users');
+  const [{ n }] = await q('SELECT count(*)::int AS n FROM app_users');
   if (n === 0) {
     const email = process.env.ADMIN_EMAIL || 'admin@eduasiste.do';
     const pass = process.env.ADMIN_PASSWORD;
     if (!pass) { console.warn('Falta ADMIN_PASSWORD: no se creó el usuario inicial.'); }
-    else await q('INSERT INTO users(email,name,role,pass_hash) VALUES($1,$2,$3,$4)', [email, process.env.ADMIN_NAME || 'Docente Administrador', 'admin', bcrypt.hashSync(pass, 10)]);
+    else await q('INSERT INTO app_users(email,name,role,pass_hash) VALUES($1,$2,$3,$4)', [email, process.env.ADMIN_NAME || 'Docente Administrador', 'admin', bcrypt.hashSync(pass, 10)]);
   }
 }
 const PORT = process.env.PORT || 3000;
