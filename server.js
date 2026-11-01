@@ -5,7 +5,6 @@ const app = express();
 app.use(express.json());
 app.use(express.static(path.join(__dirname)));
 
-// Memoria local para pruebas y funcionamiento fluido
 let estudiantesDemo = [
     { id: 1, student_code: 'EST-8921', first_name: 'Diego', last_name: 'Morales Vargas', grade: '5°', section: 'B', guardian_name: 'Ana Vargas', guardian_phone: '809-555-0192', active: true },
     { id: 2, student_code: 'EST-7740', first_name: 'Sofía', last_name: 'Restrepo Luján', grade: '3°', section: 'A', guardian_name: 'Carlos Restrepo', guardian_phone: '809-555-7740', active: true },
@@ -15,7 +14,6 @@ let estudiantesDemo = [
 
 let asistenciaDemo = [];
 
-// Autenticación
 app.post('/api/auth/login', (req, res) => {
     const { email } = req.body;
     const role = (email && (email.includes('dir') || email.includes('admin') || email.includes('direccion'))) ? 'admin' : 'teacher';
@@ -31,7 +29,6 @@ app.post('/api/auth/login', (req, res) => {
     });
 });
 
-// Rutas de Estudiantes
 app.get('/api/students', (req, res) => res.json(estudiantesDemo));
 app.post('/api/students', (req, res) => {
     const nuevo = { id: estudiantesDemo.length + 1, ...req.body, active: true };
@@ -39,7 +36,6 @@ app.post('/api/students', (req, res) => {
     res.status(201).json(nuevo);
 });
 
-// Rutas de Asistencia
 app.get('/api/attendance', (req, res) => res.json(asistenciaDemo));
 app.post('/api/attendance', (req, res) => {
     const { student_id, attendance_date, status, note } = req.body;
@@ -53,7 +49,6 @@ app.post('/api/attendance', (req, res) => {
     res.status(201).json(registro);
 });
 
-// Reportes y Resumen
 app.get('/api/reports/summary', (req, res) => {
     res.json({
         presentes: 1142,
@@ -64,7 +59,6 @@ app.get('/api/reports/summary', (req, res) => {
     });
 });
 
-// Rutas explícitas para las páginas de la app
 app.get('/dashboard.html', (req, res) => res.sendFile(path.join(__dirname, 'dashboard.html')));
 app.get('/dashboard_admin.html', (req, res) => res.sendFile(path.join(__dirname, 'dashboard_admin.html')));
 app.get('*', (req, res) => res.sendFile(path.join(__dirname, 'inicio_de_sesion.html')));
