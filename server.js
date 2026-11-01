@@ -5,7 +5,7 @@ const app = express();
 app.use(express.json());
 app.use(express.static(path.join(__dirname)));
 
-// Memoria local de estudiantes y asistencia para que todo funcione de inmediato
+// Memoria local para pruebas y funcionamiento fluido
 let estudiantesDemo = [
     { id: 1, student_code: 'EST-8921', first_name: 'Diego', last_name: 'Morales Vargas', grade: '5°', section: 'B', guardian_name: 'Ana Vargas', guardian_phone: '809-555-0192', active: true },
     { id: 2, student_code: 'EST-7740', first_name: 'Sofía', last_name: 'Restrepo Luján', grade: '3°', section: 'A', guardian_name: 'Carlos Restrepo', guardian_phone: '809-555-7740', active: true },
@@ -15,7 +15,7 @@ let estudiantesDemo = [
 
 let asistenciaDemo = [];
 
-// Autenticación libre y directa
+// Autenticación
 app.post('/api/auth/login', (req, res) => {
     const { email } = req.body;
     const role = (email && (email.includes('dir') || email.includes('admin') || email.includes('direccion'))) ? 'admin' : 'teacher';
@@ -64,6 +64,9 @@ app.get('/api/reports/summary', (req, res) => {
     });
 });
 
+// Rutas explícitas para las páginas de la app
+app.get('/dashboard.html', (req, res) => res.sendFile(path.join(__dirname, 'dashboard.html')));
+app.get('/dashboard_admin.html', (req, res) => res.sendFile(path.join(__dirname, 'dashboard_admin.html')));
 app.get('*', (req, res) => res.sendFile(path.join(__dirname, 'inicio_de_sesion.html')));
 
 const PORT = process.env.PORT || 3000;
