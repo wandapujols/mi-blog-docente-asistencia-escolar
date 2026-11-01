@@ -63,3 +63,13 @@ app.post('/api/attendance',auth,async(req,res)=>{try{const {student_id,attendanc
 app.get('/api/reports/summary',auth,async(req,res)=>{const q=await pool.query(`SELECT COUNT(*) FILTER(WHERE status='presente')::int AS presentes,COUNT(*) FILTER(WHERE status='ausente')::int AS ausentes,COUNT(*) FILTER(WHERE status='tardanza')::int AS tardanzas,COUNT(*) FILTER(WHERE status='justificado')::int AS justificados FROM attendance WHERE attendance_date=COALESCE($1::date,CURRENT_DATE)`,[req.query.date||null]);const s=await pool.query('SELECT COUNT(*)::int AS total_estudiantes FROM students WHERE active=true');res.json({...q.rows[0],total_estudiantes:s.rows[0].total_estudiantes});});
 app.get('*',(req,res)=>res.sendFile(path.join(__dirname,'inicio_de_sesion.html')));
 const port=process.env.PORT||3000;app.listen(port,()=>console.log(`EduAsiste escuchando en ${port}`));
+// Crear un usuario demo automático al arrancar para que el acceso rápido funcione
+pool.query(`
+  INSERT INTO users (name, email, password_hash) 
+  VALUES ('Prof. M. Flores', 'docente@eduasiste.edu.do', '$2a$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewdBPj4J1xG3VzFm')
+  ON CONFLICT (email) DO NOTHING;
+
+  INSERT INTO users (name, email, password_hash) 
+  VALUES ('Dirección Académica', 'direccion@eduasiste.edu.do', '$2a$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewdBPj4J1xG3VzFm')
+  ON CONFLICT (email) DO NOTHING;
+`).catch(err => console.error("Error creando usuarios demo:", err));
