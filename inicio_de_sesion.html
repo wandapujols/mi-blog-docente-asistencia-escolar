@@ -31,11 +31,11 @@
         <div class="mt-8 pt-6 border-t border-slate-100">
             <p class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-3">Acceso Rápido Demo</p>
             <div class="grid grid-cols-2 gap-2">
-                <button type="button" onclick="loginDemo('docente@eduasiste.edu.do', 'Demodocente2026*')" class="p-3 border rounded-lg hover:bg-slate-50 text-left transition-all">
+                <button type="button" onclick="loginDemo('docente@eduasiste.edu.do', 'Docente')" class="p-3 border rounded-lg hover:bg-slate-50 text-left transition-all">
                     <div class="font-medium text-sm text-slate-800">Docente Demo</div>
                     <div class="text-xs text-slate-500">Prof. M. Flores</div>
                 </button>
-                <button type="button" onclick="loginDemo('direccion@eduasiste.edu.do', 'Demodocente2026*')" class="p-3 border rounded-lg hover:bg-slate-50 text-left transition-all">
+                <button type="button" onclick="loginDemo('direccion@eduasiste.edu.do', 'admin')" class="p-3 border rounded-lg hover:bg-slate-50 text-left transition-all">
                     <div class="font-medium text-sm text-slate-800">Directivo Demo</div>
                     <div class="text-xs text-slate-500">Dirección Académica</div>
                 </button>
@@ -44,38 +44,24 @@
     </div>
 
     <script>
-        async function handleLogin(event) {
+        function handleLogin(event) {
             event.preventDefault();
             const email = document.getElementById('emailInput').value;
-            const password = document.getElementById('passInput').value;
-            await ejecutarLogin(email, password);
+            // Si el correo contiene 'dir' o 'admin', entra como admin, de lo contrario como docente
+            const role = (email.includes('dir') || email.includes('admin') || email.includes('direccion')) ? 'admin' : 'teacher';
+            
+            localStorage.setItem('token', 'demo-token-libre');
+            localStorage.setItem('user', JSON.stringify({ email: email, name: 'Usuario Demo', role: role }));
+            
+            window.location.href = role === 'admin' ? 'dashboard_admin.html' : 'dashboard.html';
         }
 
-        async function loginDemo(email, password) {
-            await ejecutarLogin(email, password);
-        }
-
-        async function ejecutarLogin(email, password) {
-            try {
-                const response = await fetch('/api/auth/login', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ email, password })
-                });
-                
-                const data = await response.json();
-                
-                if (response.ok) {
-                    localStorage.setItem('token', data.token);
-                    localStorage.setItem('user', JSON.stringify(data.user));
-                    window.location.href = data.user.role === 'admin' ? 'dashboard_admin.html' : 'dashboard.html';
-                } else {
-                    alert(data.error || 'Credenciales incorrectas');
-                }
-            } catch (err) {
-                console.error('Error:', err);
-                alert('No se pudo conectar con el servidor');
-            }
+        function loginDemo(email, roleType) {
+            const role = roleType === 'admin' ? 'admin' : 'teacher';
+            localStorage.setItem('token', 'demo-token-libre');
+            localStorage.setItem('user', JSON.stringify({ email: email, name: 'Usuario Demo', role: role }));
+            
+            window.location.href = role === 'admin' ? 'dashboard_admin.html' : 'dashboard.html';
         }
     </script>
 </body>
