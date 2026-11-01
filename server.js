@@ -6,11 +6,51 @@ const { Pool } = require('pg');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const path = require('path');
+
 const app = express();
-app.use(helmet({contentSecurityPolicy:false}));
-app.use(cors()); app.use(express.json());
+app.use(helmet({ contentSecurityPolicy: false }));
+app.use(cors());
+app.use(express.json());
 app.use(express.static(path.join(__dirname)));
-const pool = new Pool({connectionString:process.env.DATABASE_URL,ssl:process.env.DATABASE_URL && !process.env.DATABASE_URL.includes('localhost') ? {rejectUnauthorized:false}:false});
+
+const pool = new Pool({
+  connectionString: process.env.DATABASE_URL,
+  ssl: process.env.DATABASE_URL && !process.env.DATABASE_URL.includes('localhost') ? { rejectUnauthorized: false } : false
+});
+
+// Crear tablas automáticamente al arrancar si no existen
+pool.query(`
+  CREATE TABLE IF NOT EXISTS users (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(100),
+    email VARCHAR(150) UNIQUE,
+    password_hash VARCHAR(255),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+  );
+
+  CREATE TABLE IF NOT EXISTS students (
+    id SERIAL PRIMARY KEY,
+    student_code VARCHAR(50) UNIQUE,
+    first_name VARCHAR(100),
+    last_name VARCHAR(100),
+    grade VARCHAR(50),
+    section VARCHAR(50),
+    guardian_name VARCHAR(150),
+    guardian_phone VARCHAR(50),
+    active BOOLEAN DEFAULT true,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+  );
+
+  CREATE TABLE IF NOT EXISTS attendance (
+    id SERIAL PRIMARY KEY,
+    student_id INT REFERENCES students(id),
+    attendance_date DATE,
+    status VARCHAR(50),
+    note TEXT,
+    recorded_by INT,
+    CONSTRAINT unique_student_attendance UNIQUE(student_id, attendance_date)
+  );
+`).catch(err => console.error("Error creando tablas:", err));
 const auth=(req,res,next)=>{try{const h=req.headers.authorization||'';req.user=jwt.verify(h.replace(/^Bearer\s+/i,''),process.env.JWT_SECRET);next();}catch{return res.status(401).json({error:'No autorizado'});}};
 app.get('/api/health',async(req,res)=>{try{await pool.query('SELECT 1');res.json({status:'ok',database:'connected'});}catch(e){res.status(503).json({status:'error',database:'disconnected'});}});
 app.post('/api/auth/register',async(req,res)=>{try{const {name,email,password}=req.body;if(!name||!email||!password||password.length<8)return res.status(400).json({error:'Nombre, correo y contraseña de al menos 8 caracteres son obligatorios'});const hash=await bcrypt.hash(password,12);const q=await pool.query('INSERT INTO users(name,email,password_hash) VALUES($1,$2,$3) RETURNING id,name,email',[name,email.toLowerCase(),hash]);res.status(201).json(q.rows[0]);}catch(e){res.status(400).json({error:'No se pudo crear el usuario. Comprueba si el correo ya existe.'});}});
