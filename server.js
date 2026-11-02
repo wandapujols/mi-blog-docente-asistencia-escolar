@@ -126,6 +126,22 @@ app.get('/api/reports/section/:id', h(async (req, res) =>
     FROM students st LEFT JOIN attendance a ON a.student_id=st.id
     WHERE st.active AND st.section_id=$1 GROUP BY st.id ORDER BY st.name`, [req.params.id]))));
 
+app.get('/api/reports/overview', h(async (req, res) => {
+  const sec = req.query.section ? Number(req.query.section) : null;
+  const students = await q(`SELECT st.id, st.name, s.name AS section,
+      count(a.status) FILTER (WHERE a.status='P')::int AS p, count(a.status) FILTER (WHERE a.status='A')::int AS a,
+      count(a.status) FILTER (WHERE a.status='T')::int AS t, count(a.status) FILTER (WHERE a.status='E')::int AS e,
+      count(a.status)::int AS n
+    FROM students st JOIN sections s ON s.id=st.section_id LEFT JOIN attendance a ON a.student_id=st.id
+    WHERE st.active AND ($1::int IS NULL OR st.section_id=$1) GROUP BY st.id, s.name ORDER BY st.name`, [sec]);
+  const weekday = await q(`SELECT extract(dow from a.day)::int AS dow, count(*) FILTER (WHERE a.status='A')::int AS a, count(*)::int AS n
+    FROM attendance a JOIN students st ON st.id=a.student_id WHERE st.active AND ($1::int IS NULL OR st.section_id=$1) GROUP BY 1 ORDER BY 1`, [sec]);
+  const weeks = await q(`SELECT to_char(date_trunc('week',a.day),'YYYY-MM-DD') AS wk, count(*) FILTER (WHERE a.status='A')::int AS a, count(*)::int AS n
+    FROM attendance a JOIN students st ON st.id=a.student_id WHERE st.active AND ($1::int IS NULL OR st.section_id=$1)
+    GROUP BY 1 ORDER BY 1 DESC LIMIT 8`, [sec]);
+  res.json({ students, weekday, weeks: weeks.reverse() });
+}));
+
 // ---------- Excusas ----------
 app.get('/api/excuses', h(async (req, res) => res.json(await q(`SELECT e.id, st.name AS student,
   to_char(e.date_from,'YYYY-MM-DD') AS date_from, to_char(e.date_to,'YYYY-MM-DD') AS date_to, e.motive, e.has_doc, e.notes
