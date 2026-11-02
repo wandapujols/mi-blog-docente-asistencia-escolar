@@ -90,13 +90,33 @@ app.get('/api/students/:id/attendance', h(async (req, res) =>
 
 // ---------- Resumen y reportes ----------
 app.get('/api/dashboard', h(async (req, res) => {
-  const date = isDate(req.query.date) ? req.query.date : new Date().toISOString().slice(0, 10);
+  let date = req.query.date;
+  if (!isDate(date)) {
+    const [m] = await q("SELECT to_char(max(day),'YYYY-MM-DD') AS d FROM attendance WHERE day<=current_date");
+    date = (m && m.d) || new Date().toISOString().slice(0, 10);
+  }
   const sections = await q(`SELECT s.id, s.name, count(DISTINCT st.id)::int AS total,
       count(a.status) FILTER (WHERE a.status='P')::int AS p, count(a.status) FILTER (WHERE a.status='A')::int AS a,
       count(a.status) FILTER (WHERE a.status='T')::int AS t, count(a.status) FILTER (WHERE a.status='E')::int AS e
     FROM sections s LEFT JOIN students st ON st.section_id=s.id AND st.active
     LEFT JOIN attendance a ON a.student_id=st.id AND a.day=$1 GROUP BY s.id ORDER BY s.name`, [date]);
-  res.json({ date, sections });
+  const hist = await q(`SELECT st.section_id AS id, count(a.status)::int AS n, count(a.status) FILTER (WHERE a.status='A')::int AS ab
+    FROM students st LEFT JOIN attendance a ON a.student_id=st.id WHERE st.active GROUP BY st.section_id`);
+  const hm = {}; hist.forEach(r => { hm[r.id] = r; });
+  sections.forEach(s => { const r = hm[s.id] || { n: 0, ab: 0 }; s.hn = r.n; s.ha = r.ab; });
+  const trend = await q(`SELECT to_char(day,'YYYY-MM-DD') AS d, status, count(*)::int AS c FROM attendance
+    WHERE day BETWEEN $1::date-6 AND $1::date GROUP BY 1,2 ORDER BY 1`, [date]);
+  const recs = await q(`SELECT st.id, st.name, st.guardian_phone, s.name AS section, a.status
+    FROM students st JOIN sections s ON s.id=st.section_id JOIN attendance a ON a.student_id=st.id
+    WHERE st.active AND a.day<=$1::date AND a.day>$1::date-30 ORDER BY st.id, a.day DESC`, [date]);
+  const by = {};
+  recs.forEach(r => {
+    const o = by[r.id] || (by[r.id] = { id: r.id, name: r.name, phone: r.guardian_phone, section: r.section, streak: 0, open: true });
+    if (o.open) { if (r.status === 'A') o.streak++; else o.open = false; }
+  });
+  const alerts = Object.values(by).filter(o => o.streak >= 3).sort((x, y) => y.streak - x.streak).slice(0, 6)
+    .map(o => ({ id: o.id, name: o.name, phone: o.phone, section: o.section, streak: o.streak }));
+  res.json({ date, sections, trend, alerts });
 }));
 app.get('/api/reports/section/:id', h(async (req, res) =>
   res.json(await q(`SELECT st.id, st.name,
