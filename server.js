@@ -189,6 +189,10 @@ async function init() {
     if (!pass) { console.warn('Falta ADMIN_PASSWORD: no se creó el usuario inicial.'); }
     else await q('INSERT INTO app_users(email,name,role,pass_hash) VALUES($1,$2,$3,$4)', [email, process.env.ADMIN_NAME || 'Docente Administrador', 'admin', bcrypt.hashSync(pass, 10)]);
   }
+  // Mantiene sincronizado el nombre del administrador con la variable ADMIN_NAME.
+  if (process.env.ADMIN_NAME && process.env.ADMIN_EMAIL) {
+    await q('UPDATE app_users SET name=$1 WHERE lower(email)=lower($2)', [process.env.ADMIN_NAME, process.env.ADMIN_EMAIL]);
+  }
 }
 const PORT = process.env.PORT || 3000;
 init().then(() => app.listen(PORT, () => console.log('Servidor activo en el puerto ' + PORT)))
