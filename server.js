@@ -142,6 +142,18 @@ app.get('/api/reports/overview', h(async (req, res) => {
   res.json({ students, weekday, weeks: weeks.reverse() });
 }));
 
+// ---------- Quiz (preguntas que agrega la docente) ----------
+app.get('/api/quiz', h(async (req, res) => res.json(await q('SELECT id, question, options, correct FROM quiz_questions ORDER BY id'))));
+app.post('/api/quiz', h(async (req, res) => {
+  const { question, options, correct } = req.body || {};
+  const opts = Array.isArray(options) ? options.map(o => String(o).trim()).filter(Boolean) : [];
+  if (!question || !String(question).trim() || opts.length < 2 || opts.length > 4 || !Number.isInteger(correct) || correct < 0 || correct >= opts.length)
+    return res.status(400).json({ error: 'Escribe la pregunta, de 2 a 4 opciones y marca la correcta' });
+  const [r] = await q('INSERT INTO quiz_questions(question,options,correct) VALUES($1,$2,$3) RETURNING id', [String(question).trim(), JSON.stringify(opts), correct]);
+  res.json(r);
+}));
+app.delete('/api/quiz/:id', h(async (req, res) => { await q('DELETE FROM quiz_questions WHERE id=$1', [req.params.id]); res.json({ ok: true }); }));
+
 // ---------- Excusas ----------
 app.get('/api/excuses', h(async (req, res) => res.json(await q(`SELECT e.id, st.name AS student,
   to_char(e.date_from,'YYYY-MM-DD') AS date_from, to_char(e.date_to,'YYYY-MM-DD') AS date_to, e.motive, e.has_doc, e.notes
@@ -180,6 +192,7 @@ async function init() {
     CREATE TABLE IF NOT EXISTS sections(id SERIAL PRIMARY KEY, name TEXT UNIQUE NOT NULL);
     CREATE TABLE IF NOT EXISTS students(id SERIAL PRIMARY KEY, name TEXT NOT NULL, section_id INT NOT NULL REFERENCES sections(id), guardian_phone TEXT, active BOOLEAN NOT NULL DEFAULT true);
     CREATE TABLE IF NOT EXISTS attendance(student_id INT NOT NULL REFERENCES students(id) ON DELETE CASCADE, day DATE NOT NULL, status CHAR(1) NOT NULL CHECK (status IN ('P','A','T','E')), PRIMARY KEY(student_id, day));
+    CREATE TABLE IF NOT EXISTS quiz_questions(id SERIAL PRIMARY KEY, question TEXT NOT NULL, options JSONB NOT NULL, correct INT NOT NULL);
     CREATE TABLE IF NOT EXISTS excuses(id SERIAL PRIMARY KEY, student_id INT NOT NULL REFERENCES students(id) ON DELETE CASCADE, date_from DATE NOT NULL, date_to DATE NOT NULL, motive TEXT NOT NULL, has_doc BOOLEAN NOT NULL DEFAULT false, notes TEXT, created_at TIMESTAMPTZ NOT NULL DEFAULT now());
   `);
   const [{ n }] = await q('SELECT count(*)::int AS n FROM app_users');
@@ -188,6 +201,11 @@ async function init() {
     const pass = process.env.ADMIN_PASSWORD;
     if (!pass) { console.warn('Falta ADMIN_PASSWORD: no se creó el usuario inicial.'); }
     else await q('INSERT INTO app_users(email,name,role,pass_hash) VALUES($1,$2,$3,$4)', [email, process.env.ADMIN_NAME || 'Docente Administrador', 'admin', bcrypt.hashSync(pass, 10)]);
+  }
+  const [{ qn }] = await q('SELECT count(*)::int AS qn FROM quiz_questions');
+  if (qn === 0) {
+    const demo = [['¿Cuál es la capital de República Dominicana?', ['Santiago', 'Santo Domingo', 'La Romana'], 1], ['¿Qué se celebra el 27 de febrero?', ['La Independencia Nacional', 'La Navidad', 'El Día del Maestro'], 0], ['¿Cuánto es 7 x 8?', ['54', '56', '64', '48'], 1], ['¿Cuántos días tiene una semana?', ['5', '6', '7'], 2]];
+    for (const d of demo) await q('INSERT INTO quiz_questions(question,options,correct) VALUES($1,$2,$3)', [d[0], JSON.stringify(d[1]), d[2]]);
   }
   // Mantiene sincronizado el nombre del administrador con la variable ADMIN_NAME.
   if (process.env.ADMIN_NAME && process.env.ADMIN_EMAIL) {

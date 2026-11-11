@@ -65,12 +65,14 @@ document.addEventListener('user-ready', e => {
 });
 document.addEventListener('DOMContentLoaded', () => {
   const file = location.pathname.split('/').pop();
-  const tplKey = file === 'historial.html' ? 'reportes' : 'historial';
-  const tpl = document.querySelector('a[data-path="' + tplKey + '"]');
+  const tpl = document.querySelector('a[data-path="' + (file === 'historial.html' ? 'reportes' : 'historial') + '"]');
   const reg = document.querySelector('a[data-path="registro-diario"]');
-  if (!tpl || !reg || !tpl.closest('nav,aside') || document.querySelector('a[data-excusas]')) return;
-  const c = tpl.cloneNode(true);
-  c.dataset.excusas = '1'; c.removeAttribute('data-path'); c.href = '/excusas.html';
-  c.querySelectorAll('span').forEach(s => { s.textContent = s.classList.contains('material-symbols-outlined') ? 'event_busy' : 'Excusas'; });
-  reg.after(c);
+  if (!tpl || !reg || !tpl.closest('nav,aside') || document.querySelector('a[data-extra]')) return;
+  const add = (after, label, icon, href) => {
+    const c = tpl.cloneNode(true);
+    c.dataset.extra = '1'; c.removeAttribute('data-path'); c.href = href;
+    c.querySelectorAll('span').forEach(s => { s.textContent = s.classList.contains('material-symbols-outlined') ? icon : label; });
+    after.after(c); return c;
+  };
+  add(add(reg, 'Excusas', 'event_busy', '/excusas.html'), 'Juegos', 'sports_esports', '/juegos.html');
 });

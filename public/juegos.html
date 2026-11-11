@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><title>Juegos - Wanda Pujols</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"surface-container":"#fce7f0","on-surface":"#2a1220","secondary-fixed-dim":"#68dba9","on-error":"#ffffff","on-primary-fixed":"#3d0024","inverse-surface":"#3b2330","surface-container-high":"#f7deea","on-tertiary-fixed":"#2f1500","primary":"#9d2b6b","outline":"#8a6c7b","on-secondary-fixed-variant":"#005137","tertiary-container":"#743d00","surface-tint":"#b03a78","tertiary-fixed":"#ffdcc3","on-secondary-fixed":"#002114","on-primary-container":"#ffd9ea","on-background":"#2a1220","on-tertiary-fixed-variant":"#6e3900","tertiary":"#532a00","surface-variant":"#f1d6e3","inverse-primary":"#ffb0d3","on-tertiary-container":"#ffa85d","on-secondary":"#ffffff","secondary":"#006c4a","primary-fixed":"#ffd9ea","surface-container-highest":"#f1d6e3","background":"#fff7fa","on-error-container":"#93000a","on-tertiary":"#ffffff","outline-variant":"#e0c2d0","surface-container-low":"#fff0f6","secondary-container":"#82f5c1","on-primary":"#ffffff","surface-bright":"#fff7fa","surface-dim":"#e8cdd9","primary-fixed-dim":"#ffb0d3","inverse-on-surface":"#ffeaf3","surface":"#fff7fa","on-secondary-container":"#00714e","on-primary-fixed-variant":"#7d1555","error-container":"#ffdad6","secondary-fixed":"#85f8c4","surface-container-lowest":"#ffffff","error":"#ba1a1a","tertiary-fixed-dim":"#ffb77d","primary-container":"#c2407f","on-surface-variant":"#5a3f4d"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-lg":"1.5rem","space-md":"1rem","space-sm":"0.5rem","space-xs":"0.25rem","space-xl":"2rem","gutter-sm":"1rem","gutter":"1.5rem","margin":"2rem","margin-sm":"1rem"},"fontFamily":{"body-lg":["Inter"],"headline-lg":["Plus Jakarta Sans"],"headline-lg-mobile":["Plus Jakarta Sans"],"body-md":["Inter"],"display-lg":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"label-md":["Inter"],"body-sm":["Inter"],"title-md":["Inter"],"label-sm":["Inter"],"display-lg-mobile":["Plus Jakarta Sans"]},"fontSize":{"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"headline-lg":["28px",{"lineHeight":"36px","letterSpacing":"-0.02em","fontWeight":"600"}],"headline-lg-mobile":["22px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"display-lg":["40px",{"lineHeight":"48px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-md":["20px",{"lineHeight":"26px","letterSpacing":"-0.01em","fontWeight":"600"}],"label-md":["13px",{"lineHeight":"18px","letterSpacing":"0.01em","fontWeight":"600"}],"body-sm":["12px",{"lineHeight":"16px","fontWeight":"400"}],"title-md":["16px",{"lineHeight":"24px","fontWeight":"600"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.03em","fontWeight":"600"}],"display-lg-mobile":["30px",{"lineHeight":"38px","letterSpacing":"-0.01em","fontWeight":"700"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between"><div class="flex flex-col flex-1 overflow-y-auto"><div class="h-16 px-space-md flex items-center gap-space-sm bg-surface-container-lowest"><div class="flex flex-col"><span class="font-headline-md text-headline-md text-primary leading-none tracking-tight">Wanda Pujols</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mt-space-xs">Gestión Escolar</span></div></div><div class="px-space-md py-space-sm"><div class="px-space-sm py-space-xs font-label-sm text-label-sm uppercase tracking-wider text-outline">Menú Principal</div></div><nav class="flex-1 px-space-sm space-y-space-xs" data-active-classes="bg-primary text-on-primary font-title-md shadow-[0_1px_3px_rgba(15,23,42,0.08)]"><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg transition-all bg-primary text-on-primary font-title-md shadow-[0_1px_3px_rgba(15,23,42,0.08)]" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">dashboard</span><span>Dashboard</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all" data-path="registro-diario" href="#"><span class="material-symbols-outlined text-[20px]">fact_check</span><span>Asistencia Diaria</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all" data-path="estudiantes" href="#"><span class="material-symbols-outlined text-[20px]">group</span><span>Estudiantes</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all" data-path="nuevo-estudiante" href="#"><span class="material-symbols-outlined text-[20px]">person_add</span><span>Nuevo Estudiante</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all" data-path="historial" href="#"><span class="material-symbols-outlined text-[20px]">calendar_month</span><span>Historial</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all" data-path="reportes" href="#"><span class="material-symbols-outlined text-[20px]">analytics</span><span>Reportes</span></a><div class="pt-space-sm px-space-sm py-space-xs font-label-sm text-label-sm uppercase tracking-wider text-outline">Ajustes</div><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-all" data-path="configuracion" href="#"><span class="material-symbols-outlined text-[20px]">settings</span><span>Configuración</span></a></nav></div><div class="p-space-md bg-surface-container-low m-space-sm rounded-xl"><div class="flex items-center gap-space-sm mb-space-sm"><div class="h-2 w-2 rounded-full bg-secondary"></div><span class="font-label-sm text-label-sm text-secondary font-semibold">Periodo Lectivo 2024</span></div><a class="flex items-center gap-space-sm px-space-sm py-space-xs text-error hover:bg-error-container hover:text-on-error-container rounded-lg transition-colors font-label-md text-label-md" data-path="login" href="#"><span class="material-symbols-outlined text-[18px]">logout</span><span>Cerrar Sesión</span></a></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs px-space-md py-space-xs bg-surface-container rounded-full text-primary font-label-md text-label-md"><span class="material-symbols-outlined text-[16px]">today</span><span>Hoy: 24 de Octubre, 2024</span></div><div class="hidden lg:flex items-center gap-space-xs bg-surface-container-low px-space-md py-space-xs rounded-lg text-outline"><span class="material-symbols-outlined text-[18px]">search</span><span class="font-body-sm text-body-sm">Buscar estudiante, carnet o curso...</span></div></div><div class="flex items-center gap-space-md"><button aria-label="Notificaciones" class="relative p-space-xs rounded-full text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1 right-1 w-2 h-2 rounded-full bg-error"></span></button><div class="flex items-center gap-space-sm pl-space-sm"><div class="flex flex-col text-right hidden sm:flex"><span class="font-title-md text-body-sm font-semibold text-on-surface leading-tight">Prof. Martín Benítez</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-tight">Docente Principal</span></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCU6SbgMpYI1jp9C3RhVnxiWjiik-q9tmzLzXVGIVPI61TA5giSFdaekj_eaXti2EIn4jRKgIWM_BYM-WDaGBWxQBtuFM2BlN18wKx9rwGztsDZOeyFFyep71Wr-fPiujNkfVPnqjZ3Fh4wFrAYTz7UsXYQyck2r1e15ci3WOJwg_Hx0cmGzddc8FisWrojhMGLChKrfxDjhNeFZEM6902wzTRJKucBcgfQudI-CB0"/></div></div></header><main class="relative w-full pt-16 px-gutter bg-background min-h-screen"><div class="flex flex-col w-full pb-16 space-y-space-lg">
+<!-- Top Welcome & Global Action Header -->
+<section class="relative overflow-hidden bg-surface-container-lowest rounded-xl shadow-sm p-space-lg">
+<div class="absolute -right-16 -top-24 w-80 h-80 rounded-full bg-gradient-to-br from-primary-fixed/40 via-surface-container/20 to-transparent blur-3xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-space-lg">
+<div class="flex flex-col space-y-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="inline-flex items-center gap-1.5 px-space-sm py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
+            Jornada Matutina en Curso
+          </span>
+<span class="font-body-sm text-body-sm text-outline">|</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">calendar_today</span>
+            Jueves, 24 de Octubre de 2024
+          </span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+          ¡Buen día, <span class="text-primary font-headline-lg">Prof. Carmen Mendoza</span>!
+        </h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+          Supervisión institucional consolidada. El 86% de las secciones ha completado el pase de lista correspondiente al turno de hoy.
+        </p>
+</div>
+<div class="flex flex-wrap sm:flex-nowrap items-center gap-space-md">
+<!-- Selector Ciclo -->
+<div class="flex items-center gap-space-xs bg-surface-container-low px-space-md py-space-sm rounded-lg text-on-surface">
+<span class="material-symbols-outlined text-primary text-[20px]">school</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline leading-none">Periodo Activo</span>
+<select aria-label="Seleccionar período lectivo" class="bg-transparent font-title-md text-body-sm text-on-surface outline-none cursor-pointer pr-space-xs">
+<option>Año Académico 2024 - Ciclo II</option>
+<option>Año Académico 2024 - Ciclo I</option>
+<option>Periodo Extraordinario 2024</option>
+</select>
+</div>
+</div>
+<!-- Botón Principal Tomar Asistencia -->
+<a class="inline-flex items-center justify-center gap-space-sm bg-primary text-on-primary hover:bg-primary-container px-space-lg py-space-sm rounded-lg font-title-md text-body-md shadow-sm transition-all transform hover:-translate-y-0.5 active:translate-y-0 text-center whitespace-nowrap" data-path="registro-diario" href="#">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">fact_check</span>
+<span>Tomar Asistencia de Hoy</span>
+</a>
+</div>
+</div>
+</section>
+<!-- 4 Tarjetas de Métricas Estadísticas (KPIs) -->
+<section class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-space-md">
+<!-- Total Estudiantes -->
+<div class="relative overflow-hidden bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col justify-between group hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md uppercase tracking-wider text-outline">Matrícula General</span>
+<span class="font-display-lg text-display-lg text-on-surface mt-space-xs">1,248</span>
+</div>
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-primary group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[26px]">groups</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between text-on-surface-variant">
+<span class="inline-flex items-center gap-1 font-label-md text-label-md text-secondary">
+<span class="material-symbols-outlined text-[16px]">trending_up</span>
+          +12 nuevos este mes
+        </span>
+<span class="font-body-sm text-body-sm text-outline">98% activa</span>
+</div>
+<div class="w-full bg-surface-container h-1 rounded-full mt-space-sm overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 98%"></div>
+</div>
+</div>
+<!-- Asistencia Hoy (Presentes) -->
+<div class="relative overflow-hidden bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col justify-between group hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md uppercase tracking-wider text-outline">Asistencia Hoy (Presentes)</span>
+<div class="flex items-baseline gap-space-xs mt-space-xs">
+<span class="font-display-lg text-display-lg text-on-surface">1,142</span>
+<span class="font-body-sm text-body-sm text-outline">alumnos</span>
+</div>
+</div>
+<div class="w-12 h-12 rounded-xl bg-secondary-container/50 flex items-center justify-center text-secondary group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[26px]" style="font-variation-settings: 'FILL' 1;">how_to_reg</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between">
+<span class="inline-flex items-center gap-1 px-space-xs py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+          91.5% tasa global
+        </span>
+<span class="font-body-sm text-body-sm text-outline">Meta: &gt;90%</span>
+</div>
+<div class="w-full bg-surface-container h-1 rounded-full mt-space-sm overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 91.5%"></div>
+</div>
+</div>
+<!-- Ausencias Registradas -->
+<div class="relative overflow-hidden bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col justify-between group hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md uppercase tracking-wider text-outline">Ausencias Registradas</span>
+<div class="flex items-baseline gap-space-xs mt-space-xs">
+<span class="font-display-lg text-display-lg text-error">64</span>
+<span class="font-body-sm text-body-sm text-outline">alumnos</span>
+</div>
+</div>
+<div class="w-12 h-12 rounded-xl bg-error-container/60 flex items-center justify-center text-error group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[26px]">person_off</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between">
+<span class="inline-flex items-center gap-1 px-space-xs py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">warning</span>
+          5.1% inasistencia
+        </span>
+<span class="font-body-sm text-body-sm text-outline font-title-md">18 justificadas</span>
+</div>
+<div class="w-full bg-surface-container h-1 rounded-full mt-space-sm overflow-hidden">
+<div class="bg-error h-full rounded-full" style="width: 28%"></div>
+</div>
+</div>
+<!-- Tardanzas de Hoy -->
+<div class="relative overflow-hidden bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col justify-between group hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md uppercase tracking-wider text-outline">Tardanzas de Hoy</span>
+<div class="flex items-baseline gap-space-xs mt-space-xs">
+<span class="font-display-lg text-display-lg text-tertiary">42</span>
+<span class="font-body-sm text-body-sm text-outline">alumnos</span>
+</div>
+</div>
+<div class="w-12 h-12 rounded-xl bg-tertiary-fixed/60 flex items-center justify-center text-tertiary-container group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[26px]">alarm</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between">
+<span class="inline-flex items-center gap-1 px-space-xs py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+          3.4% del total
+        </span>
+<span class="font-body-sm text-body-sm text-outline">Prom. 12 min</span>
+</div>
+<div class="w-full bg-surface-container h-1 rounded-full mt-space-sm overflow-hidden">
+<div class="bg-tertiary-container h-full rounded-full" style="width: 38%"></div>
+</div>
+</div>
+</section>
+<!-- Interactive Grid: Visual Charts & Analytics Panel -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-space-md">
+<!-- Gráfico Semanal Asistencia (Bar Chart) - 7 cols -->
+<div class="lg:col-span-7 bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col justify-between">
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-space-sm">
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Tendencia Semanal de Asistencia</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Comparativa diaria por condición: Presentes, Tardanzas y Ausentes</p>
+</div>
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-1">
+<span class="w-3 h-3 rounded bg-secondary"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Presentes</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="w-3 h-3 rounded bg-tertiary-container"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Tardanzas</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="w-3 h-3 rounded bg-error"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Ausencias</span>
+</div>
+</div>
+</div>
+<!-- Micro Visual SVG Graphic: 5 Days Bar Group -->
+<div class="my-space-lg">
+<div class="relative w-full h-56 flex items-end justify-between px-space-md pt-space-md pb-space-xs bg-surface-container-low/40 rounded-xl">
+<!-- Background Grid Lines -->
+<div class="absolute inset-x-space-md top-4 h-px bg-surface-container"></div>
+<div class="absolute inset-x-space-md top-24 h-px bg-surface-container"></div>
+<div class="absolute inset-x-space-md top-40 h-px bg-surface-container"></div>
+<!-- Lunes -->
+<div class="relative z-10 flex flex-col items-center gap-space-xs w-1/6">
+<div class="flex items-end gap-1 h-44 w-full justify-center">
+<div class="w-3 bg-secondary rounded-t-sm transition-all hover:opacity-80" style="height: 88%" title="Presentes: 1,098"></div>
+<div class="w-3 bg-tertiary-container rounded-t-sm transition-all hover:opacity-80" style="height: 18%" title="Tardanzas: 48"></div>
+<div class="w-3 bg-error rounded-t-sm transition-all hover:opacity-80" style="height: 14%" title="Ausencias: 102"></div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold">Lun 20</span>
+</div>
+<!-- Martes -->
+<div class="relative z-10 flex flex-col items-center gap-space-xs w-1/6">
+<div class="flex items-end gap-1 h-44 w-full justify-center">
+<div class="w-3 bg-secondary rounded-t-sm transition-all hover:opacity-80" style="height: 92%" title="Presentes: 1,148"></div>
+<div class="w-3 bg-tertiary-container rounded-t-sm transition-all hover:opacity-80" style="height: 12%" title="Tardanzas: 32"></div>
+<div class="w-3 bg-error rounded-t-sm transition-all hover:opacity-80" style="height: 10%" title="Ausencias: 68"></div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold">Mar 21</span>
+</div>
+<!-- Miércoles -->
+<div class="relative z-10 flex flex-col items-center gap-space-xs w-1/6">
+<div class="flex items-end gap-1 h-44 w-full justify-center">
+<div class="w-3 bg-secondary rounded-t-sm transition-all hover:opacity-80" style="height: 95%" title="Presentes: 1,185"></div>
+<div class="w-3 bg-tertiary-container rounded-t-sm transition-all hover:opacity-80" style="height: 9%" title="Tardanzas: 24"></div>
+<div class="w-3 bg-error rounded-t-sm transition-all hover:opacity-80" style="height: 7%" title="Ausencias: 39"></div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold">Mié 22</span>
+</div>
+<!-- Jueves (HOY) -->
+<div class="relative z-10 flex flex-col items-center gap-space-xs w-1/6 bg-surface-container/60 rounded-lg p-1">
+<div class="flex items-end gap-1 h-44 w-full justify-center">
+<div class="w-3.5 bg-secondary rounded-t-sm shadow-sm transition-all hover:opacity-80" style="height: 91.5%" title="Presentes: 1,142"></div>
+<div class="w-3.5 bg-tertiary-container rounded-t-sm shadow-sm transition-all hover:opacity-80" style="height: 14%" title="Tardanzas: 42"></div>
+<div class="w-3.5 bg-error rounded-t-sm shadow-sm transition-all hover:opacity-80" style="height: 9%" title="Ausencias: 64"></div>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-bold">Jue 24 (Hoy)</span>
+</div>
+<!-- Viernes (Proyectado) -->
+<div class="relative z-10 flex flex-col items-center gap-space-xs w-1/6 opacity-40">
+<div class="flex items-end gap-1 h-44 w-full justify-center border-b border-outline/20">
+<div class="w-3 bg-outline rounded-t-sm" style="height: 5%"></div>
+</div>
+<span class="font-label-sm text-label-sm text-outline">Vie 25</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between text-body-sm text-on-surface-variant pt-space-xs">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary">verified</span>
+          Promedio semanal alcanzado: <strong class="text-on-surface font-title-md">92.8%</strong>
+</span>
+<button class="text-primary hover:text-primary-container font-label-md text-label-md flex items-center gap-1 transition-colors" type="button">
+<span>Ver análisis detallado</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Desglose por Grado y Nivel - 5 cols -->
+<div class="lg:col-span-5 bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between">
+<h2 class="font-headline-md text-headline-md text-on-surface">Asistencia por Grado</h2>
+<span class="px-space-xs py-0.5 rounded bg-surface-container text-primary font-label-sm text-label-sm">Secundaria y Primaria</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Nivel de cumplimiento según registro matinal</p>
+</div>
+<div class="space-y-space-md my-space-md">
+<!-- 1° Secundaria -->
+<div>
+<div class="flex justify-between font-label-md text-label-md mb-1">
+<span class="text-on-surface font-semibold">1° Secundaria (4 secciones)</span>
+<span class="text-secondary font-bold">96.4%</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 96.4%"></div>
+</div>
+</div>
+<!-- 2° Secundaria -->
+<div>
+<div class="flex justify-between font-label-md text-label-md mb-1">
+<span class="text-on-surface font-semibold">2° Secundaria (4 secciones)</span>
+<span class="text-secondary font-bold">94.1%</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 94.1%"></div>
+</div>
+</div>
+<!-- 3° Secundaria -->
+<div>
+<div class="flex justify-between font-label-md text-label-md mb-1">
+<span class="text-on-surface font-semibold">3° Secundaria (3 secciones)</span>
+<span class="text-secondary font-bold">92.0%</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 92%"></div>
+</div>
+</div>
+<!-- 4° Secundaria -->
+<div>
+<div class="flex justify-between font-label-md text-label-md mb-1">
+<span class="text-on-surface font-semibold">4° Secundaria (3 secciones)</span>
+<span class="text-tertiary-container font-bold">88.5%</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-tertiary-container h-full rounded-full" style="width: 88.5%"></div>
+</div>
+</div>
+<!-- 5° Secundaria -->
+<div>
+<div class="flex justify-between font-label-md text-label-md mb-1">
+<span class="text-on-surface font-semibold">5° Secundaria (3 secciones)</span>
+<span class="text-error font-bold">83.2%</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-error h-full rounded-full" style="width: 83.2%"></div>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded-lg flex items-center gap-space-sm text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">info</span>
+<span>Atención prioritaria sugerida en <strong>5° Secundaria</strong> por repunte de faltas.</span>
+</div>
+</div>
+</section>
+<!-- Dual Split: Alertas Críticas & Estado de Pase de Lista por Aulas -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-space-md">
+<!-- Alertas Críticas de Inasistencia (WhatsApp / Email Notifier) - 7 cols -->
+<div class="lg:col-span-7 bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-lg bg-error-container flex items-center justify-center text-error">
+<span class="material-symbols-outlined text-[20px]">notification_important</span>
+</div>
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Alertas Críticas de Inasistencia</h2>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Estudiantes con 3 o más faltas consecutivas sin justificar</span>
+</div>
+</div>
+<span class="px-space-sm py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-semibold">
+            4 casos activos
+          </span>
+</div>
+<!-- Lista de Alumnos en Riesgo -->
+<div class="mt-space-md space-y-space-sm">
+<!-- Item 1 -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<img class="w-10 h-10 rounded-full object-cover" data-alt="Close up portrait photograph of high school student Diego Morales smiling slightly wearing a navy blue school uniform against a clean blurred classroom background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkDpHdGdFhekYXBZRwb9m0lRHjrpjIkmth0YFv_oaX0_-FhFPYdjmHV_sZXa2PJET-F0nfMVl5PHi2wHXcrwuaHAjuSfiVEXuda71XyhWRzBKLVk7nde9cOCDtjsRKAqEJPpXxGOcq3kdh1zluMvrBSeBMbHOQxV76uRm2uDceyXkOTnq4NF7Z40k1kCwUxcULd3G4XNSxMuwdys9Nm6rJp272UeqfYjZvb0R1Mvc"/>
+<div class="flex flex-col">
+<span class="font-title-md text-body-sm font-semibold text-on-surface">Diego Morales Vargas</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">5° de Sec. - Aula B | Carnet: #EST-8921</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="px-space-xs py-0.5 rounded bg-error/10 text-error font-label-sm text-label-sm font-bold whitespace-nowrap">
+                4 faltas seguidas
+              </span>
+<button aria-label="Notificar apoderado de Diego Morales" class="inline-flex items-center gap-1 bg-surface-container-lowest hover:bg-primary hover:text-on-primary text-primary px-space-sm py-1.5 rounded-lg shadow-sm font-label-md text-label-md transition-all" onclick="alert('Notificación enviada con éxito al apoderado de Diego Morales por WhatsApp y Correo.')" type="button">
+<span class="material-symbols-outlined text-[16px]">send</span>
+<span class="hidden sm:inline">Notificar Tutor</span>
+</button>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<img class="w-10 h-10 rounded-full object-cover" data-alt="Portrait photograph of teenage student Sofia Restrepo looking calmly forward with dark hair tied back in crisp school attire in a bright natural light setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvrDlqt9vvvb_vGhZ0EsncPVfV9roVkUckcQPQb2P0U41baxpBQEcbd9YPiphjjFgW6u0Qd4VhjIcmRBC3BHw4WBQss2Ermg7OrNXZGY3cUo5LGBpK97FP1MoxLVAYFkUTmx6TY_MGvq4ARgmTBLmH2yBNTvbP7gTe8PhfWsOjebZV8etOv2AHdnMhSGbZxfVM4a5daX09x8iJmHH-iGDg9Wm905UnIOz_Cn3GiMQ"/>
+<div class="flex flex-col">
+<span class="font-title-md text-body-sm font-semibold text-on-surface">Sofía Restrepo Luján</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">3° de Sec. - Aula A | Carnet: #EST-7740</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="px-space-xs py-0.5 rounded bg-error/10 text-error font-label-sm text-label-sm font-bold whitespace-nowrap">
+                3 faltas seguidas
+              </span>
+<button aria-label="Notificar apoderado de Sofía Restrepo" class="inline-flex items-center gap-1 bg-surface-container-lowest hover:bg-primary hover:text-on-primary text-primary px-space-sm py-1.5 rounded-lg shadow-sm font-label-md text-label-md transition-all" onclick="alert('Notificación enviada con éxito al apoderado de Sofía Restrepo por WhatsApp y Correo.')" type="button">
+<span class="material-symbols-outlined text-[16px]">send</span>
+<span class="hidden sm:inline">Notificar Tutor</span>
+</button>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<img class="w-10 h-10 rounded-full object-cover" data-alt="Headshot of cheerful young student Mateo Alarcon wearing spectacles and high school blazer in a modern educational institute background with soft daylight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxGeleC9MVKGcRgBOZVaIMKPGJzLsFzAFEQeYXHL7pCL_Y7OQcw7Nb6Iif7zXUsrnbz26i-Ynl4UpMsFdSE20ckt1ZSt96LAsIU6obrNBJk7Tdzb8YiLvEPb9No2hLesQ8I8S3bL_U-A11qwjZPPNowFtEFbFbSACeyf-8nuDRLhjoKnYQtz5qqm9Y1sPrL_XQ4b77xtbWE01YX4umADy_LDvlovQn7WSPcmms-Fo"/>
+<div class="flex flex-col">
+<span class="font-title-md text-body-sm font-semibold text-on-surface">Mateo Alarcón Quispe</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">4° de Sec. - Aula C | Carnet: #EST-6192</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="px-space-xs py-0.5 rounded bg-error/10 text-error font-label-sm text-label-sm font-bold whitespace-nowrap">
+                3 faltas seguidas
+              </span>
+<button aria-label="Notificar apoderado de Mateo Alarcón" class="inline-flex items-center gap-1 bg-surface-container-lowest hover:bg-primary hover:text-on-primary text-primary px-space-sm py-1.5 rounded-lg shadow-sm font-label-md text-label-md transition-all" onclick="alert('Notificación enviada con éxito al apoderado de Mateo Alarcón por WhatsApp y Correo.')" type="button">
+<span class="material-symbols-outlined text-[16px]">send</span>
+<span class="hidden sm:inline">Notificar Tutor</span>
+</button>
+</div>
+</div>
+<!-- Item 4 -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<img class="w-10 h-10 rounded-full object-cover" data-alt="Warm studio style portrait of female student Camila Fernandez wearing tidy educational uniform smiling warmly in a contemporary school campus library setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjaDyu1As6A03hJBc1qg0O5gOioTPB3VAHL0pNo0EypdRGU9nzcgRZSE-WV8xu-PdSzmTohUi8HU_WOikCx9ZARryc0ClH6yqioQRhrZKM9SMTo-09GjHTfOTN1btGcTHtrRG2P3xOxJUIWdwSEElEiF_ImVJfrayvp3vqc8kh0PVQLtoy1On-x7MM4pSl3GHfci6J1DHx0aSCnyDXdcuwv7IFbhRoDxzqQPGCLCo"/>
+<div class="flex flex-col">
+<span class="font-title-md text-body-sm font-semibold text-on-surface">Camila Fernández Silva</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">2° de Sec. - Aula B | Carnet: #EST-5510</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="px-space-xs py-0.5 rounded bg-error/10 text-error font-label-sm text-label-sm font-bold whitespace-nowrap">
+                3 faltas seguidas
+              </span>
+<button aria-label="Notificar apoderado de Camila Fernández" class="inline-flex items-center gap-1 bg-surface-container-lowest hover:bg-primary hover:text-on-primary text-primary px-space-sm py-1.5 rounded-lg shadow-sm font-label-md text-label-md transition-all" onclick="alert('Notificación enviada con éxito al apoderado de Camila Fernández por WhatsApp y Correo.')" type="button">
+<span class="material-symbols-outlined text-[16px]">send</span>
+<span class="hidden sm:inline">Notificar Tutor</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between">
+<a class="font-label-md text-label-md text-primary hover:underline flex items-center gap-1" data-path="estudiantes" href="#">
+<span>Ver listado completo de citaciones y alertas</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Estado de Aulas de Hoy (Registro de Pase de Lista) - 5 cols -->
+<div class="lg:col-span-5 bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between">
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Estado de Aulas de Hoy</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Monitoreo de registro por aula en tiempo real</p>
+</div>
+<span class="material-symbols-outlined text-outline text-[22px]">sync</span>
+</div>
+<div class="mt-space-md divide-y-0 space-y-space-xs">
+<!-- Aula 1: Registrado -->
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-secondary/10 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-body-sm font-semibold text-on-surface">3° Grado A - Secundaria</span>
+<span class="font-body-sm text-body-sm text-outline">Docente: Prof. R. Cáceres</span>
+</div>
+</div>
+<div class="text-right">
+<span class="inline-flex items-center gap-1 text-secondary font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> 8:05 AM
+              </span>
+<span class="block font-body-sm text-[11px] text-outline">32 / 32 reg.</span>
+</div>
+</div>
+<!-- Aula 2: Registrado -->
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-secondary/10 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-body-sm font-semibold text-on-surface">4° Grado B - Secundaria</span>
+<span class="font-body-sm text-body-sm text-outline">Docente: Prof. M. Suárez</span>
+</div>
+</div>
+<div class="text-right">
+<span class="inline-flex items-center gap-1 text-secondary font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> 8:12 AM
+              </span>
+<span class="block font-body-sm text-[11px] text-outline">30 / 30 reg.</span>
+</div>
+</div>
+<!-- Aula 3: Registrado -->
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-secondary/10 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-body-sm font-semibold text-on-surface">1° Grado A - Secundaria</span>
+<span class="font-body-sm text-body-sm text-outline">Docente: Prof. L. Vega</span>
+</div>
+</div>
+<div class="text-right">
+<span class="inline-flex items-center gap-1 text-secondary font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> 8:20 AM
+              </span>
+<span class="block font-body-sm text-[11px] text-outline">35 / 35 reg.</span>
+</div>
+</div>
+<!-- Aula 4: PENDIENTE -->
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-tertiary-fixed/30 border-l-4 border-l-tertiary">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-tertiary-container/10 flex items-center justify-center text-tertiary-container animate-pulse">
+<span class="material-symbols-outlined text-[18px]">hourglass_top</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-body-sm font-semibold text-on-surface">5° Grado A - Secundaria</span>
+<span class="font-body-sm text-body-sm text-tertiary font-medium">Pendiente de toma de lista</span>
+</div>
+</div>
+<div class="text-right">
+<button class="px-space-sm py-1 bg-tertiary-container text-on-primary rounded font-label-sm text-label-sm hover:opacity-90 transition-opacity" type="button">
+                Recordar
+              </button>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-space-md p-space-sm bg-surface-container rounded-lg flex items-center justify-between font-label-md text-label-md text-on-surface">
+<span class="text-on-surface-variant">Progreso de Aulas Turno Mañana:</span>
+<strong class="text-primary font-bold">18 de 21 cerradas (86%)</strong>
+</div>
+</div>
+</section>
+<!-- Sección de Exportación y Descarga de Reportes Rápidos -->
+<section class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm">
+<div class="flex flex-col md:flex-row md:items-center md:justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[28px]">download_for_offline</span>
+</div>
+<div class="flex flex-col">
+<h2 class="font-headline-md text-headline-md text-on-surface">Generación y Descarga de Informes Oficiales</h2>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Exporta el registro del día formateado para el Ministerio de Educación o dirección general</span>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm">
+<!-- Botón Exportar PDF -->
+<button class="inline-flex items-center gap-space-xs px-space-md py-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-title-md text-body-sm transition-colors shadow-sm" onclick="alert('Generando consolidado diario en formato PDF... Descarga lista en breve.')" type="button">
+<span class="material-symbols-outlined text-error text-[20px]">picture_as_pdf</span>
+<span>Parte Diario PDF</span>
+</button>
+<!-- Botón Exportar Excel -->
+<button class="inline-flex items-center gap-space-xs px-space-md py-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-title-md text-body-sm transition-colors shadow-sm" onclick="alert('Generando matriz de asistencia en formato Excel (.xlsx)... Descarga lista en breve.')" type="button">
+<span class="material-symbols-outlined text-secondary text-[20px]">table_view</span>
+<span>Consolidado Excel (.xlsx)</span>
+</button>
+<!-- Botón Ver Histórico -->
+<a class="inline-flex items-center gap-space-xs px-space-md py-space-sm rounded-lg bg-primary text-on-primary hover:bg-primary-container font-title-md text-body-sm transition-colors shadow-sm" data-path="reportes" href="#">
+<span class="material-symbols-outlined text-[20px]">analytics</span>
+<span>Módulo de Reportes</span>
+</a>
+</div>
+</div>
+</section>
+</div></main></div><script src="/js/app.js"></script>
+<script src="/js/juegos.js"></script>
+</body></html>
